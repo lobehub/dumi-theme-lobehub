@@ -1,0 +1,119 @@
+{
+  "name": "dumi-theme-lobehub",
+  "version": "0.0.0",
+  "description": "dumi-theme-lobehub is a documentation site theme package designed for dumi2. It provides a more beautiful and user-friendly development and reading experience based on @lobehub/ui",
+  "keywords": [
+    "lobehub",
+    "dumi",
+    "dumi theme"
+  ],
+  "homepage": "https://github.com/lobehub/dumi-theme-lobehub",
+  "bugs": {
+    "url": "https://github.com/lobehub/dumi-theme-lobehub/issues/new"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lobehub/dumi-theme-lobehub.git"
+  },
+  "license": "MIT",
+  "author": "LobeHub <i@lobehub.com>",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "father build",
+    "build:docs": "npm run build && npm run build --prefix=example",
+    "dev": "father dev",
+    "dev:docs": "npm run start --prefix=example",
+    "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "lint:md": "remark . --quiet --frail --output",
+    "lint:style": "stylelint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prepare": "husky install && father link-dev-theme",
+    "prepublishOnly": "npm run build",
+    "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
+    "release": "semantic-release",
+    "start": "concurrently \"npm run dev\" \"npm run dev:docs\"",
+    "test": "npm run type-check && npm run lint",
+    "type-check": "tsc -p tsconfig-check.json"
+  },
+  "lint-staged": {
+    "*.md": [
+      "remark --quiet --output --",
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.json": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --parser=typescript --write",
+      "stylelint --fix",
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "@floating-ui/react": "^0",
+    "@giscus/react": "^2",
+    "@lobehub/ui": "latest",
+    "ahooks": "^3",
+    "antd": "^5",
+    "antd-style": "^3",
+    "chalk": "^4",
+    "fast-deep-equal": "^3",
+    "history": "^5",
+    "lodash-es": "^4",
+    "lucide-react": "latest",
+    "polished": "^4",
+    "rc-footer": "^0",
+    "react-layout-kit": "^1",
+    "styled-components": "latest",
+    "use-merge-value": "^1",
+    "zustand": "^4"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17",
+    "@lobehub/lint": "latest",
+    "@types/lodash-es": "^4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "antd-style": "^3",
+    "commitlint": "^17",
+    "concurrently": "^8",
+    "dumi": "^2",
+    "dumi-assets-types": "^1",
+    "eslint": "^8",
+    "father": "^4",
+    "father-plugin-dumi-theme": "latest",
+    "husky": "^8",
+    "leva": "^0",
+    "lint-staged": "^13",
+    "prettier": "^2",
+    "react": "^18",
+    "react-dom": "^18",
+    "remark": "^14",
+    "remark-cli": "^11",
+    "semantic-release": "^21",
+    "stylelint": "^15",
+    "typescript": "^5"
+  },
+  "peerDependencies": {
+    "antd": ">=5",
+    "antd-style": ">=3",
+    "dumi": ">=2",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}

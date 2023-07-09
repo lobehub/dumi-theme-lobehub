@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "declaration": true,
+    "downlevelIteration": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@@/*": ["example/.dumi/tmp/*"],
+      "@/*": ["src/*"],
+      "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
+      "dumi-theme-lobehub": ["src"],
+      "dumi-theme-lobehub/*": ["src/*", "*"]
+    }
+  },
+  "include": ["src", "tests", ".dumi/**/*", "typings", "example/.dumirc.ts", "*.ts"]
+}
