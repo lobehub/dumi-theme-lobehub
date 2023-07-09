@@ -2,6 +2,37 @@
 
 # Changelog
 
+## [Version&nbsp;1.2.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.1.1...v1.2.0)
+<sup>Released on **2023-07-09**</sup>
+
+
+#### ✨ Features
+
+- **misc**: Add or modify imports, update configurations, and add new files.
+
+
+<br/>
+
+
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+
+
+#### What's improved
+
+* **misc**: Add or modify imports, update configurations, and add new files ([465b9a5](https://github.com/lobehub/dumi-theme-lobehub/commit/465b9a5))
+
+</details>
+
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;1.1.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.1.0...v1.1.1)
 <sup>Released on **2023-07-09**</sup>
 
