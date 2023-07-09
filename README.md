@@ -8,9 +8,7 @@
 
 <h1>Dumi Theme Lobehub</h1>
 
-dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`.
-
-It provides a more beautiful and user-friendly development and reading experience based on `dumi-theme-lobehub`
+dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. <br/>It provides a more beautiful and user-friendly development and reading experience based on `@lobehub/ui`
 
 [Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
 
