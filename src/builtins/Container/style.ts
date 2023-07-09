@@ -1,7 +1,7 @@
 import { FullToken, createStyles } from 'antd-style';
 
 const toCamelCase = (string_: string) => {
-  return string_.replaceAll(/( |^)[a-z]/g, (L) => L.toUpperCase());
+  return string_.replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
 };
 export const useStyles = createStyles(({ token, prefixCls, css }) => {
   // 把首字母大写

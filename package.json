@@ -27,7 +27,7 @@
   "scripts": {
     "build": "father build",
     "build:docs": "npm run build && npm run build --prefix=example",
-    "ci": "npm run test",
+    "ci": "npm run lint && npm run type-check && npm run test",
     "dev": "father dev",
     "dev:docs": "npm run start --prefix=example",
     "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
@@ -38,7 +38,9 @@
     "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
     "release": "semantic-release",
     "start": "concurrently \"npm run dev\" \"npm run dev:docs\"",
-    "test": "npm run type-check && npm run lint",
+    "test": "vitest --passWithNoTests",
+    "test:coverage": "vitest run --coverage  --passWithNoTests",
+    "test:update": "vitest -u",
     "type-check": "tsc -p tsconfig-check.json"
   },
   "lint-staged": {
@@ -69,7 +71,6 @@
     "antd-style": "^3",
     "chalk": "^4",
     "fast-deep-equal": "^3",
-    "history": "^5",
     "lodash-es": "^4",
     "lucide-react": "latest",
     "polished": "^4",
@@ -86,6 +87,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@vitest/coverage-c8": "latest",
     "antd-style": "^3",
     "commitlint": "^17",
     "concurrently": "^8",
@@ -94,7 +96,9 @@
     "eslint": "^8",
     "father": "^4",
     "father-plugin-dumi-theme": "latest",
+    "history": "^5",
     "husky": "^8",
+    "jsdom": "^22",
     "leva": "^0",
     "lint-staged": "^13",
     "prettier": "^2",
@@ -104,7 +108,8 @@
     "remark-cli": "^11",
     "semantic-release": "^21",
     "stylelint": "^15",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "latest"
   },
   "peerDependencies": {
     "antd": ">=5",

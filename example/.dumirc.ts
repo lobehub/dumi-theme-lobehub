@@ -1,5 +1,5 @@
 import { defineConfig } from 'dumi';
-import path from 'node:path';
+import { resolve } from 'node:path';
 
 import { homepage, name } from '../package.json';
 
@@ -58,8 +58,8 @@ const themeConfig = {
 
 export default defineConfig({
   alias: {
-    '@': path.join(__dirname, '../src'),
-    'dumi-theme-lobehub': path.join(__dirname, '../src'),
+    '@': resolve(__dirname, 'src'),
+    'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
   codeSplitting: {
     jsStrategy: 'granularChunks',
