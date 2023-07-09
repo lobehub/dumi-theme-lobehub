@@ -46,7 +46,8 @@ export const useStyles = createStyles(({ css, token }) => ({
 
           border-radius: 6px;
 
-          transition: color 600ms ${token.motionEaseOut},
+          transition:
+            color 600ms ${token.motionEaseOut},
             background-color 100ms ${token.motionEaseOut};
 
           &:hover {

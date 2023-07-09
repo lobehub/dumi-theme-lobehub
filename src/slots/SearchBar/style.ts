@@ -127,18 +127,16 @@ export const useStyles = createStyles(({ token, responsive, css, cx }) => {
         }
       `,
     ),
-    svg: cx(
-      css`
-        position: absolute;
-        top: 50%;
-        inset-inline-start: 16px;
-        transform: translateY(-50%);
+    svg: cx(css`
+      position: absolute;
+      top: 50%;
+      inset-inline-start: 16px;
+      transform: translateY(-50%);
 
-        width: 16px;
-        margin-top: 1px;
+      width: 16px;
+      margin-top: 1px;
 
-        color: ${token.colorTextPlaceholder};
-      `,
-    ),
+      color: ${token.colorTextPlaceholder};
+    `),
   };
 });
