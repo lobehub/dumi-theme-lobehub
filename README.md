@@ -32,7 +32,9 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 
 #### TOC
 
+- [✨ Features](#-features)
 - [📦 Installation](#-installation)
+- [🤯 Usage](#-usage)
 - [⌨️ Local Development](#️-local-development)
 - [🤝 Contributing](#-contributing)
 
@@ -40,7 +42,24 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 
 </details>
 
+## ✨ Features
+
+- [x] 🤯 **Modern Theme Style:** This theme package adopts modern design techniques such as gradient colors, frosted glass, lighting effects, and natural animations to present the interface in a more concise and visually appealing way, making the documents more intuitive, readable, and user-friendly.
+- [x] 🌓 **One-click Switch between Light and Dark Theme Mode:** Based on antd v5, custom algorithms for light and dark themes are provided by default, offering aesthetically pleasing and user-friendly options. Users can choose the theme mode according to their preferences and enjoy a good reading experience in different lighting environments.
+- [x] 💅 **Based on Ant Design and CSSinJS:** This theme package uses antd as the base component library and implements the style solution using CSSinJS, which helps to better control the style details and improve style reusability and maintainability. The underlying antd-style library provides more flexibility, readability, and ease of maintenance in writing styles.
+- [x] 🪄 **Exquisite Syntax Highlighting:** This theme package provides accurate and beautiful syntax highlighting. It utilizes modern syntax highlighting libraries like Shiki and Prism, and offers a rich set of code highlighting schemes to enhance code readability.
+- [x] 🧩 **Flexible Component Reusability:** This theme package provides high flexibility for customizing local themes. It exports premium components from the theme package, which can be reused as independent modules. Developers can freely combine and use these components in the dumi local theme package.
+- [x] 📱 **Well-Adapted for Mobile Devices:** This theme package is well-adapted for mobile devices. With the flexible style solution based on CSSinJS, multiple layout options are easily implemented. Users can enjoy a consistent and smooth experience across different devices.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
 ## 📦 Installation
+
+Quick Start Installation It is recommended to use `pnpm` for installation:
 
 ```bash
 pnpm add dumi-theme-antd-style -D
@@ -52,22 +71,9 @@ pnpm add dumi-theme-antd-style -D
 
 </div>
 
-## ⌨️ Local Development
+## 🤯 Usage
 
-You can use Gitpod for online development:
-
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
-
-Or clone it for local development:
-
-```bash
-$ git clone https://github.com/lobehub/dumi-theme-lobehub.git
-$ cd dumi-theme-lobehub
-$ pnpm install
-$ pnpm start
-```
-
-Theme Config:
+Usage After installation, start the site with `dumi`, and the theme will be automatically loaded for use.
 
 ```ts
 interface SiteThemeConfig {
@@ -94,6 +100,29 @@ interface SiteThemeConfig {
   };
   title?: string;
 }
+```
+
+> 👉 Tip: For detailed configuration, please refer to the [Type file](https://github.com/lobehub/dumi-theme-lobehub/blob/master/src/types/config.ts) | [Example](https://github.com/lobehub/dumi-theme-lobehub/blob/master/example/.dumirc.ts).
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
+
+## ⌨️ Local Development
+
+You can use Gitpod for online development:
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
+
+Or clone it for local development:
+
+```bash
+$ git clone https://github.com/lobehub/dumi-theme-lobehub.git
+$ cd dumi-theme-lobehub
+$ pnpm install
+$ pnpm start
 ```
 
 <div align="right">
