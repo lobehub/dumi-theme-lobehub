@@ -28,7 +28,6 @@ export const apiHeaderSel = (s: SiteStore): ApiHeaderProps => {
   const fm = s.routeMeta.frontmatter;
   const localeId = s.locale.id;
 
-  // 统一的路径匹配替换方法
   const replaceUrl = (rawString: string) => {
     return rawString
       .replace('{github}', REPO_BASE)
@@ -43,17 +42,10 @@ export const apiHeaderSel = (s: SiteStore): ApiHeaderProps => {
     docUrl: documentUrlMatch,
   } = (s.siteData.themeConfig.apiHeader || {}) as ApiHeaderConfig;
 
-  // 1. 兜底默认使用文档的 apiHeader.pkg
-  // 2. 如果 themeConfig 里配置了 pkg， 则使用配置的 pkg
-  // 3. 兜底使用 package.json 中的 name
   const displayPackage = fm.apiHeader?.pkg || package_;
 
-  // 1. 默认使用文档的 fm.atomId
-  // 2. 兜底到文档 title
   const componentName = fm.atomId || fm.title;
 
-  // 1. 优先选择使用文档 apiHeader.defaultImport
-  // 2. 默认使用 false
   const defaultImport = fm.apiHeader?.defaultImport || false;
 
   const sourceUrl =

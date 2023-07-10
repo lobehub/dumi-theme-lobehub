@@ -8,6 +8,7 @@ import SearchBar from '@/slots/SearchBar';
 import { useSiteStore } from '@/store/useSiteStore';
 
 import Burger from './Burger';
+import DiscordButton from './DiscordButton';
 import GithubButton from './GithubButton';
 import LangSwitch from './LangSwitch';
 import ThemeSwitch from './ThemeSwitch';
@@ -25,10 +26,9 @@ const Header = memo(() => {
           <ThemeSwitch />
         ) : (
           <>
-            {' '}
-            <SearchBar />
-            <LangSwitch />
+            <SearchBar /> <LangSwitch />
             <GithubButton />
+            <DiscordButton />
             <ThemeSwitch />
           </>
         )

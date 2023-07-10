@@ -27,7 +27,6 @@ const themeConfig = {
     sourceUrl: `{github}/tree/master/src/{atomId}/index.tsx`,
   },
   description: 'Lobe UI is an open-source UI component library for building chatbot web apps',
-
   features: [
     {
       description:
@@ -49,8 +48,15 @@ const themeConfig = {
     },
   ],
   footer: 'Made with 🤯 by LobeHub',
+  giscus: {
+    category: 'Q&A',
+    categoryId: 'DIC_kwDOJloKoM4CXsCu',
+    repo: 'lobehub/lobe-ui',
+    repoId: 'R_kgDOJloKoA',
+  },
   name: 'DUMI',
   socialLinks: {
+    discord: 'https://discord.gg/AYFPHvv2jT',
     github: homepage,
   },
   title: 'Dumi Theme LobeHub',
@@ -58,7 +64,7 @@ const themeConfig = {
 
 export default defineConfig({
   alias: {
-    '@': resolve(__dirname, 'src'),
+    '@': resolve(__dirname, '../src'),
     'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
   codeSplitting: {

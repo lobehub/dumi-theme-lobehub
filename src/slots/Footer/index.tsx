@@ -7,7 +7,7 @@ import { Center, Flexbox } from 'react-layout-kit';
 import { shallow } from 'zustand/shallow';
 
 import { githubSel, useSiteStore } from '@/store';
-import { IFooter } from '@/types';
+import { FooterConfig } from '@/types';
 
 import { getColumns } from './columns';
 import { useStyles } from './style';
@@ -20,12 +20,11 @@ const Footer = memo(() => {
 
   if (!themeConfig.footer) return;
 
-  const footer = themeConfig.footerConfig as IFooter;
+  const footer = themeConfig.footerConfig as FooterConfig;
 
-  const columns =
-    footer?.columns === false
-      ? undefined
-      : getColumns({ github: githubUrl || (pkg as any).homepage });
+  const columns = footer?.columns
+    ? undefined
+    : getColumns({ github: githubUrl || (pkg as any).homepage });
 
   const bottomFooter = footer?.bottom || themeConfig.footer;
 
@@ -50,7 +49,7 @@ const Footer = memo(() => {
       }
       columns={columns}
       contentMaxWidth={theme.contentMaxWidth}
-      theme={footer?.theme || (theme.appearance as FooterProps['theme'])}
+      theme={theme.appearance as FooterProps['theme']}
     />
   );
 });

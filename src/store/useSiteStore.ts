@@ -6,13 +6,14 @@ import {
   IPreviewerProps,
   IRouteMeta,
   ISidebarGroup,
-  IThemeConfig,
 } from 'dumi/dist/client/theme-api/types';
 import { PICKED_PKG_FIELDS } from 'dumi/dist/constants';
 import type { Location } from 'history';
 import { ComponentType } from 'react';
 import { create } from 'zustand';
 import { devtools } from 'zustand/middleware';
+
+import { SiteThemeConfig } from '@/types';
 
 export type NavData = (INavItem & { children?: INavItem[] | undefined })[];
 
@@ -32,7 +33,7 @@ export interface ISiteData {
   locales: ILocalesConfig;
   pkg: Partial<Record<keyof typeof PICKED_PKG_FIELDS, any>>;
   setLoading: (status: boolean) => void;
-  themeConfig: IThemeConfig;
+  themeConfig: SiteThemeConfig;
 }
 
 export interface SiteStore {

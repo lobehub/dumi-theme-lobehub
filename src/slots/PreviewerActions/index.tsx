@@ -8,7 +8,7 @@ import { useStyles } from './style';
 
 const SIZE = { blockSize: 24, fontSize: 16, strokeWidth: 2 };
 
-export interface IPreviewerActionsProps extends IPreviewerProps {
+export interface PreviewerActionsProps extends IPreviewerProps {
   demoContainer: HTMLDivElement | HTMLIFrameElement;
   /**
    * disabled actions
@@ -18,7 +18,7 @@ export interface IPreviewerActionsProps extends IPreviewerProps {
   forceShowCode?: boolean;
 }
 
-const PreviewerActions: FC<IPreviewerActionsProps> = (props) => {
+const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
   const intl = useIntl();
   const files = Object.entries(props.asset.dependencies).filter(([, { type }]) => type === 'FILE');
   const [activeKey, setActiveKey] = useState(0);

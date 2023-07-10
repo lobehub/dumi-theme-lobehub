@@ -6,15 +6,11 @@ import { join } from 'node:path';
 
 import { getHash } from './utils';
 
-/*
- * SSR 抽取样式
- */
 const SSRPlugin = (api: IApi) => {
   api.describe({
     key: '@',
   });
 
-  // 如果没有开启 SSR，则啥也不做
   if (!api.userConfig.ssr) return;
 
   api.logger.info('detect ssr config, when building html will extract css.');
@@ -46,7 +42,6 @@ const SSRPlugin = (api: IApi) => {
       .map((file) => {
         const antdCache = (global as any).__ANTD_CACHE__;
 
-        // 提取 antd-style 样式到独立 css 文件
         const styles = extractStaticStyle(file.content, { antdCache });
 
         for (const result of styles) {

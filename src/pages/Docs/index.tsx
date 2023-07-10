@@ -7,28 +7,32 @@ import { shallow } from 'zustand/shallow';
 
 import ApiHeader from '@/slots/ApiHeader';
 import Content from '@/slots/Content';
-import { isApiPageSel, useSiteStore } from '@/store';
+import { giscusSel, isApiPageSel, useSiteStore } from '@/store';
 
 import { useStyles } from './styles';
 
 const Documents = memo(() => {
   const outlet = useOutlet();
   const { mobile } = useResponsive();
-  const isApiPage = useSiteStore(isApiPageSel, shallow);
+  const { isApiPage, giscus } = useSiteStore(
+    (st) => ({ giscus: giscusSel(st), isApiPage: isApiPageSel(st) }),
+    shallow,
+  );
   const { styles } = useStyles();
 
   const Comment = useCallback(
-    () => (
-      <Giscus
-        category="Q&A"
-        categoryId="DIC_kwDOJloKoM4CXsCu"
-        id="lobehub"
-        mapping="title"
-        repo="lobehub/lobe-ui"
-        repoId="R_kgDOJloKoA"
-      />
-    ),
-    [location.pathname],
+    () =>
+      giscus && (
+        <Giscus
+          category={giscus.category}
+          categoryId={giscus.categoryId}
+          id="lobehub"
+          mapping="title"
+          repo={giscus.repo}
+          repoId={giscus.repoId}
+        />
+      ),
+    [giscus, location.pathname],
   );
   return (
     <>
@@ -41,7 +45,7 @@ const Documents = memo(() => {
         ) : undefined}
         <Content>
           {outlet}
-          <Comment />
+          {giscus && <Comment />}
         </Content>
       </Center>
     </>

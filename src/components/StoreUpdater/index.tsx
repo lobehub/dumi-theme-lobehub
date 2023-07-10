@@ -64,7 +64,7 @@ const homeNav = {
 };
 
 export const StoreUpdater = () => {
-  const siteData = useSiteData();
+  const siteData: any = useSiteData();
   const sidebar = useSidebarData();
   const routeMeta = useRouteMeta();
   const tabMeta = useTabMeta();
