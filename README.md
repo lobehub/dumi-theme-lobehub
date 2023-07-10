@@ -135,10 +135,13 @@ $ pnpm start
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: <kbd>**1**</kbd>
+> 📊 Total: <kbd>**2**</kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
+</a>
+<a href="https://github.com/actions-user" title="actions-user">
+  <img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="50" />
 </a>
 
 <!-- CONTRIBUTION END -->
