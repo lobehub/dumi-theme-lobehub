@@ -1,8 +1,9 @@
 import { ActionIcon, TabsNav } from '@lobehub/ui';
 import { type IPreviewerProps, openCodeSandbox, openStackBlitz, useIntl } from 'dumi';
-import SourceCode from 'dumi/theme-default/builtins/SourceCode';
 import { Code, Code2, Codesandbox, MonitorUp, Zap } from 'lucide-react';
 import { type FC, type ReactNode, useState } from 'react';
+
+import SourceCode from '@/builtins/SourceCode';
 
 import { useStyles } from './style';
 
