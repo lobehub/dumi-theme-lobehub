@@ -77,7 +77,7 @@ export default defineConfig({
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
-  ssr: isProduction ? {} : false,
+  ssr: false,
   styles: [
     `html, body { background: transparent;  }
 
