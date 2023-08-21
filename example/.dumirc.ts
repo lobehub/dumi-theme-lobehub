@@ -3,7 +3,6 @@ import { resolve } from 'node:path';
 
 import { homepage, name } from '../package.json';
 
-const isProduction = process.env.NODE_ENV === 'production';
 const isWin = process.platform === 'win32';
 
 const themeConfig = {
