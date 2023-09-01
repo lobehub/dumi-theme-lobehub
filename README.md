@@ -135,7 +135,7 @@ $ pnpm start
 
 <!-- CONTRIBUTION GROUP -->
 
-> 📊 Total: <kbd>**3**</kbd>
+> 📊 Total: <kbd>**4**</kbd>
 
 <a href="https://github.com/canisminor1990" title="canisminor1990">
   <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
@@ -145,6 +145,9 @@ $ pnpm start
 </a>
 <a href="https://github.com/arvinxx" title="arvinxx">
   <img src="https://avatars.githubusercontent.com/u/28616219?v=4" width="50" />
+</a>
+<a href="https://github.com/apps/dependabot" title="dependabot[bot]">
+  <img src="https://avatars.githubusercontent.com/in/29110?v=4" width="50" />
 </a>
 
 <!-- CONTRIBUTION END -->
