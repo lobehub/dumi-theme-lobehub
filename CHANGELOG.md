@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.6.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.6.0...v1.6.1)
+
+<sup>Released on **2023-09-06**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Auto scroll to top when change route.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Auto scroll to top when change route ([c0e9354](https://github.com/lobehub/dumi-theme-lobehub/commit/c0e9354))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.6.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.5.0...v1.6.0)
 
 <sup>Released on **2023-08-15**</sup>
