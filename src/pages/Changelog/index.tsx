@@ -1,7 +1,7 @@
 import { useResponsive } from 'antd-style';
 import { useOutlet } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { Center } from 'react-layout-kit';
 import { shallow } from 'zustand/shallow';
 
@@ -28,6 +28,11 @@ const Changelog = memo(() => {
   );
 
   const { styles } = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.scrollTo(0, 0);
+  }, []);
 
   return (
     <>

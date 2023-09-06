@@ -1,7 +1,7 @@
 import { Giscus } from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import { useOutlet } from 'dumi';
-import { memo, useCallback } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 import { Center } from 'react-layout-kit';
 import { shallow } from 'zustand/shallow';
 
@@ -19,6 +19,11 @@ const Documents = memo(() => {
     shallow,
   );
   const { styles } = useStyles();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.scrollTo(0, 0);
+  }, [location.pathname]);
 
   const Comment = useCallback(
     () =>

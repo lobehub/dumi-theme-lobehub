@@ -1,6 +1,6 @@
-import { Skeleton, Typography } from 'antd';
+import { Skeleton } from 'antd';
 import { useResponsive } from 'antd-style';
-import { memo } from 'react';
+import { memo, useEffect } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import ContentFooter from '@/slots/ContentFooter';
@@ -15,11 +15,15 @@ const Content = memo<DivProps>(({ children, ...props }) => {
   const { styles, cx } = useStyles();
   const { mobile } = useResponsive();
 
+  useEffect(() => {
+    document.body.scrollTo(0, 0);
+  }, [loading]);
+
   return (
     <Flexbox gap={mobile ? 0 : 24} width={'100%'} {...props}>
-      <Typography />
+      <div style={{ height: 0 }} />
       <div className={cx('dumi-antd-style-content', styles.content)}>
-        <Skeleton active loading={loading} paragraph />
+        <Skeleton active loading={loading} paragraph style={{ minHeight: '50vh' }} />
         <div
           style={{
             display: loading ? 'none' : undefined,
