@@ -62,7 +62,7 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 Quick Start Installation It is recommended to use `pnpm` for installation:
 
 ```bash
-pnpm add dumi-theme-antd-style -D
+pnpm add dumi-theme-lobehub -D
 ```
 
 <div align="right">
