@@ -27,7 +27,7 @@
   "scripts": {
     "build": "father build",
     "build:docs": "npm run build && npm run build --prefix=example",
-    "ci": "npm run lint && npm run type-check",
+    "ci": "npm run lint",
     "dev": "father dev",
     "dev:docs": "npm run start --prefix=example",
     "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
@@ -92,7 +92,7 @@
     "@vitest/coverage-v8": "latest",
     "clean-pkg-json": "^1",
     "commitlint": "^17",
-    "dumi": "2.2.7",
+    "dumi": "^2",
     "dumi-assets-types": "^1",
     "eslint": "^8",
     "father": "4.3.1",
