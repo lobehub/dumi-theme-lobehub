@@ -11,9 +11,7 @@ const Features = memo(() => {
 
   if (!features?.length) return;
 
-  return (
-    <F contentMaxWidth={theme.contentMaxWidth} items={features} style={{ margin: '0 16px' }} />
-  );
+  return <F items={features} style={{ margin: '0 16px', maxWidth: theme.contentMaxWidth }} />;
 });
 
 export default Features;

@@ -16,15 +16,15 @@ export const getColumns = ({ github }: GetColumnParameters) => {
         url: 'https://github.com/lobehub/lobe-ui',
       },
       {
-        description: 'Chatbot Client',
+        description: 'Awesome lint configs',
         openExternal: true,
-        title: 'Lobe Chat',
+        title: 'Lobe Lint',
         url: 'https://github.com/lobehub/lobe-chat',
       },
       {
-        description: 'Node Flow Editor',
+        description: 'Lobe Dumi Theme',
         openExternal: true,
-        title: 'Lobe Flow',
+        title: 'Dsigned for Dumi 2',
         url: 'https://github.com/lobehub/lobe-flow',
       },
     ],
@@ -69,16 +69,34 @@ export const getColumns = ({ github }: GetColumnParameters) => {
   const more: FooterColumn = {
     items: [
       {
+        description: 'OpenAI Chat Bot',
+        openExternal: true,
+        title: '🤖 Lobe Chat',
+        url: 'https://github.com/lobehub/lobe-chat',
+      },
+      {
+        description: 'Stable Diffusion Extension',
+        openExternal: true,
+        title: '🤯 Lobe Theme',
+        url: 'https://github.com/lobehub/sd-webui-lobe-theme',
+      },
+      {
+        description: 'Gen intelligently',
+        openExternal: true,
+        title: '📝 Readme Generator',
+        url: 'https://ui.lobehub.com',
+      },
+      {
         description: 'AI Commit CLI',
         openExternal: true,
         title: '💌 Lobe Commit',
         url: 'https://github.com/lobehub/lobe-commit',
       },
       {
-        description: 'Lint Config',
+        description: 'AI i18n CLI',
         openExternal: true,
-        title: '📐 Lobe Lint',
-        url: 'https://github.com/lobehub/lobe-lint',
+        title: '🌐 Lobe i18n',
+        url: 'https://github.com/lobehub/lobe-commit',
       },
     ],
     title: 'More Products',

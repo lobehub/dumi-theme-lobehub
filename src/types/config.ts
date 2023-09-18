@@ -1,4 +1,5 @@
-import type { FeaturesProps, FooterProps, HeroProps } from '@lobehub/ui';
+import type { FeaturesProps, FooterProps, HeroProps, LogoProps } from '@lobehub/ui';
+import { FooterColumn } from 'rc-footer/es/column';
 
 import type { SiteCustomToken } from '@/styles/customToken';
 
@@ -9,17 +10,21 @@ export interface ApiHeaderConfig {
   match?: string[];
   pkg?: string;
   sourceUrl?: string | false;
+  type?: 'component' | 'doc';
 }
 
 export interface FooterConfig {
   bottom?: FooterProps['bottom'];
   columns?: FooterProps['columns'];
+  moreProducts?: FooterColumn;
+  resources?: FooterColumn;
 }
 
 export interface SiteThemeConfig {
   actions: HeroProps['actions'];
   apiHeader?: ApiHeaderConfig | false;
   description?: string;
+  docStyle?: 'block' | 'pure';
   features: FeaturesProps['items'];
   footer?: string | false;
   footerConfig?: FooterConfig;
@@ -32,6 +37,7 @@ export interface SiteThemeConfig {
   hero?: HeroConfig | Record<string, HeroConfig>;
   hideHomeNav?: boolean;
   logo?: string;
+  logoType?: LogoProps['type'];
   name?: string;
   siteToken?: SiteConfigToken;
   socialLinks?: {

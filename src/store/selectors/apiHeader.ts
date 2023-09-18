@@ -37,6 +37,7 @@ export const apiHeaderSel = (s: SiteStore): ApiHeaderProps => {
   };
 
   const {
+    type = 'component',
     pkg: package_ = s.siteData.pkg.name,
     sourceUrl: sourceUrlMatch,
     docUrl: documentUrlMatch,
@@ -64,5 +65,6 @@ export const apiHeaderSel = (s: SiteStore): ApiHeaderProps => {
     pkg: displayPackage,
     sourceUrl,
     title: fm.title,
+    type,
   };
 };

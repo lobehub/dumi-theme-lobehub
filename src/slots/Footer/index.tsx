@@ -7,26 +7,27 @@ import { Center, Flexbox } from 'react-layout-kit';
 import { shallow } from 'zustand/shallow';
 
 import { githubSel, useSiteStore } from '@/store';
-import { FooterConfig } from '@/types';
 
 import { getColumns } from './columns';
 import { useStyles } from './style';
 
 const Footer = memo(() => {
   const { themeConfig, pkg } = useSiteStore((s) => s.siteData, isEqual);
+  const { footerConfig, footer } = themeConfig;
   const githubUrl = useSiteStore(githubSel, shallow);
   const { styles, theme } = useStyles();
   const { mobile } = useResponsive();
 
-  if (!themeConfig.footer) return;
+  if (!footer) return;
 
-  const footer = themeConfig.footerConfig as FooterConfig;
-
-  const columns = footer?.columns
-    ? undefined
+  const columns = footerConfig?.columns
+    ? footerConfig?.columns
     : getColumns({ github: githubUrl || (pkg as any).homepage });
 
-  const bottomFooter = footer?.bottom || themeConfig.footer;
+  if (footerConfig?.resources) columns[0] = footerConfig?.resources;
+  if (footerConfig?.resources) columns[0] = footerConfig?.resources;
+
+  const bottomFooter = footerConfig?.bottom || footer;
 
   return (
     <Foot

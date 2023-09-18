@@ -1,18 +1,19 @@
 import { Skeleton } from 'antd';
 import { useResponsive } from 'antd-style';
+import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import ContentFooter from '@/slots/ContentFooter';
-import { useSiteStore } from '@/store';
+import { themeConfig, useSiteStore } from '@/store';
 import { DivProps } from '@/types';
 
 import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ children, ...props }) => {
   const loading = useSiteStore((s) => s.siteData.loading);
-
-  const { styles, cx } = useStyles();
+  const { docStyle } = useSiteStore(themeConfig, isEqual);
+  const { styles, cx } = useStyles(docStyle === 'pure');
   const { mobile } = useResponsive();
 
   useEffect(() => {

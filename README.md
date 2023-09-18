@@ -10,18 +10,17 @@
 
 dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. <br/>It provides a more beautiful and user-friendly development and reading experience based on `@lobehub/ui`
 
-[Changelog](./CHANGELOG.md) · [Report Bug][issues-url] · [Request Feature][issues-url]
+[![][npm-release-shield]][npm-release-link]
+[![][github-releasedate-shield]][github-releasedate-link]
+[![][github-action-test-shield]][github-action-test-link]
+[![][github-action-release-shield]][github-action-release-link]<br/>
+[![][github-contributors-shield]][github-contributors-link]
+[![][github-forks-shield]][github-forks-link]
+[![][github-stars-shield]][github-stars-link]
+[![][github-issues-shield]][github-issues-link]
+[![][github-license-shield]][github-license-link]
 
-<!-- SHIELD GROUP -->
-
-[![release][release-shield]][release-url]
-[![releaseDate][release-date-shield]][release-date-url]
-[![ciTest][ci-test-shield]][ci-test-url]
-[![ciRelease][ci-release-shield]][ci-release-url] <br/>
-[![contributors][contributors-shield]][contributors-url]
-[![forks][forks-shield]][forks-url]
-[![stargazers][stargazers-shield]][stargazers-url]
-[![issues][issues-shield]][issues-url]
+[Changelog](./CHANGELOG.md) · [Report Bug][github-issues-link] · [Request Feature][github-issues-link]
 
 ![](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -59,10 +58,12 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 
 ## 📦 Installation
 
-Quick Start Installation It is recommended to use `pnpm` for installation:
+To install `dumi-theme-lobehub`, run the following command:
+
+[![][bun-shield]][bun-link]
 
 ```bash
-pnpm add dumi-theme-lobehub -D
+$ bun add dumi dumi-theme-lobehub
 ```
 
 <div align="right">
@@ -102,7 +103,8 @@ interface SiteThemeConfig {
 }
 ```
 
-> 👉 Tip: For detailed configuration, please refer to the [Type file](https://github.com/lobehub/dumi-theme-lobehub/blob/master/src/types/config.ts) | [Example](https://github.com/lobehub/dumi-theme-lobehub/blob/master/example/.dumirc.ts).
+> **Note**\
+> For detailed configuration, please refer to the [Type file](https://github.com/lobehub/dumi-theme-lobehub/blob/master/src/types/config.ts) | [Example](https://github.com/lobehub/dumi-theme-lobehub/blob/master/example/.dumirc.ts).
 
 <div align="right">
 
@@ -112,17 +114,19 @@ interface SiteThemeConfig {
 
 ## ⌨️ Local Development
 
-You can use Gitpod for online development:
+You can use Github Codespaces for online development:
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)][gitpod-url]
+[![][github-codespace-shield]][github-codespace-link]
 
 Or clone it for local development:
+
+[![][bun-shield]][bun-link]
 
 ```bash
 $ git clone https://github.com/lobehub/dumi-theme-lobehub.git
 $ cd dumi-theme-lobehub
-$ pnpm install
-$ pnpm start
+$ bun install
+$ bun dev
 ```
 
 <div align="right">
@@ -133,27 +137,11 @@ $ pnpm start
 
 ## 🤝 Contributing
 
-<!-- CONTRIBUTION GROUP -->
+Contributions of all types are more than welcome, if you are interested in contributing code, feel free to check out our GitHub [Issues][github-issues-link] to get stuck in to show us what you’re made of.
 
-> 📊 Total: <kbd>**5**</kbd>
+[![][pr-welcome-shield]][pr-welcome-link]
 
-<a href="https://github.com/canisminor1990" title="canisminor1990">
-  <img src="https://avatars.githubusercontent.com/u/17870709?v=4" width="50" />
-</a>
-<a href="https://github.com/actions-user" title="actions-user">
-  <img src="https://avatars.githubusercontent.com/u/65916846?v=4" width="50" />
-</a>
-<a href="https://github.com/arvinxx" title="arvinxx">
-  <img src="https://avatars.githubusercontent.com/u/28616219?v=4" width="50" />
-</a>
-<a href="https://github.com/lobehubbot" title="lobehubbot">
-  <img src="https://avatars.githubusercontent.com/u/134299653?v=4" width="50" />
-</a>
-<a href="https://github.com/apps/dependabot" title="dependabot[bot]">
-  <img src="https://avatars.githubusercontent.com/in/29110?v=4" width="50" />
-</a>
-
-<!-- CONTRIBUTION END -->
+[![][github-contrib-shield]][github-contrib-link]
 
 <div align="right">
 
@@ -165,54 +153,36 @@ $ pnpm start
 
 #### 📝 License
 
-Copyright © 2023 [LobeHub][profile-url]. <br />
+Copyright © 2023 [LobeHub][profile-link]. <br />
 This project is [MIT](./LICENSE) licensed.
 
 <!-- LINK GROUP -->
 
-[profile-url]: https://github.com/lobehub
-[gitpod-url]: https://gitpod.io/#https://github.com/lobehub/dumi-theme-lobehub
-
-<!-- SHIELD LINK GROUP -->
-
-[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square
-
-<!-- release -->
-
-[release-shield]: https://img.shields.io/npm/v/dumi-theme-lobehub?label=%F0%9F%A4%AF%20NPM
-[release-url]: https://www.npmjs.com/package/dumi-theme-lobehub
-
-<!-- releaseDate -->
-
-[release-date-shield]: https://img.shields.io/github/release-date/lobehub/dumi-theme-lobehub?style=flat
-[release-date-url]: https://github.com/lobehub/dumi-theme-lobehub/releases
-
-<!-- ciTest -->
-
-[ci-test-shield]: https://github.com/lobehub/dumi-theme-lobehub/workflows/Test%20CI/badge.svg
-[ci-test-url]: https://github.com/lobehub/dumi-theme-lobehub/actions?query=workflow%3ATest%20CI
-
-<!-- ciRelease -->
-
-[ci-release-shield]: https://github.com/lobehub/dumi-theme-lobehub/workflows/Release%20CI/badge.svg
-[ci-release-url]: https://github.com/lobehub/dumi-theme-lobehub/actions?query=workflow%3ARelease%20CI
-
-<!-- contributors -->
-
-[contributors-shield]: https://img.shields.io/github/contributors/lobehub/dumi-theme-lobehub.svg?style=flat
-[contributors-url]: https://github.com/lobehub/dumi-theme-lobehub/graphs/contributors
-
-<!-- forks -->
-
-[forks-shield]: https://img.shields.io/github/forks/lobehub/dumi-theme-lobehub.svg?style=flat
-[forks-url]: https://github.com/lobehub/dumi-theme-lobehub/network/members
-
-<!-- stargazers -->
-
-[stargazers-shield]: https://img.shields.io/github/stars/lobehub/dumi-theme-lobehub.svg?style=flat
-[stargazers-url]: https://github.com/lobehub/dumi-theme-lobehub/stargazers
-
-<!-- issues -->
-
-[issues-shield]: https://img.shields.io/github/issues/lobehub/dumi-theme-lobehub.svg?style=flat
-[issues-url]: https://github.com/lobehub/dumi-theme-lobehub/issues/new/choose
+[back-to-top]: https://img.shields.io/badge/-BACK_TO_TOP-black?style=flat-square
+[bun-link]: https://bun.sh
+[bun-shield]: https://img.shields.io/badge/-speedup%20with%20bun-black?logo=bun&style=for-the-badge
+[github-action-release-link]: https://github.com/lobehub/dumi-theme-lobehub/actions/workflows/release.yml
+[github-action-release-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/dumi-theme-lobehub/release.yml?label=release&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-action-test-link]: https://github.com/lobehub/dumi-theme-lobehub/actions/workflows/test.yml
+[github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/dumi-theme-lobehub/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
+[github-codespace-link]: https://codespaces.new/lobehub/dumi-theme-lobehub
+[github-codespace-shield]: https://github.com/codespaces/badge.svg
+[github-contrib-link]: https://github.com/lobehub/dumi-theme-lobehub/graphs/contributors
+[github-contrib-shield]: https://contrib.rocks/image?repo=lobehub%2Fdumi-theme-lobehub
+[github-contributors-link]: https://github.com/lobehub/dumi-theme-lobehub/graphs/contributors
+[github-contributors-shield]: https://img.shields.io/github/contributors/lobehub/dumi-theme-lobehub?color=c4f042&labelColor=black&style=flat-square
+[github-forks-link]: https://github.com/lobehub/dumi-theme-lobehub/network/members
+[github-forks-shield]: https://img.shields.io/github/forks/lobehub/dumi-theme-lobehub?color=8ae8ff&labelColor=black&style=flat-square
+[github-issues-link]: https://github.com/lobehub/dumi-theme-lobehub/issues
+[github-issues-shield]: https://img.shields.io/github/issues/lobehub/dumi-theme-lobehub?color=ff80eb&labelColor=black&style=flat-square
+[github-license-link]: https://github.com/lobehub/dumi-theme-lobehub/blob/main/LICENSE
+[github-license-shield]: https://img.shields.io/github/license/lobehub/dumi-theme-lobehub?color=white&labelColor=black&style=flat-square
+[github-releasedate-link]: https://github.com/lobehub/dumi-theme-lobehub/releases
+[github-releasedate-shield]: https://img.shields.io/github/release-date/lobehub/dumi-theme-lobehub?labelColor=black&style=flat-square
+[github-stars-link]: https://github.com/lobehub/dumi-theme-lobehub/network/stargazers
+[github-stars-shield]: https://img.shields.io/github/stars/lobehub/dumi-theme-lobehub?color=ffcb47&labelColor=black&style=flat-square
+[npm-release-link]: https://www.npmjs.com/package/@lobehub/chat
+[npm-release-shield]: https://img.shields.io/npm/v/@lobehub/chat?color=369eff&labelColor=black&logo=npm&logoColor=white&style=flat-square
+[pr-welcome-link]: https://github.com/lobehub/dumi-theme-lobehub/pulls
+[pr-welcome-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
+[profile-link]: https://github.com/lobehub

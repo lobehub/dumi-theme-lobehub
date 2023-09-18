@@ -5,6 +5,8 @@ import { Edit3, Github } from 'lucide-react';
 import { type ReactNode, memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
+import { ApiHeaderConfig } from '@/types';
+
 import { useStyles } from './style';
 
 /**
@@ -12,7 +14,7 @@ import { useStyles } from './style';
  * @category Props
  * @description ApiHeader 组件的 props 类型定义
  */
-export interface ApiHeaderProps {
+export interface ApiHeaderProps extends ApiHeaderConfig {
   /**
    * @title 组件名
    * @description ApiHeader 组件的名称
@@ -29,21 +31,6 @@ export interface ApiHeaderProps {
    * @description ApiHeader 组件的描述信息
    */
   description?: string;
-  /**
-   * @title 文档链接
-   * @description ApiHeader 组件文档的链接
-   */
-  docUrl?: string;
-  /**
-   * @title 包名
-   * @description ApiHeader 组件所在的包名
-   */
-  pkg?: string;
-  /**
-   * @title 源代码链接
-   * @description ApiHeader 组件源代码的链接
-   */
-  sourceUrl?: string;
   /**
    * @title 标题
    * @description ApiHeader 组件的标题
@@ -88,6 +75,7 @@ export interface ServiceItem {
 export const ApiHeader = memo<ApiTitleProps>(
   ({
     title,
+    type,
     componentName,
     description,
     defaultImport,
@@ -98,6 +86,7 @@ export const ApiHeader = memo<ApiTitleProps>(
   }) => {
     const { styles } = useStyles();
     const { mobile } = useResponsive();
+    const isDoc = type === 'doc';
 
     const items = [
       sourceUrl && {
@@ -126,42 +115,44 @@ export const ApiHeader = memo<ApiTitleProps>(
             </Typography.Text>
           </div>
         )}
-        <Flexbox gap={mobile ? 16 : 24} style={{ marginTop: 16 }}>
-          {componentName && (
-            <div style={{ display: 'flex' }}>
-              <Snippet spotlight>{importString}</Snippet>
-            </div>
-          )}
-          <Divider dashed style={{ margin: '2px 0' }} />
-          <Flexbox distribution={'space-between'} gap={mobile ? 24 : 0} horizontal={!mobile}>
-            <Space split={<Divider type={'vertical'} />} wrap>
-              {serviceList.map((item) => (
-                <a
-                  href={item.url}
-                  key={item.label}
-                  rel="noreferrer"
-                  target={'_blank'}
-                  title={item.label}
-                >
-                  <Flexbox align={'center'} className={styles.text} gap={8} horizontal>
-                    {item.icon}
-                    {item.children}
-                  </Flexbox>
-                </a>
-              ))}
-            </Space>
-            <Space className={styles.meta} split={<Divider type={'vertical'} />}>
-              {items.map((item, index) => (
-                <a href={item.url} key={index} rel="noreferrer" target={'_blank'}>
-                  <Flexbox align={'center'} className={styles.text} gap={8} horizontal>
-                    {item.icon}
-                    {item.children}
-                  </Flexbox>
-                </a>
-              ))}
-            </Space>
+        {!isDoc && (
+          <Flexbox gap={mobile ? 16 : 24} style={{ marginTop: 16 }}>
+            {componentName && (
+              <div style={{ display: 'flex' }}>
+                <Snippet spotlight>{importString}</Snippet>
+              </div>
+            )}
+            <Divider dashed style={{ margin: '2px 0' }} />
+            <Flexbox distribution={'space-between'} gap={mobile ? 24 : 0} horizontal={!mobile}>
+              <Space split={<Divider type={'vertical'} />} wrap>
+                {serviceList.map((item) => (
+                  <a
+                    href={item.url}
+                    key={item.label}
+                    rel="noreferrer"
+                    target={'_blank'}
+                    title={item.label}
+                  >
+                    <Flexbox align={'center'} className={styles.text} gap={8} horizontal>
+                      {item.icon}
+                      {item.children}
+                    </Flexbox>
+                  </a>
+                ))}
+              </Space>
+              <Space className={styles.meta} split={<Divider type={'vertical'} />}>
+                {items.map((item, index) => (
+                  <a href={item.url} key={index} rel="noreferrer" target={'_blank'}>
+                    <Flexbox align={'center'} className={styles.text} gap={8} horizontal>
+                      {item.icon}
+                      {item.children}
+                    </Flexbox>
+                  </a>
+                ))}
+              </Space>
+            </Flexbox>
           </Flexbox>
-        </Flexbox>
+        )}
       </Flexbox>
     );
   },

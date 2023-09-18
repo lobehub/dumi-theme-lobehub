@@ -1,29 +1,34 @@
-import { Logo as SiteLogo } from '@lobehub/ui';
+import { Avatar, Logo as SiteLogo } from '@lobehub/ui';
 import { useResponsive } from 'antd-style';
 import { Link } from 'dumi';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 
+import { themeConfig } from '@/store/selectors/siteBasicInfo';
 import { useSiteStore } from '@/store/useSiteStore';
 
 import { useStyles } from './style';
 
 const Logo = memo(() => {
-  const themeConfig = useSiteStore((s) => s.siteData.themeConfig, isEqual);
+  const config = useSiteStore(themeConfig, isEqual);
   const locale = useSiteStore((s) => s.locale, isEqual);
   const { styles, cx } = useStyles();
   const { mobile } = useResponsive();
 
   return (
-    themeConfig && (
+    config && (
       <Link className={cx(styles)} to={'base' in locale ? locale.base : '/'}>
-        {themeConfig.logo ? (
+        {config.logo ? (
           <>
-            <img height={mobile ? 32 : 36} src={themeConfig.logo} />
-            {themeConfig.name}
+            <Avatar avatar={config.logo} size={mobile ? 32 : 36} />
+            {config.name}
           </>
         ) : (
-          <SiteLogo extra={themeConfig.name} size={mobile ? 32 : 36} type="combine" />
+          <SiteLogo
+            extra={config.name}
+            size={mobile ? 32 : 36}
+            type={config.logoType || 'combine'}
+          />
         )}
       </Link>
     )

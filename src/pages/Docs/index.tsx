@@ -28,14 +28,16 @@ const Documents = memo(() => {
   const Comment = useCallback(
     () =>
       giscus && (
-        <Giscus
-          category={giscus.category}
-          categoryId={giscus.categoryId}
-          id="lobehub"
-          mapping="title"
-          repo={giscus.repo}
-          repoId={giscus.repoId}
-        />
+        <div style={{ marginTop: 64 }}>
+          <Giscus
+            category={giscus.category}
+            categoryId={giscus.categoryId}
+            id="lobehub"
+            mapping="title"
+            repo={giscus.repo}
+            repoId={giscus.repoId}
+          />
+        </div>
       ),
     [giscus, location.pathname],
   );

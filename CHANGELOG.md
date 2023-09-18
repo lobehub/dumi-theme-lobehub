@@ -2,7 +2,7 @@
 
 # Changelog
 
-### [Version 1.6.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.6.0...v1.6.1)
+### [Version 1.6.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.6.0...v1.6.1)
 
 <sup>Released on **2023-09-06**</sup>
 
@@ -27,7 +27,7 @@
 
 </div>
 
-## [Version 1.6.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.5.0...v1.6.0)
+## [Version 1.6.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.5.0...v1.6.0)
 
 <sup>Released on **2023-08-15**</sup>
 
@@ -52,7 +52,7 @@
 
 </div>
 
-## [Version 1.5.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.4.1...v1.5.0)
+## [Version 1.5.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.4.1...v1.5.0)
 
 <sup>Released on **2023-08-15**</sup>
 
@@ -77,7 +77,7 @@
 
 </div>
 
-### [Version 1.4.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.4.0...v1.4.1)
+### [Version 1.4.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.4.0...v1.4.1)
 
 <sup>Released on **2023-07-18**</sup>
 
@@ -102,7 +102,7 @@
 
 </div>
 
-## [Version 1.4.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.3.0...v1.4.0)
+## [Version 1.4.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.3.0...v1.4.0)
 
 <sup>Released on **2023-07-10**</sup>
 
@@ -127,7 +127,7 @@
 
 </div>
 
-## [Version 1.3.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.2.0...v1.3.0)
+## [Version 1.3.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.2.0...v1.3.0)
 
 <sup>Released on **2023-07-09**</sup>
 
@@ -152,7 +152,7 @@
 
 </div>
 
-## [Version 1.2.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.1.1...v1.2.0)
+## [Version 1.2.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.1.1...v1.2.0)
 
 <sup>Released on **2023-07-09**</sup>
 
@@ -177,7 +177,7 @@
 
 </div>
 
-### [Version 1.1.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.1.0...v1.1.1)
+### [Version 1.1.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.1.0...v1.1.1)
 
 <sup>Released on **2023-07-09**</sup>
 
@@ -202,7 +202,7 @@
 
 </div>
 
-## [Version 1.1.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.0.0...v1.1.0)
+## [Version 1.1.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.0.0...v1.1.0)
 
 <sup>Released on **2023-07-09**</sup>
 
@@ -227,7 +227,7 @@
 
 </div>
 
-## Version 1.0.0
+## Version 1.0.0
 
 <sup>Released on **2023-07-09**</sup>
 
