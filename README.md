@@ -81,6 +81,7 @@ interface SiteThemeConfig {
   actions: HeroProps['actions'];
   apiHeader?: ApiHeaderConfig | false;
   description?: string;
+  docStyle?: 'block' | 'pure';
   features: FeaturesProps['items'];
   footer?: string | false;
   footerConfig?: FooterConfig;
@@ -93,6 +94,7 @@ interface SiteThemeConfig {
   hero?: HeroConfig | Record<string, HeroConfig>;
   hideHomeNav?: boolean;
   logo?: string;
+  logoType?: LogoProps['type'];
   name?: string;
   siteToken?: SiteConfigToken;
   socialLinks?: {
@@ -104,7 +106,7 @@ interface SiteThemeConfig {
 ```
 
 > **Note**\
-> For detailed configuration, please refer to the [Type file](https://github.com/lobehub/dumi-theme-lobehub/blob/master/src/types/config.ts) | [Example](https://github.com/lobehub/dumi-theme-lobehub/blob/master/example/.dumirc.ts).
+> For detailed configuration, please refer to the [📘 Type file](https://github.com/lobehub/dumi-theme-lobehub/blob/master/src/types/config.ts) / [📘 Example](https://github.com/lobehub/dumi-theme-lobehub/blob/master/example/.dumirc.ts).
 
 <div align="right">
 
@@ -119,8 +121,6 @@ You can use Github Codespaces for online development:
 [![][github-codespace-shield]][github-codespace-link]
 
 Or clone it for local development:
-
-[![][bun-shield]][bun-link]
 
 ```bash
 $ git clone https://github.com/lobehub/dumi-theme-lobehub.git
@@ -149,6 +149,19 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 </div>
 
+## 🔗 Links
+
+### More Products
+
+- **[🍭 Lobe UI](https://github.com/lobehub/lobe-ui)** - An open-source UI component library for building AIGC web apps.
+- **[🤖 Lobe Chat](https://github.com/lobehub/lobe-chat)** - An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🤯 Lobe Theme](https://github.com/lobehub/sd-webui-lobe-theme)** - The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.
+
+<div align="right">
+
+[![][back-to-top]](#readme-top)
+
+</div>
 ---
 
 #### 📝 License
