@@ -7,13 +7,13 @@ import { shallow } from 'zustand/shallow';
 
 import { activePathSel, useSiteStore } from '@/store';
 
-const useStyles = createStyles(({ css, stylish, token, responsive }) => {
+const useStyles = createStyles(({ css, stylish, token, responsive, prefixCls }) => {
   return {
     link: css`
       ${stylish.resetLinkColor}
     `,
     tabs: css`
-      .ant-tabs-tab-active a {
+      .${prefixCls}-tabs-tab-active a {
         color: ${token.colorText} !important;
       }
       ${responsive.mobile} {
