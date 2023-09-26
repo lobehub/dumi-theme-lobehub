@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.7.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.1...v1.7.2)
+
+<sup>Released on **2023-09-26**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Using dynamic prefix.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Using dynamic prefix ([6992f8c](https://github.com/lobehub/dumi-theme-lobehub/commit/6992f8c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.7.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.0...v1.7.1)
 
 <sup>Released on **2023-09-26**</sup>
