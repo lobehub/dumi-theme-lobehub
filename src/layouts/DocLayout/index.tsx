@@ -1,5 +1,4 @@
 import { ThemeProvider } from '@lobehub/ui';
-import { extractStaticStyle } from 'antd-style';
 import { memo } from 'react';
 import { shallow } from 'zustand/shallow';
 
@@ -11,9 +10,6 @@ import customToken from '@/styles/customToken';
 
 import DocumentLayout from './DocumentLayout';
 
-// @ts-ignore
-global.__ANTD_CACHE__ = extractStaticStyle.cache;
-
 const App = memo(() => {
   const themeMode = useThemeStore((st) => st.themeMode, shallow);
 
@@ -21,11 +17,7 @@ const App = memo(() => {
     <>
       <Favicons />
       <StoreUpdater />
-      <ThemeProvider
-        cache={extractStaticStyle.cache}
-        customToken={customToken}
-        themeMode={themeMode}
-      >
+      <ThemeProvider customToken={customToken} themeMode={themeMode}>
         <GlobalStyle />
         <DocumentLayout />
       </ThemeProvider>
