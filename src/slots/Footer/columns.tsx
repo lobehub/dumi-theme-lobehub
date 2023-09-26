@@ -24,7 +24,7 @@ export const getColumns = ({ github }: GetColumnParameters) => {
       {
         description: 'Lobe Dumi Theme',
         openExternal: true,
-        title: 'Dsigned for Dumi 2',
+        title: 'Designed for Dumi 2',
         url: 'https://github.com/lobehub/lobe-flow',
       },
     ],
