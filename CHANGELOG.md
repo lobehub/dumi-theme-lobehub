@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.7.3](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.2...v1.7.3)
+
+<sup>Released on **2023-10-09**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Replace StroyBook with StoryBook.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Replace StroyBook with StoryBook ([fcd9e30](https://github.com/lobehub/dumi-theme-lobehub/commit/fcd9e30))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.7.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.1...v1.7.2)
 
 <sup>Released on **2023-09-26**</sup>
