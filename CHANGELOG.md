@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.7.4](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.3...v1.7.4)
+
+<sup>Released on **2023-10-18**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Apply siteToken configuration.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Apply siteToken configuration ([7a37f54](https://github.com/lobehub/dumi-theme-lobehub/commit/7a37f54))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.7.3](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.2...v1.7.3)
 
 <sup>Released on **2023-10-09**</sup>
