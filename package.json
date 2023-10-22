@@ -88,7 +88,7 @@
     "zustand": "^4"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17",
+    "@commitlint/cli": "^18.0.0",
     "@lobehub/lint": "latest",
     "@types/lodash-es": "^4",
     "@types/node": "^20",
