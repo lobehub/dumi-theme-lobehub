@@ -25,7 +25,7 @@ const Footer = memo(() => {
     : getColumns({ github: githubUrl || (pkg as any).homepage });
 
   if (footerConfig?.resources) columns[0] = footerConfig?.resources;
-  if (footerConfig?.resources) columns[0] = footerConfig?.resources;
+  if (footerConfig?.moreProducts) columns[3] = footerConfig?.moreProducts;
 
   const bottomFooter = footerConfig?.bottom || footer;
 
