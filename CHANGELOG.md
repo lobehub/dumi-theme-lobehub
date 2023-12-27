@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.7.5](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.4...v1.7.5)
+
+<sup>Released on **2023-12-27**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Overwrite columns when footerConfig.moreProducts specify.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Overwrite columns when footerConfig.moreProducts specify ([251fd90](https://github.com/lobehub/dumi-theme-lobehub/commit/251fd90))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.7.4](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.3...v1.7.4)
 
 <sup>Released on **2023-10-18**</sup>
