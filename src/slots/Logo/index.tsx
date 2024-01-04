@@ -1,4 +1,5 @@
 import { Avatar, Logo as SiteLogo } from '@lobehub/ui';
+import { Space } from 'antd';
 import { useResponsive } from 'antd-style';
 import { Link } from 'dumi';
 import isEqual from 'fast-deep-equal';
@@ -19,10 +20,10 @@ const Logo = memo(() => {
     config && (
       <Link className={cx(styles)} to={'base' in locale ? locale.base : '/'}>
         {config.logo ? (
-          <>
+          <Space>
             <Avatar avatar={config.logo} size={mobile ? 32 : 36} />
             {config.name}
-          </>
+          </Space>
         ) : (
           <SiteLogo
             extra={config.name}
