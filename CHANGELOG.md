@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.7.6](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.5...v1.7.6)
+
+<sup>Released on **2024-01-04**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add space between logo and name.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add space between logo and name ([29ddf1a](https://github.com/lobehub/dumi-theme-lobehub/commit/29ddf1a))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.7.5](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.4...v1.7.5)
 
 <sup>Released on **2023-12-27**</sup>
