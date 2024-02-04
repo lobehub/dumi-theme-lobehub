@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img height="120" src="https://registry.npmmirror.com/@lobehub/assets-logo/1.0.0/files/assets/logo-3d.webp">
+<img height="120" src="https://registry.npmmirror.com/@lobehub/assets-logo/latest/files/assets/logo-3d.webp">
 <img height="120" src="https://gw.alipayobjects.com/zos/kitchen/qJ3l3EPsdW/split.svg">
 <img height="120" src="https://gw.alipayobjects.com/zos/bmw-prod/d3e3eb39-1cd7-4aa5-827c-877deced6b7e/lalxt4g3_w256_h256.png">
 
@@ -36,6 +36,8 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 - [🤯 Usage](#-usage)
 - [⌨️ Local Development](#️-local-development)
 - [🤝 Contributing](#-contributing)
+- [🔗 Links](#-links)
+  - [More Products](#more-products)
 
 ####
 
@@ -105,7 +107,7 @@ interface SiteThemeConfig {
 }
 ```
 
-> **Note**\
+> \[!NOTE]\
 > For detailed configuration, please refer to the [📘 Type file](https://github.com/lobehub/dumi-theme-lobehub/blob/master/src/types/config.ts) / [📘 Example](https://github.com/lobehub/dumi-theme-lobehub/blob/master/example/.dumirc.ts).
 
 <div align="right">
