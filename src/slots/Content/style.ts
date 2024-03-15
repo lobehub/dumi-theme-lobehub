@@ -78,6 +78,21 @@ export const useStyles = createStyles(
             padding-inline-start: 18px;
           }
         }
+
+        summary kbd {
+          transform: unset;
+
+          padding: unset;
+
+          font-size: inherit;
+          line-height: inherit;
+          color: inherit;
+
+          background: unset;
+          border: unset;
+          box-shadow: unset;
+        }
+      }
       `,
     ),
   }),

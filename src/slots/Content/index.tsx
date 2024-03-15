@@ -1,3 +1,4 @@
+import { Typography } from '@lobehub/ui';
 import { Skeleton } from 'antd';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
@@ -22,16 +23,15 @@ const Content = memo<DivProps>(({ children, ...props }) => {
 
   return (
     <Flexbox gap={mobile ? 0 : 24} width={'100%'} {...props}>
-      <div style={{ height: 0 }} />
       <div className={cx('dumi-antd-style-content', styles.content)}>
-        <Skeleton active loading={loading} paragraph style={{ minHeight: '50vh' }} />
-        <div
+        <Skeleton active loading={loading} paragraph />
+        <Typography
           style={{
             display: loading ? 'none' : undefined,
           }}
         >
           {children}
-        </div>
+        </Typography>
       </div>
       <ContentFooter />
     </Flexbox>
