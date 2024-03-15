@@ -1,12 +1,13 @@
 import { createStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ token, responsive, css, stylish }) => ({
+export const useStyles = createStyles(({ token, responsive, css }) => ({
   content: css`
     flex: 1;
 
     box-sizing: border-box;
     width: 100%;
     min-height: 400px;
+    margin-top: 24px;
     padding: 24px 48px;
 
     background-color: ${token.colorBgContainer};
@@ -22,57 +23,18 @@ export const useStyles = createStyles(({ token, responsive, css, stylish }) => (
     }
 
     .markdown {
-      ${stylish.markdown};
-      h2,
-      h3 {
-        &[id^='version'] {
-          color: ${token.colorText};
-        }
-      }
+      summary kbd {
+        transform: unset;
 
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        transition: all 400ms ${token.motionEaseOut};
+        padding: unset;
 
-        > a[aria-hidden]:first-child {
-          float: left;
+        font-size: inherit;
+        line-height: inherit;
+        color: inherit;
 
-          width: 20px;
-          margin-inline-start: -24px;
-          padding-inline-end: 4px;
-
-          font-size: inherit;
-          line-height: inherit;
-          color: ${token.colorText};
-          text-align: right;
-
-          &:hover {
-            border: 0;
-          }
-
-          > .icon-link::before {
-            content: '#';
-            font-size: inherit;
-            color: ${token.colorTextTertiary};
-          }
-        }
-
-        &:hover {
-          color: ${token.colorText};
-        }
-
-        &:not(:hover) > a[aria-hidden]:first-child > .icon-link {
-          visibility: hidden;
-        }
-      }
-
-      ol,
-      ul {
-        padding-inline-start: 18px;
+        background: unset;
+        border: unset;
+        box-shadow: unset;
       }
     }
   `,

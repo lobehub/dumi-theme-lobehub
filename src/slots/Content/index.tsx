@@ -1,4 +1,5 @@
-import { Skeleton, Typography } from 'antd';
+import { Typography } from '@lobehub/ui';
+import { Skeleton } from 'antd';
 import { useResponsive } from 'antd-style';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
@@ -17,16 +18,15 @@ const Content = memo<DivProps>(({ children, ...props }) => {
 
   return (
     <Flexbox gap={mobile ? 0 : 24} width={'100%'} {...props}>
-      <Typography />
       <div className={cx('dumi-antd-style-content', styles.content)}>
         <Skeleton active loading={loading} paragraph />
-        <div
+        <Typography
           style={{
             display: loading ? 'none' : undefined,
           }}
         >
           {children}
-        </div>
+        </Typography>
       </div>
       <ContentFooter />
     </Flexbox>

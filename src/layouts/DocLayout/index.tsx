@@ -126,11 +126,7 @@ export default memo(() => {
     <>
       <Favicons />
       <StoreUpdater />
-      <ThemeProvider
-        cache={extractStaticStyle.cache}
-        customToken={customToken}
-        themeMode={themeMode}
-      >
+      <ThemeProvider customToken={customToken} themeMode={themeMode}>
         <GlobalStyle />
         <DocumentLayout />
       </ThemeProvider>
