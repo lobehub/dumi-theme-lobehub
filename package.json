@@ -102,7 +102,7 @@
     "eslint": "^8",
     "father": "4.3.1",
     "father-plugin-dumi-theme": "latest",
-    "husky": "^8",
+    "husky": "^9.0.0",
     "jsdom": "^22",
     "leva": "^0",
     "lint-staged": "^15.0.0",
