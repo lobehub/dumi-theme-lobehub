@@ -35,7 +35,7 @@ const Navbar = memo(() => {
         className={styles.tabs}
         items={nav.map((item) => ({
           key: String(item.activePath! || item.link),
-          label: /^(\w+:)\/\/|^(mailto|tel):/.test(item.link) ? (
+          label: /^(\w+:)\/\/|^(mailto|tel):/.test(item.link || '') ? (
             <a className={styles.link} href={String(item.link)} rel="noreferrer" target="_blank">
               {item.title}
             </a>
