@@ -1,6 +1,6 @@
 import { TabsNav } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
-import { Link, history } from 'dumi';
+import { Link } from 'dumi';
 import NavbarExtra from 'dumi/theme-default/slots/NavbarExtra';
 import { memo } from 'react';
 import { shallow } from 'zustand/shallow';
@@ -35,19 +35,16 @@ const Navbar = memo(() => {
         className={styles.tabs}
         items={nav.map((item) => ({
           key: String(item.activePath! || item.link),
-          label: (
+          label: /^(\w+:)\/\/|^(mailto|tel):/.test(item.link) ? (
+            <a className={styles.link} href={String(item.link)} rel="noreferrer" target="_blank">
+              {item.title}
+            </a>
+          ) : (
             <Link className={styles.link} to={String(item.link)}>
               {item.title}
             </Link>
           ),
         }))}
-        onChange={(path) => {
-          const url = nav.find((index) => index.activePath === path || index.link === path)?.link;
-
-          if (!url) return;
-
-          history.push(url);
-        }}
       />
       <NavbarExtra />
     </>
