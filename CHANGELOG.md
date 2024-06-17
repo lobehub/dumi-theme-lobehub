@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.8.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.7...v1.8.0)
+
+<sup>Released on **2024-06-17**</sup>
+
+#### ✨ Features
+
+- **misc**: Update README.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update README ([e46ec29](https://github.com/lobehub/dumi-theme-lobehub/commit/e46ec29))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.7.7](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.6...v1.7.7)
 
 <sup>Released on **2024-06-17**</sup>
