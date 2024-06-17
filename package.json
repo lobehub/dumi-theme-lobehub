@@ -70,7 +70,7 @@
   },
   "dependencies": {
     "@floating-ui/react": "^0.26.17",
-    "@giscus/react": "^2.4.0",
+    "@giscus/react": "^3.0.0",
     "@lobehub/ui": "^1.142.4",
     "ahooks": "^3.8.0",
     "antd": "^5.18.2",
