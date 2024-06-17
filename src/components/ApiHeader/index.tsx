@@ -1,4 +1,4 @@
-import { Icon, Snippet } from '@lobehub/ui';
+import { Icon, Markdown, Snippet } from '@lobehub/ui';
 import { Divider, Space, Typography } from 'antd';
 import { useResponsive } from 'antd-style';
 import { Edit3, Github } from 'lucide-react';
@@ -106,15 +106,9 @@ export const ApiHeader = memo<ApiTitleProps>(
       : `import { ${componentName} } from '${pkg}';`;
 
     return (
-      <Flexbox id={'api-header'}>
+      <Flexbox id={'api-header'} style={{ marginBottom: 24 }}>
         <Typography.Title className={styles.title}>{title}</Typography.Title>
-        {description && (
-          <div>
-            <Typography.Text className={styles.desc} type={'secondary'}>
-              {description}
-            </Typography.Text>
-          </div>
-        )}
+        {description && <Markdown className={styles.desc}>{description}</Markdown>}
         {!isDoc && (
           <Flexbox gap={mobile ? 16 : 24} style={{ marginTop: 16 }}>
             {componentName && (

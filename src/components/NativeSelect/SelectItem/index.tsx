@@ -1,4 +1,4 @@
-import { ForwardedRef, forwardRef, memo } from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 
 import { useStyles } from './style';
 
@@ -12,8 +12,8 @@ interface SelectItemProps {
   value: any;
 }
 
-const SelectItem = memo<SelectItemProps>(
-  forwardRef(({ value, label, prefixCls, isSelected, isActive, disabled, ...props }, reference) => {
+const SelectItem = forwardRef<any, SelectItemProps>(
+  ({ value, label, prefixCls, isSelected, isActive, disabled, ...props }, reference) => {
     const { styles, cx } = useStyles(prefixCls);
 
     return (
@@ -34,7 +34,7 @@ const SelectItem = memo<SelectItemProps>(
         {label}
       </button>
     );
-  }),
+  },
 );
 
 export default SelectItem;
