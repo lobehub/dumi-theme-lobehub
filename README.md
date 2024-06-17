@@ -43,6 +43,9 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 
 </details>
 
+> \[!WARNING]
+> Not Support Dumi >= 2.3 yet
+
 ## ✨ Features
 
 - [x] 🤯 **Modern Theme Style:** This theme package adopts modern design techniques such as gradient colors, frosted glass, lighting effects, and natural animations to present the interface in a more concise and visually appealing way, making the documents more intuitive, readable, and user-friendly.
