@@ -4,6 +4,53 @@
 
 ### [Version 1.7.7](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.6...v1.7.7)
 
+<sup>Released on **2024-06-17**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Update Favicons component to use latest version of assets-favicons package, Update README.md logo image source.
+
+#### 🐛 Bug Fixes
+
+- **slots**: 修复 nav 是外链时的跳转 bug.
+- **misc**: Fix build, FIx build, Fix style, Lock dumi to 2.2.17.
+
+#### 💄 Styles
+
+- **misc**: Update Markdown style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Update Favicons component to use latest version of assets-favicons package ([de95d61](https://github.com/lobehub/dumi-theme-lobehub/commit/de95d61))
+- **misc**: Update README.md logo image source ([8eeaf2a](https://github.com/lobehub/dumi-theme-lobehub/commit/8eeaf2a))
+
+#### What's fixed
+
+- **slots**: 修复 nav 是外链时的跳转 bug ([7f0cc34](https://github.com/lobehub/dumi-theme-lobehub/commit/7f0cc34))
+- **misc**: Fix build ([281bca4](https://github.com/lobehub/dumi-theme-lobehub/commit/281bca4))
+- **misc**: FIx build ([d480b58](https://github.com/lobehub/dumi-theme-lobehub/commit/d480b58))
+- **misc**: Fix style ([46108db](https://github.com/lobehub/dumi-theme-lobehub/commit/46108db))
+- **misc**: Lock dumi to 2.2.17 ([807ec0c](https://github.com/lobehub/dumi-theme-lobehub/commit/807ec0c))
+
+#### Styles
+
+- **misc**: Update Markdown style ([a8000d3](https://github.com/lobehub/dumi-theme-lobehub/commit/a8000d3))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 1.7.7](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.6...v1.7.7)
+
 <sup>Released on **2024-04-08**</sup>
 
 #### ♻ Code Refactoring
