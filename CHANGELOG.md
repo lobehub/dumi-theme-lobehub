@@ -2,6 +2,40 @@
 
 # Changelog
 
+### [Version 1.8.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.0...v1.8.1)
+
+<sup>Released on **2024-06-27**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix deps, Fix deps.
+
+#### 💄 Styles
+
+- **misc**: Update deps.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix deps ([7998eb8](https://github.com/lobehub/dumi-theme-lobehub/commit/7998eb8))
+- **misc**: Fix deps ([63160dc](https://github.com/lobehub/dumi-theme-lobehub/commit/63160dc))
+
+#### Styles
+
+- **misc**: Update deps ([252174c](https://github.com/lobehub/dumi-theme-lobehub/commit/252174c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.8.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.7.7...v1.8.0)
 
 <sup>Released on **2024-06-17**</sup>
