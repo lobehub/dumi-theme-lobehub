@@ -110,10 +110,10 @@
     "vitest": "^1.6.0"
   },
   "peerDependencies": {
+    "@giscus/react": ">=3",
     "@lobehub/ui": ">=1",
     "antd": ">=5",
-    "antd-style": ">=3",
-    "@giscus/react": ">=3",
+    "dumi": "~2.2",
     "lucide-react": ">=0.292",
     "openai": ">=4",
     "react": ">=18",
