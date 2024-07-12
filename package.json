@@ -93,7 +93,7 @@
     "commitlint": "^19.3.0",
     "dumi-assets-types": "^2.3.0",
     "eslint": "^8.57.0",
-    "father": "4.3.1",
+    "father": "4.4.5",
     "father-plugin-dumi-theme": "1.0.0-rc.1",
     "husky": "^9.0.11",
     "jsdom": "^22.1.0",
