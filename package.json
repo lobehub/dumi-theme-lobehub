@@ -88,7 +88,7 @@
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitest/coverage-v8": "^1.6.0",
+    "@vitest/coverage-v8": "^2.0.0",
     "clean-pkg-json": "^1.2.0",
     "commitlint": "^19.3.0",
     "dumi-assets-types": "^2.3.0",
