@@ -12,9 +12,12 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
     `,
     container: css`
       .dumi-default-previewer {
+        position: relative;
+
         overflow: hidden;
         display: flex;
         flex-direction: column;
+
         border-color: ${token.colorBorderSecondary};
 
         &-demo {
