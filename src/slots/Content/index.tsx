@@ -14,7 +14,7 @@ import { useStyles } from './style';
 const Content = memo<DivProps>(({ children, ...props }) => {
   const loading = useSiteStore((s) => s.siteData.loading);
   const { docStyle } = useSiteStore(themeConfig, isEqual);
-  const { styles, cx } = useStyles(docStyle === 'pure');
+  const { styles } = useStyles(docStyle === 'pure');
   const { mobile } = useResponsive();
 
   useEffect(() => {
@@ -23,9 +23,10 @@ const Content = memo<DivProps>(({ children, ...props }) => {
 
   return (
     <Flexbox gap={mobile ? 0 : 24} width={'100%'} {...props}>
-      <div className={cx('dumi-antd-style-content', styles.content)}>
+      <div className={styles.content}>
         <Skeleton active loading={loading} paragraph />
         <Typography
+          headerMultiple={0.5}
           style={{
             display: loading ? 'none' : undefined,
           }}

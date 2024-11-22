@@ -40,7 +40,7 @@ const SSRPlugin = (api: IApi) => {
       .filter((f) => !f.path.includes(':'))
 
       .map((file) => {
-        const antdCache = (global as any).__ANTD_CACHE__;
+        const antdCache = (global as any).__LOBE_CACHE__;
 
         const styles = extractStaticStyle(file.content, { antdCache });
 

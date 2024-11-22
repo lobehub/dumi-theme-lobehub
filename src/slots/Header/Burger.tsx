@@ -3,7 +3,6 @@ import { Link } from 'dumi';
 import isEqual from 'fast-deep-equal';
 import { uniq } from 'lodash-es';
 import { memo, useMemo, useState } from 'react';
-import { shallow } from 'zustand/shallow';
 
 import { activePathSel, useSiteStore } from '@/store';
 
@@ -12,13 +11,10 @@ const Burger = memo(() => {
 
   const nav = useSiteStore((s) => s.navData, isEqual);
   const sidebar = useSiteStore((s) => s.sidebar, isEqual);
-  const { pathname, activePath } = useSiteStore(
-    (s) => ({
-      activePath: activePathSel(s),
-      pathname: s.location.pathname,
-    }),
-    shallow,
-  );
+  const { pathname, activePath } = useSiteStore((s) => ({
+    activePath: activePathSel(s),
+    pathname: s.location.pathname,
+  }));
 
   const items: BurgerProps['items'] = useMemo(() => {
     const sidebarItems = sidebar?.map((group) => {

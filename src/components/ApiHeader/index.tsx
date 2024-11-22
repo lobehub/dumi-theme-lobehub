@@ -3,7 +3,7 @@ import { Divider, Space, Typography } from 'antd';
 import { useResponsive } from 'antd-style';
 import { Edit3, Github } from 'lucide-react';
 import { type ReactNode, memo } from 'react';
-import { Flexbox } from 'react-layout-kit';
+import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
 import { ApiHeaderConfig } from '@/types';
 
@@ -72,7 +72,7 @@ export interface ServiceItem {
   url: string;
 }
 
-export const ApiHeader = memo<ApiTitleProps>(
+export const ApiHeader = memo<ApiTitleProps & FlexboxProps>(
   ({
     title,
     type,
@@ -83,6 +83,7 @@ export const ApiHeader = memo<ApiTitleProps>(
     sourceUrl,
     docUrl,
     serviceList = [],
+    ...rest
   }) => {
     const { styles } = useStyles();
     const { mobile } = useResponsive();
@@ -106,7 +107,7 @@ export const ApiHeader = memo<ApiTitleProps>(
       : `import { ${componentName} } from '${pkg}';`;
 
     return (
-      <Flexbox id={'api-header'} style={{ marginBottom: 24 }}>
+      <Flexbox id={'api-header'} style={{ marginBottom: 24 }} width={'100%'} {...rest}>
         <Typography.Title className={styles.title}>{title}</Typography.Title>
         {description && <Markdown className={styles.desc}>{description}</Markdown>}
         {!isDoc && (

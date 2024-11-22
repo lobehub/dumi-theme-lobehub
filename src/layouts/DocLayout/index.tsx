@@ -1,32 +1,46 @@
-import { ThemeProvider } from '@lobehub/ui';
-import { memo } from 'react';
-import { shallow } from 'zustand/shallow';
+import {
+  useLocale,
+  useLocation,
+  useNavData,
+  useRouteMeta,
+  useSidebarData,
+  useSiteData,
+  useTabMeta,
+} from 'dumi';
+import { memo, useMemo } from 'react';
 
 import Favicons from '@/components/Favicons';
 import { StoreUpdater } from '@/components/StoreUpdater';
-import GlobalStyle from '@/layouts/DocLayout/GlobalStyle';
-import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
-import customToken from '@/styles/customToken';
+import { Provider, createStore } from '@/store';
 
 import DocumentLayout from './DocumentLayout';
+import ThemeProvider from './ThemeProvider';
 
-const App = memo(() => {
-  const themeMode = useThemeStore((st) => st.themeMode, shallow);
-  const userToken = useSiteStore(siteSelectors.token);
-
+const App = memo(({ initState }: any) => {
   return (
-    <>
+    <Provider createStore={() => createStore(initState)}>
       <Favicons />
       <StoreUpdater />
-      <ThemeProvider
-        customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
-        themeMode={themeMode}
-      >
-        <GlobalStyle />
+      <ThemeProvider>
         <DocumentLayout />
       </ThemeProvider>
-    </>
+    </Provider>
   );
 });
 
-export default App;
+export default memo(() => {
+  const siteData = useSiteData();
+  const sidebar = useSidebarData();
+  const routeMeta = useRouteMeta();
+  const tabMeta = useTabMeta();
+  const navData = useNavData();
+  const location = useLocation();
+  const locale = useLocale();
+
+  const initState = useMemo(
+    () => ({ locale, location, navData, routeMeta, sidebar, siteData, tabMeta }),
+    [],
+  );
+
+  return <App initState={initState} />;
+});

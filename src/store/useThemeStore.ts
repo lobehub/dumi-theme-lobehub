@@ -1,15 +1,17 @@
 import type { ThemeMode } from 'antd-style';
-import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
+import { shallow } from 'zustand/shallow';
+import { createWithEqualityFn } from 'zustand/traditional';
 
-export interface ThemeStore {
+interface Store {
   themeMode: ThemeMode;
 }
-export const useThemeStore = create<ThemeStore>()(
+export const useThemeStore = createWithEqualityFn<Store>()(
   persist(
     () => ({
       themeMode: 'auto' as ThemeMode,
     }),
-    { name: 'ANTD_STYLE_DOC_STORE' },
+    { name: 'LOBE_DOC_STORE' },
   ),
+  shallow,
 );

@@ -4,7 +4,6 @@ import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
-import { shallow } from 'zustand/shallow';
 
 import { githubSel, useSiteStore } from '@/store';
 
@@ -14,7 +13,7 @@ import { useStyles } from './style';
 const Footer = memo(() => {
   const { themeConfig, pkg } = useSiteStore((s) => s.siteData, isEqual);
   const { footerConfig, footer } = themeConfig;
-  const githubUrl = useSiteStore(githubSel, shallow);
+  const githubUrl = useSiteStore(githubSel);
   const { styles, theme } = useStyles();
   const { mobile } = useResponsive();
 

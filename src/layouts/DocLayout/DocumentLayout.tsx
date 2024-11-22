@@ -3,7 +3,6 @@ import { useResponsive, useTheme } from 'antd-style';
 import { Helmet, useIntl, useLocation } from 'dumi';
 import isEqual from 'fast-deep-equal';
 import { memo, useCallback, useEffect } from 'react';
-import { shallow } from 'zustand/shallow';
 
 import Changelog from '@/pages/Changelog';
 import Docs from '@/pages/Docs';
@@ -39,7 +38,7 @@ const DocumentLayout = memo(() => {
       page: page,
       siteTitle: siteTitleSel(s),
     };
-  }, shallow);
+  });
 
   const fm = useSiteStore((s) => s.routeMeta.frontmatter, isEqual);
 

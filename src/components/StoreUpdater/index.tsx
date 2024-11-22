@@ -1,30 +1,23 @@
 import { useDebounceEffect } from 'ahooks';
-import {
-  useLocale,
-  useLocation,
-  useNavData,
-  useRouteMeta,
-  useSidebarData,
-  useSiteData,
-  useTabMeta,
-} from 'dumi';
+import { useLocale, useLocation, useNavData, useSidebarData, useSiteData, useTabMeta } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import React, { type DependencyList, type EffectCallback, useEffect } from 'react';
+import React, { memo, useEffect } from 'react';
 
-import { SiteStore, useSiteStore } from '@/store/useSiteStore';
+import { SiteStore, useStoreApi } from '../../store/useSiteStore';
+import { useRouteMeta } from './useRouteMeta';
 
 const isBrowser = typeof window !== 'undefined';
 
 const SSRInit: Record<string, boolean> = {};
 
-const useReact18xUpdater = (effect: EffectCallback, deps?: DependencyList) => {
+const useReact18xUpdater = (effect: React.EffectCallback, deps?: React.DependencyList) => {
   useEffect(() => {
     (React as any).startTransition(() => {
       effect();
     });
   }, deps);
 };
-const useLegacyUpdater = (effect: EffectCallback, deps?: DependencyList) => {
+const useLegacyUpdater = (effect: React.EffectCallback, deps?: React.DependencyList) => {
   useDebounceEffect(
     () => {
       effect();
@@ -41,9 +34,10 @@ const useSyncState = <T extends keyof SiteStore>(
   value: SiteStore[T],
   updateMethod?: (key: T, value: SiteStore[T]) => void,
 ) => {
+  const storeApi = useStoreApi();
   const updater = updateMethod
     ? updateMethod
-    : (key: T, value: SiteStore[T]) => useSiteStore.setState({ [key]: value });
+    : (key: T, value: SiteStore[T]) => storeApi.setState({ [key]: value });
 
   // 如果是 Node 环境，直接更新一次 store
   // 但是为了避免多次更新 store，所以加一个标记
@@ -57,45 +51,51 @@ const useSyncState = <T extends keyof SiteStore>(
   }, [value]);
 };
 
-const homeNav = {
-  activePath: '/',
-  link: '/',
-  title: 'Home',
+const displayLangHomeNavMap: Record<string, string> = {
+  'en-US': 'Home',
+  'zh-CN': '首页',
 };
 
-export const StoreUpdater = () => {
-  const siteData: any = useSiteData();
+const getHomeNav = (id: string) => ({
+  activePath: '/',
+  link: '/',
+  title: displayLangHomeNavMap[id],
+});
+
+export const StoreUpdater = memo(() => {
+  const siteData = useSiteData();
   const sidebar = useSidebarData();
-  const routeMeta = useRouteMeta();
   const tabMeta = useTabMeta();
   const navData = useNavData();
   const location = useLocation();
   const locale = useLocale();
+  const storeApi = useStoreApi();
+
+  useRouteMeta();
 
   useSyncState('siteData', siteData, () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { setLoading, ...data } = siteData;
     const {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      siteData: { setLoading: _, ...previousData },
-    } = useSiteStore.getState();
+      siteData: { setLoading: _, ...prevData },
+    } = storeApi.getState();
 
-    if (isEqual(data, previousData)) return;
+    if (isEqual(data, prevData)) return;
 
-    useSiteStore.setState({ siteData });
+    storeApi.setState({ siteData });
   });
 
   useSyncState('sidebar', sidebar);
-  useSyncState('routeMeta', routeMeta);
   useSyncState('location', location);
   useSyncState('tabMeta', tabMeta);
   useSyncState('locale', locale);
 
   useSyncState('navData', navData, () => {
-    const data = siteData.themeConfig.hideHomeNav ? navData : [homeNav, ...navData];
+    const data = siteData.themeConfig.hideHomeNav ? navData : [getHomeNav(locale.id), ...navData];
 
-    useSiteStore.setState({ navData: data });
+    storeApi.setState({ navData: data });
   });
 
-  return false;
-};
+  return null;
+});

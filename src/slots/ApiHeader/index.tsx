@@ -1,5 +1,6 @@
 import isEqual from 'fast-deep-equal';
 import { memo, useMemo } from 'react';
+import { FlexboxProps } from 'react-layout-kit';
 
 import { ApiHeader as Header } from '@/components/ApiHeader';
 import { apiHeaderSel, useSiteStore } from '@/store';
@@ -10,7 +11,7 @@ import NpmFilled from './NpmFilled';
 import PackagePhobia from './PackagePhobia';
 import Unpkg from './Unpkg';
 
-const ApiHeader = memo(() => {
+const ApiHeader = memo<FlexboxProps>(({ ...rest }) => {
   const props = useSiteStore(apiHeaderSel, isEqual);
   const { pkg } = props;
 
@@ -51,7 +52,7 @@ const ApiHeader = memo(() => {
     ];
   }, [pkg]);
 
-  return <Header serviceList={packages} {...props} />;
+  return <Header serviceList={packages} {...props} {...rest} />;
 });
 
 export default ApiHeader;

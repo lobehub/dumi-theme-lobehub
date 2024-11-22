@@ -3,7 +3,6 @@ import { useResponsive } from 'antd-style';
 import { useOutlet } from 'dumi';
 import { memo, useCallback, useEffect } from 'react';
 import { Center } from 'react-layout-kit';
-import { shallow } from 'zustand/shallow';
 
 import ApiHeader from '@/slots/ApiHeader';
 import Content from '@/slots/Content';
@@ -14,10 +13,10 @@ import { useStyles } from './styles';
 const Documents = memo(() => {
   const outlet = useOutlet();
   const { mobile } = useResponsive();
-  const { isApiPage, giscus } = useSiteStore(
-    (st) => ({ giscus: giscusSel(st), isApiPage: isApiPageSel(st) }),
-    shallow,
-  );
+  const { isApiPage, giscus } = useSiteStore((st) => ({
+    giscus: giscusSel(st),
+    isApiPage: isApiPageSel(st),
+  }));
   const { styles } = useStyles();
 
   useEffect(() => {
@@ -42,20 +41,13 @@ const Documents = memo(() => {
     [giscus, location.pathname],
   );
   return (
-    <>
-      <div className={styles.background} />
-      <Center className={styles.content} style={{ marginBottom: 48, padding: mobile ? 0 : 24 }}>
-        {isApiPage ? (
-          <div style={{ padding: mobile ? 16 : 0, width: '100%' }}>
-            <ApiHeader />
-          </div>
-        ) : undefined}
-        <Content>
-          {outlet}
-          {giscus && <Comment />}
-        </Content>
-      </Center>
-    </>
+    <Center className={styles.content} style={{ marginBottom: 48, padding: mobile ? 0 : 24 }}>
+      {isApiPage && <ApiHeader padding={mobile ? 16 : 0} />}
+      <Content>
+        {outlet}
+        {giscus && <Comment />}
+      </Content>
+    </Center>
   );
 });
 
