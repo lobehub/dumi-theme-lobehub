@@ -39,7 +39,7 @@
     "lint:md": "remark . --quiet --frail --output",
     "lint:style": "stylelint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepack": "npm run build && clean-pkg-json",
-    "prepare": "husky install && father link-dev-theme",
+    "prepare": "husky && father link-dev-theme",
     "prepublishOnly": "npm run build",
     "prettier": "prettier -c --write --no-error-on-unmatched-pattern \"**/**\"",
     "release": "semantic-release",

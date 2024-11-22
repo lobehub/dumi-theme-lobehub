@@ -28,7 +28,7 @@ export const getColumns = ({ github }: GetColumnParameters) => {
         url: 'https://github.com/lobehub/lobe-charts',
       },
       {
-        description: 'TTS/STT Library',
+        description: 'TTS / STT Library',
         openExternal: true,
         title: 'Lobe TTS',
         url: 'https://github.com/lobehub/lobe-tts',
@@ -75,7 +75,7 @@ export const getColumns = ({ github }: GetColumnParameters) => {
   const more: FooterColumn = {
     items: [
       {
-        description: 'AI/LLM Chat Framework',
+        description: 'AI / LLM Chat Framework',
         openExternal: true,
         title: '🤯 Lobe Chat',
         url: 'https://github.com/lobehub/lobe-chat',
