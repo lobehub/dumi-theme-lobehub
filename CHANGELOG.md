@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.8.3](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.2...v1.8.3)
+
+<sup>Released on **2024-11-22**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix Previewer.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix Previewer ([32473d1](https://github.com/lobehub/dumi-theme-lobehub/commit/32473d1))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.8.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.1...v1.8.2)
 
 <sup>Released on **2024-11-22**</sup>
