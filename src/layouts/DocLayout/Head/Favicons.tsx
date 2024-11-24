@@ -1,10 +1,10 @@
 import { Helmet } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import { memo } from 'react';
+import { FC } from 'react';
 
 import { siteSelectors, useSiteStore } from '@/store';
 
-const Favicons = memo(() => {
+const Favicons: FC = () => {
   const [title, logo] = useSiteStore((s) => [siteSelectors.siteTitle(s), siteSelectors.logo(s)]);
   const metadata = useSiteStore(siteSelectors.metadata, isEqual);
   return (
@@ -19,6 +19,6 @@ const Favicons = memo(() => {
       <meta content="#000" media="(prefers-color-scheme: dark)" name="theme-color" />
     </Helmet>
   );
-});
+};
 
 export default Favicons;

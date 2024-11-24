@@ -1,10 +1,11 @@
 import { Helmet } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import { memo } from 'react';
+import { FC } from 'react';
+import urlJoin from 'url-join';
 
 import { siteSelectors, useSiteStore } from '@/store';
 
-const Og = memo(() => {
+const Og: FC = () => {
   const [title, desc, logo, hostname] = useSiteStore((s) => [
     siteSelectors.siteTitle(s),
     siteSelectors.siteDesc(s),
@@ -16,9 +17,10 @@ const Og = memo(() => {
     <Helmet>
       <title>{metadata?.title || title}</title>
       <meta content={metadata?.description || desc} name="description" />
+      <link href={hostname || location.origin} rel="canonical" />
       <meta content={metadata?.openGraph?.title || title} property="og:title" />
       <meta content={metadata?.openGraph?.description || desc} property="og:description" />
-      <meta content={hostname || location.origin} property="og:url" />
+      <meta content={urlJoin(hostname || location.origin, location.pathname)} property="og:url" />
       <meta content={metadata?.openGraph?.siteName} property="og:site_name" />
       <meta content="en" property="og:locale" />
       <meta content={metadata?.openGraph?.title || title} property="og:image:alt" />
@@ -41,6 +43,6 @@ const Og = memo(() => {
       />
     </Helmet>
   );
-});
+};
 
 export default Og;

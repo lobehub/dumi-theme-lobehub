@@ -16,6 +16,7 @@ import { Provider, createStore } from '@/store';
 import DocumentLayout from './DocumentLayout';
 import Favicons from './Head/Favicons';
 import Og from './Head/Og';
+import StructuredData from './Head/StructuredData';
 import ThemeProvider from './ThemeProvider';
 
 const App = memo(({ initState }: any) => {
@@ -23,6 +24,7 @@ const App = memo(({ initState }: any) => {
     <Provider createStore={() => createStore(initState)}>
       <Favicons />
       <Og />
+      <StructuredData />
       <Analytics />
       <StoreUpdater />
       <ThemeProvider>

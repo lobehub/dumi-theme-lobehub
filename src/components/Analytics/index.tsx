@@ -1,3 +1,5 @@
+import { Helmet } from 'dumi';
+
 import { siteSelectors, useSiteStore } from '@/store';
 
 import ClarityAnalytics from './Clarity';
@@ -7,7 +9,7 @@ import Plausible from './Plausible';
 const Analytics = () => {
   const analytics = useSiteStore(siteSelectors.analytics);
   return (
-    <>
+    <Helmet>
       {analytics?.googleAnalytics && (
         <GoogleAnalytics measurementId={analytics.googleAnalytics.measurementId} />
       )}
@@ -18,7 +20,7 @@ const Analytics = () => {
           scriptBaseUrl={analytics.plausible.scriptBaseUrl}
         />
       )}
-    </>
+    </Helmet>
   );
 };
 
