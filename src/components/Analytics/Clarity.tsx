@@ -1,6 +1,6 @@
-import { memo } from 'react';
+import { FC } from 'react';
 
-const MicrosoftClarity = memo<{ projectId: string }>(({ projectId }) => {
+const MicrosoftClarity: FC<{ projectId: string }> = ({ projectId }) => {
   return (
     <script
       dangerouslySetInnerHTML={{
@@ -15,6 +15,6 @@ const MicrosoftClarity = memo<{ projectId: string }>(({ projectId }) => {
       id="microsoft-clarity-init"
     />
   );
-});
+};
 
 export default MicrosoftClarity;

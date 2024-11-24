@@ -1,6 +1,6 @@
-import { memo } from 'react';
+import { FC } from 'react';
 
-const GoogleAnalytics = memo<{ measurementId: string }>(({ measurementId }) => {
+const GoogleAnalytics: FC<{ measurementId: string }> = ({ measurementId }) => {
   return (
     <>
       <script async src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`} />
@@ -19,6 +19,6 @@ const GoogleAnalytics = memo<{ measurementId: string }>(({ measurementId }) => {
       />
     </>
   );
-});
+};
 
 export default GoogleAnalytics;

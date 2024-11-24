@@ -1,4 +1,5 @@
 import { Helmet } from 'dumi';
+import { FC } from 'react';
 
 import { siteSelectors, useSiteStore } from '@/store';
 
@@ -6,7 +7,7 @@ import ClarityAnalytics from './Clarity';
 import GoogleAnalytics from './GoogleAnalytics';
 import Plausible from './Plausible';
 
-const Analytics = () => {
+const Analytics: FC = () => {
   const analytics = useSiteStore(siteSelectors.analytics);
   return (
     <Helmet>
