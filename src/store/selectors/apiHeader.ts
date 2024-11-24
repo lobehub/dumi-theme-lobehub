@@ -1,9 +1,7 @@
 import type { ApiHeaderProps } from '../../components/ApiHeader';
 import type { ApiHeaderConfig } from '../../types/config';
 import type { SiteStore } from '../useSiteStore';
-import { githubSel } from './siteBasicInfo';
-
-export * from './hero';
+import { siteSelectors } from './site';
 
 const haseUrl = (config: false | string | undefined) => {
   if (config === false) return false;
@@ -11,7 +9,7 @@ const haseUrl = (config: false | string | undefined) => {
   return typeof config === 'string';
 };
 
-export const isApiPageSel = (s: SiteStore) => {
+const isApiPage = (s: SiteStore) => {
   const fm = s.routeMeta.frontmatter;
 
   if (s.siteData.themeConfig.apiHeader === false || fm.apiHeader === false) return false;
@@ -23,8 +21,8 @@ export const isApiPageSel = (s: SiteStore) => {
   return baseMatch.some((path) => s.location.pathname.startsWith(path));
 };
 
-export const apiHeaderSel = (s: SiteStore): ApiHeaderProps => {
-  const REPO_BASE = githubSel(s);
+const apiHeader = (s: SiteStore): ApiHeaderProps => {
+  const REPO_BASE = siteSelectors.github(s);
   const fm = s.routeMeta.frontmatter;
   const localeId = s.locale.id;
 
@@ -67,4 +65,9 @@ export const apiHeaderSel = (s: SiteStore): ApiHeaderProps => {
     title: fm.title,
     type,
   };
+};
+
+export const apiHeaderSelectors = {
+  apiHeader,
+  isApiPage,
 };

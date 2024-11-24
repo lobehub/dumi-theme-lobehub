@@ -6,7 +6,7 @@ import { Center } from 'react-layout-kit';
 
 import ApiHeader from '@/slots/ApiHeader';
 import Content from '@/slots/Content';
-import { giscusSel, isApiPageSel, useSiteStore } from '@/store';
+import { apiHeaderSelectors, siteSelectors, useSiteStore } from '@/store';
 
 import { useStyles } from './styles';
 
@@ -14,8 +14,8 @@ const Documents = memo(() => {
   const outlet = useOutlet();
   const { mobile } = useResponsive();
   const { isApiPage, giscus } = useSiteStore((st) => ({
-    giscus: giscusSel(st),
-    isApiPage: isApiPageSel(st),
+    giscus: siteSelectors.giscus(st),
+    isApiPage: apiHeaderSelectors.isApiPage(st),
   }));
   const { styles } = useStyles();
 

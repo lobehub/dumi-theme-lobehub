@@ -1,12 +1,14 @@
 import { Hero as H } from '@lobehub/ui';
 import { memo } from 'react';
 
-import { heroActionsSel, heroDescSel, heroTitleSel, useSiteStore } from '@/store';
+import { heroSelectors, useSiteStore } from '@/store';
 
 const Hero = memo(() => {
-  const title = useSiteStore(heroTitleSel);
-  const description = useSiteStore(heroDescSel);
-  const actions = useSiteStore(heroActionsSel);
+  const [title, description, actions] = useSiteStore((s) => [
+    heroSelectors.heroTitle(s),
+    heroSelectors.heroDesc(s),
+    heroSelectors.heroActions(s),
+  ]);
 
   return <H actions={actions} description={description} title={title!} />;
 });

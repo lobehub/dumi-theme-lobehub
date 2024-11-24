@@ -3,7 +3,7 @@ import { memo, useMemo } from 'react';
 import { FlexboxProps } from 'react-layout-kit';
 
 import { ApiHeader as Header } from '@/components/ApiHeader';
-import { apiHeaderSel, useSiteStore } from '@/store';
+import { apiHeaderSelectors, useSiteStore } from '@/store';
 
 import BundlephobiaFilled from './BundlephobiaFilled';
 import Graph from './Graph';
@@ -12,7 +12,7 @@ import PackagePhobia from './PackagePhobia';
 import Unpkg from './Unpkg';
 
 const ApiHeader = memo<FlexboxProps>(({ ...rest }) => {
-  const props = useSiteStore(apiHeaderSel, isEqual);
+  const props = useSiteStore(apiHeaderSelectors.apiHeader, isEqual);
   const { pkg } = props;
 
   const packages = useMemo(() => {

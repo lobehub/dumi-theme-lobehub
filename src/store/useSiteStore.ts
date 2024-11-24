@@ -13,14 +13,12 @@ import { devtools } from 'zustand/middleware';
 import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
 
+import { SiteThemeConfig } from '@/types';
+
 export type NavData = (INavItem & { children?: INavItem[] | undefined })[];
 
 export type ISiteData = ISiteContext & {
-  themeConfig: IThemeConfig & {
-    socialLinks?: {
-      discord?: string;
-    };
-  };
+  themeConfig: IThemeConfig & SiteThemeConfig;
 };
 
 export interface SiteStore {

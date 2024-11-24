@@ -44,8 +44,27 @@ export interface SiteStore {
   tabMeta?: NonNullable<IRouteMeta['tabs']>[0]['meta'];
 }
 
+export const initialThemeConfig: SiteThemeConfig = {
+  footer: 'Made with 🤯 by <a href="https://lobehub.com" target="_blank">LobeHub</a>',
+  metadata: {
+    icons: {
+      apple: 'https://lobehub.com/apple-touch-icon.png',
+      icon: 'https://lobehub.com/favicon-32x32.png',
+      shortcut: 'https://lobehub.com/favicon.ico',
+    },
+    manifest:
+      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/site.webmanifest',
+    openGraph: {
+      siteName: 'LobeHub',
+    },
+    twitter: {
+      site: '@lobehub',
+    },
+  },
+};
+
 export const initialState: SiteStore = {
-  locale: { id: 'zh-CN', name: '中文', suffix: '' },
+  locale: { id: 'en-US', name: 'English', suffix: '' },
   location: {
     hash: '',
     key: '',
@@ -58,11 +77,8 @@ export const initialState: SiteStore = {
   routeMeta: {
     // @ts-ignore
     frontmatter: {},
-
     tabs: undefined,
-
     texts: [],
-
     toc: [],
   },
 
@@ -70,19 +86,14 @@ export const initialState: SiteStore = {
 
   siteData: {
     components: {},
-
     demos: {},
-
     entryExports: {},
-
     loading: true,
-
     locales: [],
-
     pkg: {},
     // @ts-ignore
     setLoading: undefined,
     // @ts-ignore
-    themeConfig: {},
+    themeConfig: initialThemeConfig,
   },
 };

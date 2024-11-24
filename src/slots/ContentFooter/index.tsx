@@ -3,12 +3,12 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
-import { contentBottomSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 import Linker from './Linker';
 
 const ContentFooter = memo(() => {
-  const { prev, next } = useSiteStore(contentBottomSel, isEqual);
+  const { prev, next } = useSiteStore(siteSelectors.contentBottom, isEqual);
   const { mobile } = useResponsive();
 
   return (

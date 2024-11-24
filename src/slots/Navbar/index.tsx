@@ -4,7 +4,7 @@ import { Link, history } from 'dumi';
 import NavbarExtra from 'dumi/theme-default/slots/NavbarExtra';
 import { memo } from 'react';
 
-import { activePathSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 const useStyles = createStyles(({ css, stylish, token, responsive, prefixCls }) => {
   return {
@@ -26,7 +26,7 @@ const Navbar = memo(() => {
 
   const regLink = /^(\w+:)\/\/|^(mailto|tel):/;
   const nav = useSiteStore((s) => s.navData);
-  const activePath = useSiteStore(activePathSel);
+  const activePath = useSiteStore(siteSelectors.activePath);
   return (
     <>
       <TabsNav

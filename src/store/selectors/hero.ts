@@ -2,14 +2,9 @@ import { type FeatureItem } from '@lobehub/ui';
 
 import { SiteStore } from '../useSiteStore';
 
-export const isHeroPageSel = (s: SiteStore) => s.location.pathname === '/';
+const isHeroPage = (s: SiteStore) => s.location.pathname === '/';
 
-// 是否展示首页的自定义内容
-export const showHeroPageCustomContent = (s: SiteStore) =>
-  !!s.routeMeta.frontmatter.hero?.showCustomContent ||
-  !!s.siteData.themeConfig.hero?.showCustomContent;
-
-export const localeValueSel = (s: SiteStore, value: any) => {
+const localeValue = (s: SiteStore, value: any) => {
   if (!value) return;
 
   if (value[s.locale.id]) return value[s.locale.id];
@@ -21,50 +16,58 @@ export const localeValueSel = (s: SiteStore, value: any) => {
  * Hero Title 选择器
  * 选择逻辑：优先使用 hero 配置的 title， 再兜底到 themeConfig 中的 name
  */
-export const heroTitleSel = (s: SiteStore) =>
+const heroTitle = (s: SiteStore) =>
   s.routeMeta.frontmatter.hero?.title ||
   // 从 hero 的 title 中选择
-  localeValueSel(s, s.siteData.themeConfig.hero)?.title ||
+  localeValue(s, s.siteData.themeConfig.hero)?.title ||
   // @deprecated 1.0 正式版本移除
   // 从 hero 的 title 中选择
-  localeValueSel(s, s.siteData.themeConfig.title) ||
+  localeValue(s, s.siteData.themeConfig.title) ||
   s.siteData.themeConfig.name;
 
 /**
  * Hero description 选择器
  * 选择逻辑：优先使用 hero 配置的 description， 再兜底到 themeConfig 中的 name
  */
-export const heroDescSel = (s: SiteStore) =>
+const heroDesc = (s: SiteStore) =>
   s.routeMeta.frontmatter.hero?.description ||
   // 从 hero 的 description 中选择
-  localeValueSel(s, s.siteData.themeConfig.hero)?.description ||
+  localeValue(s, s.siteData.themeConfig.hero)?.description ||
   // @deprecated 1.0 正式版本移除
   // 从 hero 的 description 中选择
-  localeValueSel(s, s.siteData.themeConfig.description);
+  localeValue(s, s.siteData.themeConfig.description);
 
 /**
  * Hero Action 选择器
  * 选择逻辑：优先使用 hero 配置的 actions， 再兜底到 themeConfig 中的 actions
  */
-export const heroActionsSel = (s: SiteStore) =>
+const heroActions = (s: SiteStore) =>
   s.routeMeta.frontmatter.hero?.actions ||
   // 从 hero 的 actions 中选择
-  localeValueSel(s, s.siteData.themeConfig.hero)?.actions ||
+  localeValue(s, s.siteData.themeConfig.hero)?.actions ||
   // @deprecated 1.0 正式版本移除
-  localeValueSel(s, s.siteData.themeConfig.actions);
+  localeValue(s, s.siteData.themeConfig.actions);
 
 /**
  * Features 选择器
  */
-export const featuresSel = (s: SiteStore): FeatureItem[] => {
-  if (!isHeroPageSel(s)) return [];
+const features = (s: SiteStore): FeatureItem[] => {
+  if (!isHeroPage(s)) return [];
 
   return (
-    localeValueSel(s, s.siteData.themeConfig.hero)?.features ||
+    localeValue(s, s.siteData.themeConfig.hero)?.features ||
     // @deprecated 1.0 正式版本移除
-    localeValueSel(s, s.siteData.themeConfig.features) ||
+    localeValue(s, s.siteData.themeConfig.features) ||
     // 在themeConfig 没有配置的话，尝试兜底到 frontmatter 中的配置
     s.routeMeta.frontmatter.features ||
     []
   );
+};
+
+export const heroSelectors = {
+  features,
+  heroActions,
+  heroDesc,
+  heroTitle,
+  isHeroPage,
 };

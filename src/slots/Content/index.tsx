@@ -6,14 +6,14 @@ import { memo, useEffect } from 'react';
 import { Flexbox } from 'react-layout-kit';
 
 import ContentFooter from '@/slots/ContentFooter';
-import { themeConfig, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 import { DivProps } from '@/types';
 
 import { useStyles } from './style';
 
 const Content = memo<DivProps>(({ children, ...props }) => {
   const loading = useSiteStore((s) => s.siteData.loading);
-  const { docStyle } = useSiteStore(themeConfig, isEqual);
+  const { docStyle } = useSiteStore(siteSelectors.themeConfig, isEqual);
   const { styles } = useStyles(docStyle === 'pure');
   const { mobile } = useResponsive();
 

@@ -11,7 +11,7 @@ import Footer from '@/slots/Footer';
 import Header from '@/slots/Header';
 import Sidebar from '@/slots/Sidebar';
 import Toc from '@/slots/Toc';
-import { isHeroPageSel, siteTitleSel, tocAnchorItemSel, useSiteStore } from '@/store';
+import { heroSelectors, siteSelectors, useSiteStore } from '@/store';
 
 const DocumentLayout = memo(() => {
   const intl = useIntl();
@@ -21,7 +21,7 @@ const DocumentLayout = memo(() => {
 
   const { loading, page, siteTitle, noToc } = useSiteStore((s) => {
     const isChanlogPage = s.location.pathname === '/changelog';
-    const isHomePage = isHeroPageSel(s);
+    const isHomePage = heroSelectors.isHeroPage(s);
     let page;
 
     if (isHomePage) {
@@ -34,9 +34,9 @@ const DocumentLayout = memo(() => {
 
     return {
       loading: s.siteData.loading,
-      noToc: tocAnchorItemSel(s).length === 0,
+      noToc: siteSelectors.tocAnchorItem(s).length === 0,
       page: page,
-      siteTitle: siteTitleSel(s),
+      siteTitle: siteSelectors.siteTitle(s),
     };
   });
 

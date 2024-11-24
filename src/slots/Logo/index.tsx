@@ -5,13 +5,13 @@ import { Link } from 'dumi';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 
-import { themeConfig } from '@/store/selectors/siteBasicInfo';
+import { siteSelectors } from '@/store';
 import { useSiteStore } from '@/store/useSiteStore';
 
 import { useStyles } from './style';
 
 const Logo = memo(() => {
-  const config = useSiteStore(themeConfig, isEqual);
+  const config = useSiteStore(siteSelectors.themeConfig, isEqual);
   const locale = useSiteStore((s) => s.locale, isEqual);
   const { styles, cx } = useStyles();
   const { mobile } = useResponsive();

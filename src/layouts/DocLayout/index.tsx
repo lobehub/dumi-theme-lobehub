@@ -9,17 +9,21 @@ import {
 } from 'dumi';
 import { memo, useMemo } from 'react';
 
-import Favicons from '@/components/Favicons';
+import Analytics from '@/components/Analytics';
 import { StoreUpdater } from '@/components/StoreUpdater';
 import { Provider, createStore } from '@/store';
 
 import DocumentLayout from './DocumentLayout';
+import Favicons from './Head/Favicons';
+import Og from './Head/Og';
 import ThemeProvider from './ThemeProvider';
 
 const App = memo(({ initState }: any) => {
   return (
     <Provider createStore={() => createStore(initState)}>
       <Favicons />
+      <Og />
+      <Analytics />
       <StoreUpdater />
       <ThemeProvider>
         <DocumentLayout />

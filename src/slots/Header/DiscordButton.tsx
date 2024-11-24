@@ -3,7 +3,7 @@ import { createStyles } from 'antd-style';
 import { type LucideIcon, createLucideIcon } from 'lucide-react';
 import { memo } from 'react';
 
-import { discordSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 const Discord: LucideIcon = createLucideIcon('Discord', [
   [
@@ -24,7 +24,7 @@ const useStyles = createStyles(
 );
 
 const DiscordButton = memo(() => {
-  const inviteUrl = useSiteStore(discordSel);
+  const inviteUrl = useSiteStore(siteSelectors.discord);
   const { styles } = useStyles();
 
   return inviteUrl ? (

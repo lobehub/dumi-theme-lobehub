@@ -3,12 +3,12 @@ import { useResponsive, useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect, useState } from 'react';
 
-import { tocAnchorItemSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 const GAP = 48;
 
 const Toc = memo(() => {
-  const items = useSiteStore(tocAnchorItemSel, isEqual);
+  const items = useSiteStore(siteSelectors.tocAnchorItem, isEqual);
   const { mobile } = useResponsive();
   const theme = useTheme();
   const [spacing, setSpacing] = useState<number>(GAP);

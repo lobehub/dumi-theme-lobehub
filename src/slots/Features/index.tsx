@@ -3,10 +3,10 @@ import { useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 
-import { featuresSel, useSiteStore } from '@/store';
+import { heroSelectors, useSiteStore } from '@/store';
 
 const Features = memo(() => {
-  const features = useSiteStore(featuresSel, isEqual);
+  const features = useSiteStore(heroSelectors.features, isEqual);
   const theme = useTheme();
 
   if (!features?.length) return;

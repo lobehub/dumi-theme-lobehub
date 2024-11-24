@@ -5,7 +5,7 @@ import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 
-import { githubSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 import { getColumns } from './columns';
 import { useStyles } from './style';
@@ -13,7 +13,7 @@ import { useStyles } from './style';
 const Footer = memo(() => {
   const { themeConfig, pkg } = useSiteStore((s) => s.siteData, isEqual);
   const { footerConfig, footer } = themeConfig;
-  const githubUrl = useSiteStore(githubSel);
+  const githubUrl = useSiteStore(siteSelectors.github);
   const { styles, theme } = useStyles();
   const { mobile } = useResponsive();
 
@@ -38,7 +38,7 @@ const Footer = memo(() => {
               align={'center'}
               dangerouslySetInnerHTML={{ __html: bottomFooter }}
               horizontal
-            ></Flexbox>
+            />
           </Center>
         ) : (
           <Center horizontal>

@@ -26,10 +26,11 @@ const Header = memo(() => {
           <ThemeSwitch />
         ) : (
           <>
-            <SearchBar /> <LangSwitch />
-            <GithubButton />
+            <SearchBar />
             <DiscordButton />
+            <LangSwitch />
             <ThemeSwitch />
+            <GithubButton />
           </>
         )
       }

@@ -4,7 +4,7 @@ import isEqual from 'fast-deep-equal';
 import { uniq } from 'lodash-es';
 import { memo, useMemo, useState } from 'react';
 
-import { activePathSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 const Burger = memo(() => {
   const [opened, setOpened] = useState(false);
@@ -12,7 +12,7 @@ const Burger = memo(() => {
   const nav = useSiteStore((s) => s.navData, isEqual);
   const sidebar = useSiteStore((s) => s.sidebar, isEqual);
   const { pathname, activePath } = useSiteStore((s) => ({
-    activePath: activePathSel(s),
+    activePath: siteSelectors.activePath(s),
     pathname: s.location.pathname,
   }));
 

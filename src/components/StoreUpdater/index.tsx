@@ -73,6 +73,7 @@ export const StoreUpdater = memo(() => {
 
   useRouteMeta();
 
+  // @ts-ignore
   useSyncState('siteData', siteData, () => {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { setLoading, ...data } = siteData;
@@ -83,6 +84,7 @@ export const StoreUpdater = memo(() => {
 
     if (isEqual(data, prevData)) return;
 
+    // @ts-ignore
     storeApi.setState({ siteData });
   });
 

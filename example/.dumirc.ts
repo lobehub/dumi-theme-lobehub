@@ -27,7 +27,7 @@ const themeConfig = {
     type: 'doc',
   },
   description: 'Lobe UI is an open-source UI component library for building chatbot web apps',
-  footer: 'Made with 🤯 by LobeHub',
+  footer: 'Made with 🤯 by <a href="https://lobehub.com" target="_blank">LobeHub</a>',
   giscus: {
     category: 'Q&A',
     categoryId: 'DIC_kwDOJloKoM4CXsCu',
@@ -53,7 +53,7 @@ export default defineConfig({
   define: {
     'process.env': process.env,
   },
-  favicons: ['https://npm.elemecdn.com/@lobehub/assets-favicons/assets/favicon.ico'],
+  favicons: ['https://lobehub.com/favicon.ico'],
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',

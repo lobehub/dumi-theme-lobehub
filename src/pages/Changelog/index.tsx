@@ -7,14 +7,12 @@ import { Center } from 'react-layout-kit';
 import { ApiHeader } from '@/components/ApiHeader';
 import { useStyles } from '@/pages/Docs/styles';
 import Content from '@/slots/Content';
-import { githubSel, useSiteStore } from '@/store';
+import { siteSelectors, useSiteStore } from '@/store';
 
 const Changelog = memo(() => {
   const outlet = useOutlet();
   const { mobile } = useResponsive();
-  const { repoBase } = useSiteStore((s) => ({
-    repoBase: githubSel(s),
-  }));
+  const repoBase = useSiteStore(siteSelectors.github);
 
   const { fm } = useSiteStore(
     (s) => ({
