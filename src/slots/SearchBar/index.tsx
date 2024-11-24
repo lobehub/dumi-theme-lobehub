@@ -1,8 +1,8 @@
 import { SearchBar as Input } from '@lobehub/ui';
 import { useSiteSearch } from 'dumi';
-import SearchResult from 'dumi/theme-default/slots/SearchResult';
 import { memo, useState } from 'react';
 
+import SearchResult from '../SearchResult';
 import { useStyles } from './style';
 
 const SearchBar = memo(() => {
