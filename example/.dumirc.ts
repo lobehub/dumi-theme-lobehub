@@ -1,8 +1,9 @@
 import { defineConfig } from 'dumi';
 import { resolve } from 'node:path';
 
-import { homepage, name } from '../package.json';
+import { description, homepage, name } from '../package.json';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const isWin = process.platform === 'win32';
 
 const themeConfig = {
@@ -24,10 +25,8 @@ const themeConfig = {
     match: ['/components'],
     pkg: name,
     sourceUrl: `{github}/tree/master/src/{atomId}/index.tsx`,
-    type: 'doc',
   },
-  description: 'Lobe UI is an open-source UI component library for building chatbot web apps',
-  footer: 'Made with 🤯 by <a href="https://lobehub.com" target="_blank">LobeHub</a>',
+  description,
   giscus: {
     category: 'Q&A',
     categoryId: 'DIC_kwDOJloKoM4CXsCu',
@@ -53,11 +52,13 @@ export default defineConfig({
   define: {
     'process.env': process.env,
   },
+  exportStatic: {},
   favicons: ['https://lobehub.com/favicon.ico'],
+  jsMinifier: 'swc',
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
-  ssr: false,
+  ssr: isProduction ? {} : false,
   styles: [
     `html, body { background: transparent;  }
 

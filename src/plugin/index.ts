@@ -6,11 +6,15 @@ import { join } from 'node:path';
 
 import { getHash } from './utils';
 
+/*
+ * SSR 抽取样式
+ */
 const SSRPlugin = (api: IApi) => {
   api.describe({
-    key: '@',
+    key: 'lobe-docs',
   });
 
+  // 如果没有开启 SSR，则啥也不做
   if (!api.userConfig.ssr) return;
 
   api.logger.info('detect ssr config, when building html will extract css.');
@@ -30,7 +34,6 @@ const SSRPlugin = (api: IApi) => {
 
   const addLinkStyle = (html: string, cssFile: string) => {
     const prefix = api.userConfig.publicPath || api.config.publicPath;
-
     return html.replace('</head>', `<link rel="stylesheet" href="${prefix + cssFile}"></head>`);
   };
 
@@ -40,8 +43,9 @@ const SSRPlugin = (api: IApi) => {
       .filter((f) => !f.path.includes(':'))
 
       .map((file) => {
-        const antdCache = (global as any).__LOBE_CACHE__;
+        const antdCache = (global as any).__ANTD_CACHE__;
 
+        // 提取 antd-style 样式到独立 css 文件
         const styles = extractStaticStyle(file.content, { antdCache });
 
         for (const result of styles) {

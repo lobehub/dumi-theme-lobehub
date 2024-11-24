@@ -38,6 +38,8 @@ dumi-theme-lobehub is a documentation site theme package designed for `Dumi 2`. 
 - [🤝 Contributing](#-contributing)
 - [🔗 Links](#-links)
   - [More Products](#more-products)
+  - [Design Resources](#design-resources)
+  - [Development Resources](#development-resources)
 
 ####
 
@@ -192,9 +194,22 @@ Contributions of all types are more than welcome, if you are interested in contr
 
 ### More Products
 
-- **[🍭 Lobe UI](https://github.com/lobehub/lobe-ui)** - An open-source UI component library for building AIGC web apps.
-- **[🤖 Lobe Chat](https://github.com/lobehub/lobe-chat)** - An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
-- **[🤯 Lobe Theme](https://github.com/lobehub/sd-webui-lobe-theme)** - The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.
+- **[🤯 Lobe Chat](https://github.com/lobehub/lobe-chat)** - An open-source, extensible (Function Calling), high-performance chatbot framework. It supports one-click free deployment of your private ChatGPT/LLM web application.
+- **[🅰️ Lobe Theme](https://github.com/lobehub/sd-webui-lobe-theme)** - The modern theme for stable diffusion webui, exquisite interface design, highly customizable UI, and efficiency boosting features.
+- **[🧸 Lobe Vidol](https://github.com/lobehub/lobe-vidol)** - Experience the magic of virtual idol creation with Lobe Vidol, enjoy the elegance of our Exquisite UI Design, dance along using MMD Dance Support, and engage in Smooth Conversations.
+
+### Design Resources
+
+- **[🍭 Lobe UI](https://ui.lobehub.com)** - An open-source UI component library for building AIGC web apps.
+- **[🥨 Lobe Icons](https://lobehub.com/icons)** - Popular AI / LLM Model Brand SVG Logo and Icon Collection.
+- **[📊 Lobe Charts](https://charts.lobehub.com)** - React modern charts components built on recharts
+
+### Development Resources
+
+- **[🎤 Lobe TTS](https://tts.lobehub.com)** - A high-quality & reliable TTS/STT library for Server and Browser
+- **[🌏 Lobe i18n](https://github.com/lobehub/lobe-cli-toolbox/blob/master/packages/lobe-i18n)** - Automation ai tool for the i18n (internationalization) translation process.
+
+[More Resources](https://lobehub.com/resources)
 
 <div align="right">
 
