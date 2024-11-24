@@ -12,11 +12,12 @@ import {
 import isEqual from 'fast-deep-equal';
 import { memo, useMemo } from 'react';
 
-import Analytics from '@/components/Analytics';
 import { Provider, createStore, useThemeStore } from '@/store';
 
+import Analytics from '../DocLayout/Head/Analytics';
 import Favicons from '../DocLayout/Head/Favicons';
 import Og from '../DocLayout/Head/Og';
+import StructuredData from '../DocLayout/Head/StructuredData';
 import GlobalStyle from './GlobalStyle';
 
 const App = memo(({ initState }: any) => {
@@ -28,6 +29,7 @@ const App = memo(({ initState }: any) => {
       <Favicons />
       <Og />
       <Analytics />
+      <StructuredData />
       <ThemeProvider themeMode={themeMode}>
         <GlobalStyle />
         {outlet}
