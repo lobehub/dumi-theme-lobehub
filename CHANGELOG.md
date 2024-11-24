@@ -2,6 +2,32 @@
 
 # Changelog
 
+### [Version 1.8.6](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.5...v1.8.6)
+
+<sup>Released on **2024-11-24**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update api talbe style, Update badge and alert.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update api talbe style ([2176ebb](https://github.com/lobehub/dumi-theme-lobehub/commit/2176ebb))
+- **misc**: Update badge and alert ([8c14fbf](https://github.com/lobehub/dumi-theme-lobehub/commit/8c14fbf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.8.5](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.4...v1.8.5)
 
 <sup>Released on **2024-11-24**</sup>
