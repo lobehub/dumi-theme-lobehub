@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.10.5](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.4...v1.10.5)
+
+<sup>Released on **2024-11-24**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix ssr style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix ssr style ([96bd8cf](https://github.com/lobehub/dumi-theme-lobehub/commit/96bd8cf))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.10.4](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.3...v1.10.4)
 
 <sup>Released on **2024-11-24**</sup>
