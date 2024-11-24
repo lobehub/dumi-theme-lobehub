@@ -1,4 +1,5 @@
 import type { FeaturesProps, FooterProps, HeroProps, LogoProps } from '@lobehub/ui';
+import { IThemeConfig } from 'dumi/dist/client/theme-api/types';
 import { FooterColumn } from 'rc-footer/es/column';
 
 import type { SiteCustomToken } from '@/styles/customToken';
@@ -20,7 +21,7 @@ export interface FooterConfig {
   resources?: FooterColumn;
 }
 
-export interface SiteThemeConfig {
+export interface SiteThemeConfig extends IThemeConfig {
   actions?: HeroProps['actions'];
   analytics?: {
     clarity?: {

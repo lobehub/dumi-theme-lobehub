@@ -83,11 +83,23 @@ Usage After installation, start the site with `dumi`, and the theme will be auto
 
 ```ts
 interface SiteThemeConfig {
-  actions: HeroProps['actions'];
+  actions?: HeroProps['actions'];
+  analytics?: {
+    clarity?: {
+      projectId: string;
+    };
+    googleAnalytics?: {
+      measurementId: string;
+    };
+    plausible?: {
+      domain: string;
+      scriptBaseUrl: string;
+    };
+  };
   apiHeader?: ApiHeaderConfig | false;
   description?: string;
   docStyle?: 'block' | 'pure';
-  features: FeaturesProps['items'];
+  features?: FeaturesProps['items'];
   footer?: string | false;
   footerConfig?: FooterConfig;
   giscus?: {
@@ -100,6 +112,28 @@ interface SiteThemeConfig {
   hideHomeNav?: boolean;
   logo?: string;
   logoType?: LogoProps['type'];
+  metadata?: {
+    description?: string;
+    icons?: {
+      apple?: string;
+      icon?: string;
+      shortcut?: string;
+    };
+    manifest?: string;
+    openGraph?: {
+      description?: string;
+      image?: string;
+      siteName?: string;
+      title?: string;
+    };
+    title?: string;
+    twitter?: {
+      description?: string;
+      image?: string;
+      site?: string;
+      title?: string;
+    };
+  };
   name?: string;
   siteToken?: SiteConfigToken;
   socialLinks?: {

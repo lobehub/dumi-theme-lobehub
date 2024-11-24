@@ -1,11 +1,5 @@
 import type { ISiteContext } from 'dumi/dist/client/theme-api/context';
-import {
-  ILocale,
-  INavItem,
-  IRouteMeta,
-  ISidebarGroup,
-  IThemeConfig,
-} from 'dumi/dist/client/theme-api/types';
+import { ILocale, INavItem, IRouteMeta, ISidebarGroup } from 'dumi/dist/client/theme-api/types';
 import type { Location } from 'history';
 import { StoreApi } from 'zustand';
 import { createContext } from 'zustand-utils';
@@ -18,7 +12,7 @@ import { SiteThemeConfig } from '@/types';
 export type NavData = (INavItem & { children?: INavItem[] | undefined })[];
 
 export type ISiteData = ISiteContext & {
-  themeConfig: IThemeConfig & SiteThemeConfig;
+  themeConfig: SiteThemeConfig;
 };
 
 export interface SiteStore {

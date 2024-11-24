@@ -44,7 +44,7 @@ export interface SiteStore {
   tabMeta?: NonNullable<IRouteMeta['tabs']>[0]['meta'];
 }
 
-export const initialThemeConfig: SiteThemeConfig = {
+export const initialThemeConfig: Partial<SiteThemeConfig> = {
   footer: 'Made with 🤯 by <a href="https://lobehub.com" target="_blank">LobeHub</a>',
   metadata: {
     icons: {
@@ -62,6 +62,14 @@ export const initialThemeConfig: SiteThemeConfig = {
     },
   },
 };
+
+export const styles = [
+  `html, body { background: transparent;  }
+
+  @media (prefers-color-scheme: dark) {
+    html, body { background: #000; }
+  }`,
+];
 
 export const initialState: SiteStore = {
   locale: { id: 'en-US', name: 'English', suffix: '' },
@@ -93,6 +101,7 @@ export const initialState: SiteStore = {
     pkg: {},
     // @ts-ignore
     setLoading: undefined,
+    styles: styles,
     // @ts-ignore
     themeConfig: initialThemeConfig,
   },

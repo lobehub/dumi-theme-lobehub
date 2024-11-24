@@ -5,10 +5,11 @@ import { memo } from 'react';
 import { siteSelectors, useSiteStore } from '@/store';
 
 const Og = memo(() => {
-  const [title, desc, logo] = useSiteStore((s) => [
+  const [title, desc, logo, hostname] = useSiteStore((s) => [
     siteSelectors.siteTitle(s),
     siteSelectors.siteDesc(s),
     siteSelectors.logo(s),
+    siteSelectors.hostname(s),
   ]);
   const metadata = useSiteStore(siteSelectors.metadata, isEqual);
   return (
@@ -17,7 +18,7 @@ const Og = memo(() => {
       <meta content={metadata?.description || desc} name="description" />
       <meta content={metadata?.openGraph?.title || title} property="og:title" />
       <meta content={metadata?.openGraph?.description || desc} property="og:description" />
-      <meta content={location.origin} property="og:url" />
+      <meta content={hostname || location.origin} property="og:url" />
       <meta content={metadata?.openGraph?.siteName} property="og:site_name" />
       <meta content="en" property="og:locale" />
       <meta content={metadata?.openGraph?.title || title} property="og:image:alt" />

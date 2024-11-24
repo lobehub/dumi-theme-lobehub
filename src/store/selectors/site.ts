@@ -82,6 +82,8 @@ const contentBottom = (s: SiteStore) => {
   return { currentIndex, next: dataFlatten[currentIndex + 1], prev: dataFlatten[currentIndex - 1] };
 };
 
+const hostname = (s: SiteStore) => s.siteData.hostname;
+
 export const siteSelectors = {
   activePath,
   analytics,
@@ -90,6 +92,7 @@ export const siteSelectors = {
   flattenSidebar,
   giscus,
   github,
+  hostname,
   logo,
   metadata,
   siteDesc,
