@@ -13,16 +13,17 @@ import { useStyles } from './styles';
 const Documents = memo(() => {
   const outlet = useOutlet();
   const { mobile } = useResponsive();
-  const { isApiPage, giscus } = useSiteStore((st) => ({
-    giscus: siteSelectors.giscus(st),
-    isApiPage: apiHeaderSelectors.isApiPage(st),
+  const { isApiPage, giscus, pathname } = useSiteStore((s) => ({
+    giscus: siteSelectors.giscus(s),
+    isApiPage: apiHeaderSelectors.isApiPage(s),
+    pathname: s.location.pathname,
   }));
   const { styles } = useStyles();
 
   useEffect(() => {
     window?.scrollTo(0, 0);
     document?.body.scrollTo(0, 0);
-  }, [location.pathname]);
+  }, [pathname]);
 
   const Comment = useCallback(
     () =>
@@ -31,14 +32,14 @@ const Documents = memo(() => {
           <Giscus
             category={giscus.category}
             categoryId={giscus.categoryId}
-            id="lobehub"
+            id="giscus"
             mapping="title"
             repo={giscus.repo}
             repoId={giscus.repoId}
           />
         </div>
       ),
-    [giscus, location.pathname],
+    [giscus, pathname],
   );
   return (
     <Center className={styles.content} style={{ marginBottom: 48, padding: mobile ? 0 : 24 }}>

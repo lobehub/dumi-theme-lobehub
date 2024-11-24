@@ -2,10 +2,12 @@ import { Icon } from '@lobehub/ui';
 import animateScrollTo from 'animated-scroll-to';
 import { Empty, Typography } from 'antd';
 import { useTheme } from 'antd-style';
-import { FormattedMessage, Link, history, useLocation, type useSiteSearch } from 'dumi';
+import { FormattedMessage, Link, history, type useSiteSearch } from 'dumi';
 import { FileBox, FileIcon, HeadingIcon, LetterText, LucideIcon } from 'lucide-react';
 import React, { Fragment, memo, useCallback, useEffect, useState } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
+
+import { siteSelectors, useSiteStore } from '@/store';
 
 const ICONS_MAPPING: { [key: string]: LucideIcon } = {
   content: LetterText,
@@ -82,12 +84,15 @@ const SearchResult = memo<{
   const theme = useTheme();
   const [data, histsCount] = useFlatSearchData(props.data);
   const [activeIndex, setActiveIndex] = useState(-1);
-  const { pathname } = useLocation();
+  const [pathname, hostname] = useSiteStore((s) => [
+    s.location.pathname,
+    siteSelectors.hostname(s),
+  ]);
 
   const onItemSelect = (item: ISearchResult[0]['hints'][0]) => {
     props.onItemSelect?.(item);
 
-    const url = new URL(item?.link, location.origin);
+    const url = new URL(item?.link, hostname || location?.origin);
     if (url?.pathname === pathname && !url.hash) {
       setTimeout(() => {
         animateScrollTo(0, {

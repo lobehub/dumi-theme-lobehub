@@ -80,8 +80,11 @@ const SingleSwitch = memo<{ current: ILocaleItem; locale: ILocaleItem }>(({ loca
 });
 
 const LangSwitch = memo(() => {
-  const locales = useSiteStore((s) => s.siteData.locales);
-  const current = useSiteStore((s) => s.locale);
+  const [locales, current, pathname] = useSiteStore((s) => [
+    s.siteData.locales,
+    s.locale,
+    s.location.pathname,
+  ]);
 
   // do not render in single language
   if (locales.length <= 1) return;
@@ -92,7 +95,7 @@ const LangSwitch = memo(() => {
         console.log(
           getTargetLocalePath({
             current,
-            pathname: location.pathname,
+            pathname,
             target: locales[index],
           }),
         );
@@ -100,7 +103,7 @@ const LangSwitch = memo(() => {
         history.push(
           getTargetLocalePath({
             current,
-            pathname: location.pathname,
+            pathname,
             target: locales[index],
           }),
         );
