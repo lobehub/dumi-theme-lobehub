@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.10.4](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.3...v1.10.4)
+
+<sup>Released on **2024-11-24**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix location.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix location ([2b1b872](https://github.com/lobehub/dumi-theme-lobehub/commit/2b1b872))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.10.3](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.2...v1.10.3)
 
 <sup>Released on **2024-11-24**</sup>
