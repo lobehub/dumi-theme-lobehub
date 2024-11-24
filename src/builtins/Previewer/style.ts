@@ -11,11 +11,6 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
       }
     `,
     container: css`
-      .dumi-default-table-content {
-        overflow: visible !important;
-        font-size: 14px;
-      }
-
       .dumi-default-previewer {
         position: relative;
 

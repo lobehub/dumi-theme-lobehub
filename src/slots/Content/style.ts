@@ -22,6 +22,37 @@ export const useStyles = createStyles(({ cx, token, responsive, css }, isPure: b
       &:has([data-page-tabs='true']) {
         padding-top: 8px;
       }
+
+      .dumi-default-table-content {
+        overflow: visible !important;
+        font-size: 14px;
+      }
+
+      .dumi-default-badge {
+        &:not([type]) {
+          color: ${token.colorInfoText};
+          background: ${token.colorInfoBg};
+          border: 1px solid ${token.colorInfoBorder};
+        }
+
+        &[type='warning'] {
+          color: ${token.colorWarningText};
+          background: ${token.colorWarningBg};
+          border: 1px solid ${token.colorWarningBorder};
+        }
+
+        &[type='error'] {
+          color: ${token.colorErrorText};
+          background: ${token.colorErrorBg};
+          border: 1px solid ${token.colorErrorBorder};
+        }
+
+        &[type='success'] {
+          color: ${token.colorSuccessText};
+          background: ${token.colorSuccessBg};
+          border: 1px solid ${token.colorSuccessBorder};
+        }
+      }
     `,
   ),
 }));
