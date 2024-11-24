@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.9.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.6...v1.9.0)
+
+<sup>Released on **2024-11-24**</sup>
+
+#### ✨ Features
+
+- **misc**: Update theme config.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update theme config ([736c3ea](https://github.com/lobehub/dumi-theme-lobehub/commit/736c3ea))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.8.6](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.8.5...v1.8.6)
 
 <sup>Released on **2024-11-24**</sup>
