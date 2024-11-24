@@ -1,7 +1,7 @@
-import { useLocation } from '@@/exports';
 import { ThemeProvider } from '@lobehub/ui';
 import {
   useLocale,
+  useLocation,
   useNavData,
   useOutlet,
   useRouteMeta,
