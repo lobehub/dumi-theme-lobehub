@@ -6,21 +6,22 @@ import urlJoin from 'url-join';
 import { siteSelectors, useSiteStore } from '@/store';
 
 const Og: FC = () => {
-  const [title, desc, logo, hostname] = useSiteStore((s) => [
+  const [title, desc, logo, hostname, pathname] = useSiteStore((s) => [
     siteSelectors.siteTitle(s),
     siteSelectors.siteDesc(s),
     siteSelectors.logo(s),
-    siteSelectors.hostname(s),
+    siteSelectors.hostname(s) || 'https://lobehub.com',
+    s.location.pathname,
   ]);
   const metadata = useSiteStore(siteSelectors.metadata, isEqual);
   return (
     <Helmet>
       <title>{metadata?.title || title}</title>
       <meta content={metadata?.description || desc} name="description" />
-      <link href={hostname || location.origin} rel="canonical" />
+      <link href={hostname} rel="canonical" />
       <meta content={metadata?.openGraph?.title || title} property="og:title" />
       <meta content={metadata?.openGraph?.description || desc} property="og:description" />
-      <meta content={urlJoin(hostname || location.origin, location.pathname)} property="og:url" />
+      <meta content={urlJoin(hostname, pathname)} property="og:url" />
       <meta content={metadata?.openGraph?.siteName} property="og:site_name" />
       <meta content="en" property="og:locale" />
       <meta content={metadata?.openGraph?.title || title} property="og:image:alt" />

@@ -12,46 +12,45 @@ const StructuredData: FC = () => {
     siteSelectors.siteTitle(s),
     siteSelectors.siteDesc(s),
     siteSelectors.logo(s),
-    siteSelectors.hostname(s),
+    siteSelectors.hostname(s) || 'https://lobehub.com',
   ]);
   const metadata = useSiteStore(siteSelectors.metadata, isEqual);
-  const host = hostname || location.origin;
 
   const ld = {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@id': urlJoin(host, '#website'),
+        '@id': urlJoin(hostname, '#website'),
         '@type': 'WebSite',
         'description': desc,
         'inLanguage': 'en-US',
         'name': 'LobeHub',
-        'publisher': { '@id': urlJoin(host, '#organization') },
-        'url': host,
+        'publisher': { '@id': urlJoin(hostname, '#organization') },
+        'url': hostname,
       },
       {
-        '@id': host,
+        '@id': hostname,
         '@type': 'WebPage',
-        'about': { '@id': urlJoin(host, '#organization') },
+        'about': { '@id': urlJoin(hostname, '#organization') },
         'dateModified': date,
         'datePublished': date,
         'description': desc,
-        'image': { '@id': urlJoin(host, '#primaryimage') },
+        'image': { '@id': urlJoin(hostname, '#primaryimage') },
         'inLanguage': 'en-US',
-        'isPartOf': { '@id': urlJoin(host, '#website') },
+        'isPartOf': { '@id': urlJoin(hostname, '#website') },
         'name': title,
-        'primaryImageOfPage': { '@id': urlJoin(host, '#primaryimage') },
+        'primaryImageOfPage': { '@id': urlJoin(hostname, '#primaryimage') },
         'thumbnailUrl': metadata?.twitter?.image || metadata?.openGraph?.image,
       },
       {
-        '@id': urlJoin(host, '#primaryimage'),
+        '@id': urlJoin(hostname, '#primaryimage'),
         '@type': 'ImageObject',
         'contentUrl': metadata?.twitter?.image || metadata?.openGraph?.image || logo,
         'inLanguage': 'en-US',
         'url': metadata?.twitter?.image || metadata?.openGraph?.image || logo,
       },
       {
-        '@id': urlJoin(host, '#organization'),
+        '@id': urlJoin(hostname, '#organization'),
         '@type': 'Organization',
         'alternateName': 'LobeHub',
         'contactPoint': {

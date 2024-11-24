@@ -76,7 +76,7 @@ const DocumentLayout = memo(() => {
       const elm = document.querySelector(`#${decodeURIComponent(id)}`);
       if (elm) {
         elm.scrollIntoView();
-        window.scrollBy({ top: -80 });
+        window?.scrollBy({ top: -80 });
       }
     }, 1);
   }, [loading, hash]);

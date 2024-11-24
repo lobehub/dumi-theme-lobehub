@@ -20,8 +20,8 @@ const Documents = memo(() => {
   const { styles } = useStyles();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTo(0, 0);
+    window?.scrollTo(0, 0);
+    document?.body.scrollTo(0, 0);
   }, [location.pathname]);
 
   const Comment = useCallback(

@@ -11,12 +11,13 @@ const Toc = memo(() => {
   const items = useSiteStore(siteSelectors.tocAnchorItem, isEqual);
   const { mobile } = useResponsive();
   const theme = useTheme();
+  const hash = useSiteStore((s) => s.location.hash, isEqual);
   const [spacing, setSpacing] = useState<number>(GAP);
 
   useEffect(() => {
-    const ApiTitle = document.querySelector('#api-header');
+    const ApiTitle = document?.querySelector('#api-header');
     if (ApiTitle) setSpacing(ApiTitle.clientHeight + GAP);
-  }, [window.location.href, items]);
+  }, [hash, items]);
 
   if (items?.length < 1) return;
 
@@ -24,7 +25,7 @@ const Toc = memo(() => {
     <>
       {!mobile && <div style={{ height: spacing }} />}
       <T
-        getContainer={() => document.body}
+        getContainer={() => document?.body}
         headerHeight={theme.headerHeight}
         isMobile={mobile}
         items={items}

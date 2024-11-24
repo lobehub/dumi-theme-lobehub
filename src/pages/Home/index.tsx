@@ -9,8 +9,8 @@ const Home = memo(() => {
   const outlet = useOutlet();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTo(0, 0);
+    window?.scrollTo(0, 0);
+    document?.body.scrollTo(0, 0);
   }, []);
 
   return (
