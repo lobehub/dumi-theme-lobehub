@@ -1,4 +1,5 @@
 import { Hero as H } from '@lobehub/ui';
+import { Link } from 'dumi';
 import { memo } from 'react';
 
 import { heroSelectors, useSiteStore } from '@/store';
@@ -10,7 +11,7 @@ const Hero = memo(() => {
     heroSelectors.heroActions(s),
   ]);
 
-  return <H actions={actions} description={description} title={title!} />;
+  return <H Link={Link} actions={actions} description={description} title={title!} />;
 });
 
 export default Hero;
