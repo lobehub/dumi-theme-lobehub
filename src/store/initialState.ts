@@ -52,8 +52,6 @@ export const initialThemeConfig: Partial<SiteThemeConfig> = {
       icon: 'https://lobehub.com/favicon-32x32.png',
       shortcut: 'https://lobehub.com/favicon.ico',
     },
-    manifest:
-      'https://registry.npmmirror.com/@lobehub/assets-favicons/latest/files/assets/site.webmanifest',
     openGraph: {
       siteName: 'LobeHub',
     },
