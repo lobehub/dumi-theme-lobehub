@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version 1.10.9](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.8...v1.10.9)
+
+<sup>Released on **2024-11-26**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Rm manifest.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Rm manifest ([e81ce65](https://github.com/lobehub/dumi-theme-lobehub/commit/e81ce65))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.10.8](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.7...v1.10.8)
 
 <sup>Released on **2024-11-25**</sup>
