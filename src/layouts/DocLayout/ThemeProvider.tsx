@@ -1,5 +1,5 @@
 import { ThemeProvider } from '@lobehub/ui';
-import { extractStaticStyle } from 'antd-style';
+import { StyleProvider, extractStaticStyle } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { PropsWithChildren, memo } from 'react';
 
@@ -15,14 +15,19 @@ export default memo<PropsWithChildren>(({ children }) => {
   const userToken = useSiteStore(siteSelectors.token, isEqual);
 
   return (
-    <ThemeProvider
+    <StyleProvider
       cache={extractStaticStyle.cache}
-      customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
-      prefixCls={'site'}
-      themeMode={themeMode}
+      prefix={'site'}
+      speedy={process.env.NODE_ENV === 'production'}
     >
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+      <ThemeProvider
+        customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
+        prefixCls={'site'}
+        themeMode={themeMode}
+      >
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    </StyleProvider>
   );
 });
