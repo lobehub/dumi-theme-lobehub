@@ -2,7 +2,7 @@ import { Icon } from '@lobehub/ui';
 import animateScrollTo from 'animated-scroll-to';
 import { Empty, Typography } from 'antd';
 import { useTheme } from 'antd-style';
-import { FormattedMessage, Link, history, type useSiteSearch } from 'dumi';
+import { Link, history, type useSiteSearch } from 'dumi';
 import { FileBox, FileIcon, HeadingIcon, LetterText, LucideIcon } from 'lucide-react';
 import React, { Fragment, memo, useCallback, useEffect, useState } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
@@ -131,12 +131,7 @@ const SearchResult = memo<{
   let returnNode: React.ReactNode = null;
 
   if (props.loading) {
-    returnNode = (
-      <Empty
-        description={<FormattedMessage id="search.loading" />}
-        image={Empty.PRESENTED_IMAGE_SIMPLE}
-      />
-    );
+    returnNode = <Empty description={'Search Loading...'} image={Empty.PRESENTED_IMAGE_SIMPLE} />;
   } else if (props.data.length > 0) {
     returnNode = (
       <Flexbox gap={8} paddingBlock={8} paddingInline={8}>
@@ -227,12 +222,7 @@ const SearchResult = memo<{
       </Flexbox>
     );
   } else {
-    returnNode = (
-      <Empty
-        description={<FormattedMessage id="search.not.found" />}
-        image={Empty.PRESENTED_IMAGE_SIMPLE}
-      />
-    );
+    returnNode = <Empty description={'Not Found'} image={Empty.PRESENTED_IMAGE_SIMPLE} />;
   }
 
   return (

@@ -14,6 +14,7 @@ import { memo, useMemo } from 'react';
 
 import { Provider, createStore, useThemeStore } from '@/store';
 
+import AntdV5MonkeyPatch from '../DocLayout/AntdV5MonkeyPatch';
 import Analytics from '../DocLayout/Head/Analytics';
 import Favicons from '../DocLayout/Head/Favicons';
 import Og from '../DocLayout/Head/Og';
@@ -34,6 +35,7 @@ const App = memo(({ initState }: any) => {
         <GlobalStyle />
         {outlet}
       </ThemeProvider>
+      <AntdV5MonkeyPatch />
     </Provider>
   );
 });

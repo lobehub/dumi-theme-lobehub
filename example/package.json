@@ -7,5 +7,9 @@
     "postinstall": "npm run setup",
     "preview": "dumi preview",
     "setup": "dumi setup"
+  },
+  "devDependencies": {
+    "babel-plugin-antd-style": "^1.0.4",
+    "dumi": "^2.4.17"
   }
 }

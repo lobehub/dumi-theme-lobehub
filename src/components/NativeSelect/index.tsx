@@ -50,7 +50,7 @@ const NativeSelect = memo<NativeSelectProps>(
     const overflowReference = useRef<SideObject>(null);
     const allowSelectReference = useRef(false);
     const allowMouseUpReference = useRef(true);
-    const selectTimeoutReference = useRef<any>();
+    const selectTimeoutReference = useRef<any>(null);
     const scrollReference = useRef<HTMLDivElement>(null);
 
     const [open, setOpen] = useState(false);

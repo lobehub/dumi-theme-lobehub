@@ -7,6 +7,8 @@ import GlobalStyle from '@/layouts/DocLayout/GlobalStyle';
 import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
 import customToken from '@/styles/customToken';
 
+import AntdV5MonkeyPatch from './AntdV5MonkeyPatch';
+
 //@ts-ignore
 global.__ANTD_CACHE__ = extractStaticStyle.cache;
 
@@ -15,19 +17,15 @@ export default memo<PropsWithChildren>(({ children }) => {
   const userToken = useSiteStore(siteSelectors.token, isEqual);
 
   return (
-    <StyleProvider
-      cache={extractStaticStyle.cache}
-      prefix={'site'}
-      speedy={process.env.NODE_ENV === 'production'}
-    >
+    <StyleProvider cache={extractStaticStyle.cache} speedy={process.env.NODE_ENV === 'production'}>
       <ThemeProvider
         customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
-        prefixCls={'site'}
         themeMode={themeMode}
       >
         <GlobalStyle />
         {children}
       </ThemeProvider>
+      <AntdV5MonkeyPatch />
     </StyleProvider>
   );
 });
