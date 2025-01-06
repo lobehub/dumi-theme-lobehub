@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.11.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.10...v1.11.0)
+
+<sup>Released on **2025-01-06**</sup>
+
+#### ✨ Features
+
+- **misc**: Support React 19.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Support React 19 ([ff82bae](https://github.com/lobehub/dumi-theme-lobehub/commit/ff82bae))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 1.10.10](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.10.9...v1.10.10)
 
 <sup>Released on **2024-12-15**</sup>
