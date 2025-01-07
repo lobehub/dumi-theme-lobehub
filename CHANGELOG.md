@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version 1.13.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.12.0...v1.13.0)
+
+<sup>Released on **2025-01-07**</sup>
+
+#### ✨ Features
+
+- **misc**: Update remark.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update remark ([920b4cb](https://github.com/lobehub/dumi-theme-lobehub/commit/920b4cb))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.12.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.11.0...v1.12.0)
 
 <sup>Released on **2025-01-07**</sup>
