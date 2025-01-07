@@ -1,5 +1,6 @@
 {
   "name": "dumi-theme-lobehub-example",
+  "private": true,
   "scripts": {
     "build": "dumi build",
     "build:analyze": "ANALYZE=1 dumi build",
