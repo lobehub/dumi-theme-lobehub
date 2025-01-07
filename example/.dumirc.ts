@@ -70,10 +70,6 @@ export default defineConfig({
   mako: isWin || isProduction ? false : {},
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
-  resolve: {
-    atomDirs: [{ dir: 'src', type: 'component' }],
-    entryFile: isProduction ? './src/index.ts' : undefined,
-  },
   ssr: isProduction ? {} : false,
   styles: [
     `html, body { background: transparent;  }
