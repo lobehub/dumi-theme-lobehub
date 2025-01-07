@@ -76,11 +76,13 @@ const useFlatSearchData = (data: ISearchResult) => {
   return flatData;
 };
 
-const SearchResult = memo<{
+export interface SearchResultProps {
   data: ISearchResult;
   loading: boolean;
   onItemSelect?: (item: ISearchResult[0]['hints'][0]) => void;
-}>((props) => {
+}
+
+const SearchResult = memo<SearchResultProps>((props) => {
   const theme = useTheme();
   const [data, histsCount] = useFlatSearchData(props.data);
   const [activeIndex, setActiveIndex] = useState(-1);
