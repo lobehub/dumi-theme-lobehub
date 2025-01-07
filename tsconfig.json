@@ -1,30 +1,20 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "strict": true,
     "declaration": true,
-    "module": "ESNext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "resolveJsonModule": true,
-    "moduleResolution": "Node",
     "jsx": "react-jsx",
     "types": ["vitest/globals"],
+    "baseUrl": ".",
     "paths": {
-      "@@/*": ["example/.dumi/tmp/*", ".dumi/tmp/*"],
+      "@@/*": ["example/.dumi/tmp/*"],
       "@/*": ["src/*"],
-      "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*", ".dumi/tmp/dumi/theme/*"],
+      "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*"],
       "dumi-theme-lobehub": ["src"],
-      "dumi-theme-lobehub/*": ["src/*"]
+      "dumi-theme-lobehub/*": ["src/*", "*"]
     }
   },
-  "include": [
-    "src",
-    "tests",
-    "typings",
-    ".fatherrc.ts",
-    "example/.dumirc.ts",
-    "example/docs",
-    "example/src"
-  ]
+  "include": ["src", "tests", ".dumi/**/*", "typings", "example/.dumirc.ts", "*.ts"]
 }
