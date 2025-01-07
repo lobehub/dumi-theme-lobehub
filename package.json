@@ -33,7 +33,7 @@
     "build:watch": "father dev",
     "ci": "npm run lint && npm run type-check",
     "dev": "concurrently -n dumi,example -c blue,yellow \"npm run build:watch\" \"npm run docs:dev\"",
-    "docs:build": "npm run build && npm run build --prefix=example",
+    "docs:build": "npm run build --prefix=example",
     "docs:dev": "npm run dev --prefix=example",
     "doctor": "father doctor",
     "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
