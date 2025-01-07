@@ -2,6 +2,42 @@
 
 # Changelog
 
+## [Version&nbsp;1.14.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.13.0...v1.14.0)
+
+<sup>Released on **2025-01-07**</sup>
+
+#### ✨ Features
+
+- **misc**: Update mako.
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix build, Fix deps, Fix release, Pkg Pr New.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Update mako ([b452097](https://github.com/lobehub/dumi-theme-lobehub/commit/b452097))
+
+#### What's fixed
+
+- **misc**: Fix build ([f27bd08](https://github.com/lobehub/dumi-theme-lobehub/commit/f27bd08))
+- **misc**: Fix deps ([13f0b86](https://github.com/lobehub/dumi-theme-lobehub/commit/13f0b86))
+- **misc**: Fix release ([745a901](https://github.com/lobehub/dumi-theme-lobehub/commit/745a901))
+- **misc**: Pkg Pr New ([af0508f](https://github.com/lobehub/dumi-theme-lobehub/commit/af0508f))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version 1.13.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.12.0...v1.13.0)
 
 <sup>Released on **2025-01-07**</sup>
