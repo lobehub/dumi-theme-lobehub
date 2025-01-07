@@ -43,7 +43,6 @@ const themeConfig = {
 
 export default defineConfig({
   alias: {
-    '@': resolve(__dirname, '../src'),
     'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
   apiParser: isProduction ? {} : false,
@@ -56,7 +55,7 @@ export default defineConfig({
   favicons: ['https://lobehub.com/favicon.ico'],
   jsMinifier: 'swc',
   locales: [{ id: 'en-US', name: 'English' }],
-  mako: isWin ? false : {},
+  mako: isWin || isProduction ? false : {},
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
   ssr: isProduction ? {} : false,

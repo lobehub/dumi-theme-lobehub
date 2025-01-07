@@ -1,25 +1,30 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "declaration": true,
-    "downlevelIteration": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
     "strict": true,
-    "target": "es6",
+    "declaration": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
     "types": ["vitest/globals"],
     "paths": {
       "@@/*": ["example/.dumi/tmp/*", ".dumi/tmp/*"],
       "@/*": ["src/*"],
       "dumi/theme/*": ["example/.dumi/tmp/dumi/theme/*", ".dumi/tmp/dumi/theme/*"],
       "dumi-theme-lobehub": ["src"],
-      "dumi-theme-lobehub/*": ["src/*", "*"]
+      "dumi-theme-lobehub/*": ["src/*"]
     }
   },
-  "include": ["src", "docs", "tests", ".dumi/**/*", ".dumirc.ts", ".fatherrc.ts"]
+  "include": [
+    "src",
+    "tests",
+    "typings",
+    ".fatherrc.ts",
+    "example/.dumirc.ts",
+    "example/docs",
+    "example/src"
+  ]
 }

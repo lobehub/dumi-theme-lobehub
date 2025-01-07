@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "babel-plugin-antd-style": "^1.0.4",
-    "dumi": "^2.4.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
