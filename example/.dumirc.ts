@@ -57,7 +57,6 @@ export default defineConfig({
   alias: {
     'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
-  apiParser: isProduction ? {} : false,
   base: '/',
   define: {
     'process.env': process.env,
