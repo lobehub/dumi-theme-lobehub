@@ -58,13 +58,14 @@ export default defineConfig({
     'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
   base: '/',
+  codeSplitting: {
+    jsStrategy: 'granularChunks',
+  },
   define: {
     'process.env': process.env,
   },
-  exportStatic: {},
   extraBabelPlugins: ['babel-plugin-antd-style'],
   favicons: ['https://lobehub.com/favicon.ico'],
-  jsMinifier: 'swc',
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
