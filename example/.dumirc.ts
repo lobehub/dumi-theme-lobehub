@@ -4,6 +4,7 @@ import { resolve } from 'node:path';
 
 import { description, homepage, name } from '../package.json';
 
+const isProduction = process.env.NODE_ENV === 'production';
 const isWin = process.platform === 'win32';
 
 const themeConfig: SiteThemeConfig = {
@@ -57,9 +58,6 @@ export default defineConfig({
     'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
   base: '/',
-  codeSplitting: {
-    jsStrategy: 'granularChunks',
-  },
   define: {
     'process.env': process.env,
   },
@@ -68,6 +66,7 @@ export default defineConfig({
   locales: [{ id: 'en-US', name: 'English' }],
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
+  ssr: isProduction ? {} : false,
   styles: [
     `html, body { background: transparent;  }
 
