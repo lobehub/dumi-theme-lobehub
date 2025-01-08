@@ -40,11 +40,10 @@ const themeConfig: SiteThemeConfig = {
     repo: 'lobehub/lobe-ui',
     repoId: 'R_kgDOJloKoA',
   },
-  lastUpdated: true,
   name: 'DUMI',
   prefersColor: {
     default: 'dark',
-    switch: false,
+    switch: true,
   },
   socialLinks: {
     discord: 'https://discord.gg/AYFPHvv2jT',
@@ -55,6 +54,7 @@ const themeConfig: SiteThemeConfig = {
 
 export default defineConfig({
   alias: {
+    '@': resolve(__dirname, '../src'),
     'dumi-theme-lobehub': resolve(__dirname, '../src'),
   },
   base: '/',
@@ -66,7 +66,6 @@ export default defineConfig({
   favicons: ['https://lobehub.com/favicon.ico'],
   jsMinifier: 'swc',
   locales: [{ id: 'en-US', name: 'English' }],
-  mako: isWin || isProduction ? false : {},
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
   ssr: isProduction ? {} : false,

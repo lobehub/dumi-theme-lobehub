@@ -21,6 +21,7 @@ const SearchBar = memo(() => {
         }}
         onChange={(e: any) => setKeywords(e.target.value)}
         onFocus={() => setFocusing(true)}
+        shortKey={'k'}
         spotlight
         type={'block'}
       />
