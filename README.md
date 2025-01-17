@@ -160,6 +160,7 @@ interface SiteThemeConfig {
 You can use Github Codespaces for online development:
 
 [![][github-codespace-shield]][github-codespace-link]
+[![][open-in-codeanywhere]][open-in-codeanywhere-link]
 
 Or clone it for local development:
 
@@ -234,6 +235,8 @@ This project is [MIT](./LICENSE) licensed.
 [github-action-test-link]: https://github.com/lobehub/dumi-theme-lobehub/actions/workflows/test.yml
 [github-action-test-shield]: https://img.shields.io/github/actions/workflow/status/lobehub/dumi-theme-lobehub/test.yml?label=test&labelColor=black&logo=githubactions&logoColor=white&style=flat-square
 [github-codespace-link]: https://codespaces.new/lobehub/dumi-theme-lobehub
+[open-in-codeanywhere]:https://codeanywhere.com/img/open-in-codeanywhere-btn.svg
+[open-in-codeanywhere-link]:https://app.codeanywhere.com/#https://github.com/lobehub/dumi-theme-lobehub
 [github-codespace-shield]: https://github.com/codespaces/badge.svg
 [github-contrib-link]: https://github.com/lobehub/dumi-theme-lobehub/graphs/contributors
 [github-contrib-shield]: https://contrib.rocks/image?repo=lobehub%2Fdumi-theme-lobehub
