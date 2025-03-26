@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;1.15.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.15.1...v1.15.2)
+
+<sup>Released on **2025-03-26**</sup>
+
+#### 💄 Styles
+
+- **misc**: Updat iframe style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Updat iframe style ([473a8a9](https://github.com/lobehub/dumi-theme-lobehub/commit/473a8a9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;1.15.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.15.0...v1.15.1)
 
 <sup>Released on **2025-03-23**</sup>
