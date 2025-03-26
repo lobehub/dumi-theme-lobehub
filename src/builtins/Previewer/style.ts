@@ -22,6 +22,12 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
 
         &-demo {
           flex: 1;
+          border-top-color: ${token.colorBgLayout} !important;
+
+          > iframe {
+            min-height: 600px;
+            border-top: 1px solid ${token.colorBorder};
+          }
 
           &[data-iframe]::before {
             background: ${token.colorFillContent};
