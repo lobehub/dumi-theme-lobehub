@@ -29,7 +29,7 @@ const DiscordButton = memo(() => {
 
   return inviteUrl ? (
     <a href={inviteUrl} rel="noreferrer" target={'_blank'}>
-      <ActionIcon className={styles} icon={Discord} size="site" />
+      <ActionIcon className={styles} icon={Discord} />
     </a>
   ) : undefined;
 });

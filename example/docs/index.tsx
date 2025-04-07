@@ -1,4 +1,5 @@
-import { Features, FeaturesProps, Snippet } from '@lobehub/ui';
+import { Snippet } from '@lobehub/ui';
+import { Features, type FeaturesProps } from '@lobehub/ui/awesome';
 import { Palette, Smartphone, Zap } from 'lucide-react';
 import { Center } from 'react-layout-kit';
 

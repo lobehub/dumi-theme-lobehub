@@ -6,18 +6,10 @@ import { memo } from 'react';
 
 import { siteSelectors, useSiteStore } from '@/store';
 
-const useStyles = createStyles(({ css, stylish, token, responsive, prefixCls }) => {
+const useStyles = createStyles(({ css, stylish }) => {
   return {
     link: css`
       ${stylish.resetLinkColor}
-    `,
-    tabs: css`
-      .${prefixCls}-tabs-tab-active a {
-        color: ${token.colorText} !important;
-      }
-      ${responsive.mobile} {
-        display: none;
-      }
     `,
   };
 });
@@ -31,7 +23,6 @@ const Navbar = memo(() => {
     <>
       <TabsNav
         activeKey={activePath}
-        className={styles.tabs}
         items={nav.map((item) => ({
           key: String(item.activePath! || item.link),
           label: regLink.test(item.link || '') ? (

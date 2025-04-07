@@ -195,7 +195,7 @@ const SearchResult = memo<SearchResultProps>((props) => {
                     <Icon
                       color={theme.colorTextDescription}
                       icon={ICONS_MAPPING?.[item.value.type] as any}
-                      size={{ fontSize: 32 }}
+                      size={32}
                     />
                   </Center>
                   <Flexbox>

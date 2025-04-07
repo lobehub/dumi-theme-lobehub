@@ -1,4 +1,4 @@
-import { ActionIcon } from '@lobehub/ui';
+import { ActionIcon, Button } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { Github } from 'lucide-react';
 import { rgba } from 'polished';
@@ -11,11 +11,11 @@ const useStyles = createStyles(({ css, token }) => ({
   button: css`
     overflow: hidden;
 
-    font-weight: bold;
-    color: ${token.colorTextSecondary};
-
     border: 1px solid ${rgba(token.colorText, 0.1)};
     border-radius: 36px !important;
+
+    font-weight: bold;
+    color: ${token.colorTextSecondary};
 
     transition: all 0.2s ease-in-out;
 
@@ -67,24 +67,15 @@ const GithubButton = memo(() => {
   if (!githubStar)
     return (
       <a href={repoUrl} rel="noreferrer" target={'_blank'}>
-        <ActionIcon icon={Github} size="site" />
+        <ActionIcon icon={Github} />
       </a>
     );
 
   return (
     <a href={repoUrl} rel="noreferrer" target={'_blank'}>
-      <ActionIcon
-        className={styles.button}
-        gap={4}
-        icon={Github}
-        paddingInline={16}
-        size="site"
-        style={{
-          width: 'unset',
-        }}
-      >
+      <Button className={styles.button} icon={Github} shape={'round'}>
         {githubStar > 1000 ? (githubStar / 1000).toFixed(1) + 'K' : githubStar + ' ⭐️'}
-      </ActionIcon>
+      </Button>
     </a>
   );
 });

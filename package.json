@@ -73,7 +73,7 @@
   "dependencies": {
     "@floating-ui/react": "^0.27.5",
     "@giscus/react": "^3.1.0",
-    "@lobehub/ui": "^1.167.0",
+    "@lobehub/ui": "https://pkg.pr.new/lobehub/lobe-ui/@lobehub/ui@322",
     "ahooks": "^3.8.4",
     "animated-scroll-to": "^2.3.2",
     "antd-style": "^3.7.1",

@@ -11,7 +11,7 @@ export interface SiteCustomToken {
 const generateCustomToken: GetCustomToken<SiteCustomToken> = () => ({
   contentMaxWidth: 960,
   footerHeight: 300,
-  headerHeight: 64,
+  headerHeight: 54,
   sidebarWidth: 240,
   tocWidth: 176,
 });

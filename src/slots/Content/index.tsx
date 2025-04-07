@@ -1,4 +1,4 @@
-import { Typography } from '@lobehub/ui';
+import { Block, Typography } from '@lobehub/ui';
 import { Skeleton } from 'antd';
 import { useResponsive } from 'antd-style';
 import isEqual from 'fast-deep-equal';
@@ -23,7 +23,7 @@ const Content = memo<DivProps>(({ children, ...props }) => {
 
   return (
     <Flexbox gap={mobile ? 0 : 24} width={'100%'} {...props}>
-      <div className={styles.content}>
+      <Block className={styles.content} shadow variant={'filled'}>
         <Skeleton active loading={loading} paragraph />
         <Typography
           headerMultiple={0.5}
@@ -33,7 +33,7 @@ const Content = memo<DivProps>(({ children, ...props }) => {
         >
           {children}
         </Typography>
-      </div>
+      </Block>
       <ContentFooter />
     </Flexbox>
   );

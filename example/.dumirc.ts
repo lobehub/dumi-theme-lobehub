@@ -10,7 +10,7 @@ const isWin = process.platform === 'win32';
 const themeConfig: SiteThemeConfig = {
   actions: [
     {
-      icon: 'Github',
+      github: true,
       link: homepage,
       openExternal: true,
       text: 'Github',
