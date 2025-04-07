@@ -157,9 +157,10 @@ interface SiteThemeConfig {
 
 ## ⌨️ Local Development
 
-You can use Github Codespaces for online development:
+You can use Github Codespaces  or Codeanywhere for online development:
 
 [![][github-codespace-shield]][github-codespace-link]
+[![][open-in-codeanywhere]][open-in-codeanywhere-link]
 
 Or clone it for local development:
 
@@ -254,3 +255,5 @@ This project is [MIT](./LICENSE) licensed.
 [pr-welcome-link]: https://github.com/lobehub/dumi-theme-lobehub/pulls
 [pr-welcome-shield]: https://img.shields.io/badge/%F0%9F%A4%AF%20PR%20WELCOME-%E2%86%92-ffcb47?labelColor=black&style=for-the-badge
 [profile-link]: https://github.com/lobehub
+[open-in-codeanywhere]:https://codeanywhere.com/img/open-in-codeanywhere-btn.svg
+[open-in-codeanywhere-link]:https://app.codeanywhere.com/#https://github.com/lobehub/dumi-theme-lobehub
