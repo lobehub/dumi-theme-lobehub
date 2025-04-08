@@ -1,53 +1,12 @@
-import { ActionIcon, Button } from '@lobehub/ui';
-import { createStyles } from 'antd-style';
+import { ActionIcon } from '@lobehub/ui';
+import { BottomGradientButton } from '@lobehub/ui/awesome';
 import { Github } from 'lucide-react';
-import { rgba } from 'polished';
 import { memo } from 'react';
 import useSWR from 'swr';
 
 import { siteSelectors, useSiteStore } from '@/store';
 
-const useStyles = createStyles(({ css, token }) => ({
-  button: css`
-    overflow: hidden;
-
-    border: 1px solid ${rgba(token.colorText, 0.1)};
-    border-radius: 36px !important;
-
-    font-weight: bold;
-    color: ${token.colorTextSecondary};
-
-    transition: all 0.2s ease-in-out;
-
-    &::before {
-      content: '';
-
-      position: absolute;
-      inset-block-end: 0;
-
-      display: block;
-
-      width: 50%;
-      height: 1px;
-
-      opacity: 0;
-      background-image: linear-gradient(to right, transparent, ${token.gold}, transparent);
-
-      transition: all 0.2s ease-in-out;
-    }
-
-    &:hover {
-      background: ${token.colorBgContainer};
-
-      &::before {
-        opacity: 1;
-      }
-    }
-  `,
-}));
-
 const GithubButton = memo(() => {
-  const { styles } = useStyles();
   const repoUrl = useSiteStore(siteSelectors.github);
   const { data: githubStar } = useSWR(
     'github-star',
@@ -72,11 +31,9 @@ const GithubButton = memo(() => {
     );
 
   return (
-    <a href={repoUrl} rel="noreferrer" target={'_blank'}>
-      <Button className={styles.button} icon={Github} shape={'round'}>
-        {githubStar > 1000 ? (githubStar / 1000).toFixed(1) + 'K' : githubStar + ' ⭐️'}
-      </Button>
-    </a>
+    <BottomGradientButton href={repoUrl} icon={Github} rel="noreferrer" target={'_blank'}>
+      {githubStar > 1000 ? (githubStar / 1000).toFixed(1) + 'K' : githubStar + ' ⭐️'}
+    </BottomGradientButton>
   );
 });
 

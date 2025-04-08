@@ -1,4 +1,4 @@
-import { TabsNav } from '@lobehub/ui';
+import { Tabs } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { Link, history } from 'dumi';
 import NavbarExtra from 'dumi/theme-default/slots/NavbarExtra';
@@ -21,7 +21,7 @@ const Navbar = memo(() => {
   const activePath = useSiteStore(siteSelectors.activePath);
   return (
     <>
-      <TabsNav
+      <Tabs
         activeKey={activePath}
         items={nav.map((item) => ({
           key: String(item.activePath! || item.link),

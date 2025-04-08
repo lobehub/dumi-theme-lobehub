@@ -1,4 +1,4 @@
-import { ActionIcon, TabsNav } from '@lobehub/ui';
+import { ActionIcon, Tabs } from '@lobehub/ui';
 import { type IPreviewerProps, openCodeSandbox, openStackBlitz, useIntl } from 'dumi';
 import { Code, Code2, Codesandbox, MonitorUp, Zap } from 'lucide-react';
 import { type FC, type ReactNode, useState } from 'react';
@@ -75,7 +75,7 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
         <>
           <div className={styles.tabs}>
             {!isSingleFile && (
-              <TabsNav
+              <Tabs
                 activeKey={String(activeKey)}
                 items={files.map(([filename], index) => ({
                   key: String(index),
