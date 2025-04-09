@@ -1,7 +1,7 @@
 import { FluentEmoji } from '@lobehub/ui';
 import { Button } from 'antd';
 import { Link, useIntl, useLocale } from 'dumi';
-import React, { type FC } from 'react';
+import type { FC } from 'react';
 import { Center } from 'react-layout-kit';
 
 const Page404: FC = () => {

@@ -1,4 +1,4 @@
-import type { FeatureItem } from '@lobehub/ui/awesome';
+import type { FeaturesProps } from '@lobehub/ui/awesome';
 
 import { SiteStore } from '../useSiteStore';
 
@@ -51,7 +51,7 @@ const heroActions = (s: SiteStore) =>
 /**
  * Features 选择器
  */
-const features = (s: SiteStore): FeatureItem[] => {
+const features = (s: SiteStore): FeaturesProps['items'] => {
   if (!isHeroPage(s)) return [];
 
   return (

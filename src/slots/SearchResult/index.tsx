@@ -4,7 +4,8 @@ import { Empty, Typography } from 'antd';
 import { useTheme } from 'antd-style';
 import { Link, history, useIntl, type useSiteSearch } from 'dumi';
 import { FileBox, FileIcon, HeadingIcon, LetterText, LucideIcon } from 'lucide-react';
-import React, { Fragment, memo, useCallback, useEffect, useState } from 'react';
+import type { ReactNode } from 'react';
+import { Fragment, memo, useCallback, useEffect, useState } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
 
 import { siteSelectors, useSiteStore } from '@/store';
@@ -131,7 +132,7 @@ const SearchResult = memo<SearchResultProps>((props) => {
     return () => document.removeEventListener('keydown', handler);
   });
 
-  let returnNode: React.ReactNode = null;
+  let returnNode: ReactNode = null;
 
   if (props.loading) {
     returnNode = (
