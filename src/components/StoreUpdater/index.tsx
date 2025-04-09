@@ -1,7 +1,8 @@
 import { useDebounceEffect } from 'ahooks';
 import { useLocale, useLocation, useNavData, useSidebarData, useSiteData, useTabMeta } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import React, { memo, useEffect } from 'react';
+import { memo, useEffect } from 'react';
+import * as React from 'react';
 
 import { SiteStore, useStoreApi } from '../../store/useSiteStore';
 import { useRouteMeta } from './useRouteMeta';

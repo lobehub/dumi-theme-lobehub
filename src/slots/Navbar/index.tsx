@@ -1,4 +1,4 @@
-import { TabsNav } from '@lobehub/ui';
+import { Tabs } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 import { Link, history } from 'dumi';
 import NavbarExtra from 'dumi/theme-default/slots/NavbarExtra';
@@ -6,18 +6,10 @@ import { memo } from 'react';
 
 import { siteSelectors, useSiteStore } from '@/store';
 
-const useStyles = createStyles(({ css, stylish, token, responsive, prefixCls }) => {
+const useStyles = createStyles(({ css, stylish }) => {
   return {
     link: css`
       ${stylish.resetLinkColor}
-    `,
-    tabs: css`
-      .${prefixCls}-tabs-tab-active a {
-        color: ${token.colorText} !important;
-      }
-      ${responsive.mobile} {
-        display: none;
-      }
     `,
   };
 });
@@ -29,9 +21,8 @@ const Navbar = memo(() => {
   const activePath = useSiteStore(siteSelectors.activePath);
   return (
     <>
-      <TabsNav
+      <Tabs
         activeKey={activePath}
-        className={styles.tabs}
         items={nav.map((item) => ({
           key: String(item.activePath! || item.link),
           label: regLink.test(item.link || '') ? (

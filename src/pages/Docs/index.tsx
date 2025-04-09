@@ -1,4 +1,4 @@
-import { Giscus } from '@lobehub/ui';
+import { Giscus } from '@lobehub/ui/awesome';
 import { useResponsive } from 'antd-style';
 import { useOutlet } from 'dumi';
 import { memo, useCallback, useEffect } from 'react';

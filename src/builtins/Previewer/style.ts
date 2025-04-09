@@ -20,13 +20,15 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
 
         border-color: ${token.colorBorderSecondary};
 
+        background: ${token.colorBgContainerSecondary};
+
         &-demo {
           flex: 1;
-          border-top-color: ${token.colorBgLayout} !important;
+          border-top-color: ${token.colorBgContainerSecondary} !important;
 
           > iframe {
             min-height: 600px;
-            border-top: 1px solid ${token.colorBorder};
+            border-top: 1px solid ${token.colorBorderSecondary};
           }
 
           &[data-iframe]::before {
