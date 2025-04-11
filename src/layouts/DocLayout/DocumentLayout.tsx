@@ -59,7 +59,7 @@ const DocumentLayout = memo(() => {
           <title>{siteTitle}</title>
         ) : (
           <title>
-            {fm.title} - {siteTitle}
+            {siteTitle ? `${fm.title}-${siteTitle}` : fm.title}
           </title>
         )}
       </Helmet>
