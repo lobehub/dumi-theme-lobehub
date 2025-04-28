@@ -2,6 +2,35 @@
 
 # Changelog
 
+## [Version&nbsp;1.16.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.15.2...v1.16.0)
+
+<sup>Released on **2025-04-28**</sup>
+
+#### ✨ Features
+
+- **misc**: Migrate to @lobehub/ui v2 [force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Migrate to @lobehub/ui v2 [force major], closes [#63](https://github.com/lobehub/dumi-theme-lobehub/issues/63) ([419a5c1](https://github.com/lobehub/dumi-theme-lobehub/commit/419a5c1))
+
+</details>
+
+#### 💥 BREAKING CHANGES
+
+- **misc**: https://github.com/lobehub/lobe-ui/pull/322
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;1.15.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.15.1...v1.15.2)
 
 <sup>Released on **2025-03-26**</sup>
