@@ -1,4 +1,5 @@
-import { ActionIcon, ActionIconProps, StoryBook, useControls, useCreateStore } from '@lobehub/ui';
+import { ActionIcon, type ActionIconProps } from '@lobehub/ui';
+import { StoryBook, useControls, useCreateStore } from '@lobehub/ui/storybook';
 import * as LucideIcon from 'lucide-react';
 
 export default () => {

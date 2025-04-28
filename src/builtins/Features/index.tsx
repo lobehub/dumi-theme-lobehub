@@ -1,4 +1,4 @@
-import { Features } from '@lobehub/ui';
+import { Features } from '@lobehub/ui/awesome';
 import { MoonStar, Palette, Zap } from 'lucide-react';
 
 export default () => (

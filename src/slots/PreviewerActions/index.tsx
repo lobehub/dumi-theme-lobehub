@@ -1,4 +1,4 @@
-import { ActionIcon, TabsNav } from '@lobehub/ui';
+import { ActionIcon, Tabs } from '@lobehub/ui';
 import { type IPreviewerProps, openCodeSandbox, openStackBlitz, useIntl } from 'dumi';
 import { Code, Code2, Codesandbox, MonitorUp, Zap } from 'lucide-react';
 import { type FC, type ReactNode, useState } from 'react';
@@ -6,8 +6,6 @@ import { type FC, type ReactNode, useState } from 'react';
 import SourceCode from '@/builtins/SourceCode';
 
 import { useStyles } from './style';
-
-const SIZE = { blockSize: 24, fontSize: 16, strokeWidth: 2 };
 
 export interface PreviewerActionsProps extends IPreviewerProps {
   demoContainer: HTMLDivElement | HTMLIFrameElement;
@@ -35,7 +33,7 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
           <ActionIcon
             icon={Codesandbox}
             onClick={() => openCodeSandbox(props)}
-            size={SIZE}
+            size={'small'}
             title={intl.formatMessage({
               id: 'previewer.actions.codesandbox',
             })}
@@ -45,7 +43,7 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
           <ActionIcon
             icon={Zap}
             onClick={() => openStackBlitz(props)}
-            size={SIZE}
+            size={'small'}
             title={intl.formatMessage({
               id: 'previewer.actions.stackblitz',
             })}
@@ -55,7 +53,7 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
           <a href={props.demoUrl} rel="noreferrer" target="_blank">
             <ActionIcon
               icon={MonitorUp}
-              size={SIZE}
+              size={'small'}
               title={intl.formatMessage({
                 id: 'previewer.actions.separate',
               })}
@@ -66,7 +64,7 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
           <ActionIcon
             icon={showCode ? Code2 : Code}
             onClick={() => setShowCode((previous) => !previous)}
-            size={SIZE}
+            size={'small'}
             title={intl.formatMessage({
               id: `previewer.actions.code.${showCode ? 'shrink' : 'expand'}`,
             })}
@@ -77,7 +75,7 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
         <>
           <div className={styles.tabs}>
             {!isSingleFile && (
-              <TabsNav
+              <Tabs
                 activeKey={String(activeKey)}
                 items={files.map(([filename], index) => ({
                   key: String(index),

@@ -5,8 +5,8 @@ export const useStyles = createStyles(({ cx, token, responsive, css }, isPure: b
     !isPure &&
       css`
         padding: 24px 48px;
+        border-radius: ${token.borderRadiusLG}px;
         background-color: ${token.colorBgContainer};
-        border-radius: 10px;
 
         ${responsive.mobile} {
           padding: 8px 16px;
@@ -30,27 +30,27 @@ export const useStyles = createStyles(({ cx, token, responsive, css }, isPure: b
 
       .dumi-default-badge {
         &:not([type]) {
+          border: 1px solid ${token.colorInfoBorder};
           color: ${token.colorInfoText};
           background: ${token.colorInfoBg};
-          border: 1px solid ${token.colorInfoBorder};
         }
 
         &[type='warning'] {
+          border: 1px solid ${token.colorWarningBorder};
           color: ${token.colorWarningText};
           background: ${token.colorWarningBg};
-          border: 1px solid ${token.colorWarningBorder};
         }
 
         &[type='error'] {
+          border: 1px solid ${token.colorErrorBorder};
           color: ${token.colorErrorText};
           background: ${token.colorErrorBg};
-          border: 1px solid ${token.colorErrorBorder};
         }
 
         &[type='success'] {
+          border: 1px solid ${token.colorSuccessBorder};
           color: ${token.colorSuccessText};
           background: ${token.colorSuccessBg};
-          border: 1px solid ${token.colorSuccessBorder};
         }
       }
     `,

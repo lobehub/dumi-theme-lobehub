@@ -1,4 +1,4 @@
-import { Hero as H } from '@lobehub/ui';
+import { Hero as H } from '@lobehub/ui/awesome';
 import { Link } from 'dumi';
 import { memo } from 'react';
 

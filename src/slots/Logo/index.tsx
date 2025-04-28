@@ -1,4 +1,5 @@
-import { Avatar, Logo as SiteLogo } from '@lobehub/ui';
+import { Avatar } from '@lobehub/ui';
+import { LobeHub as SiteLogo } from '@lobehub/ui/brand';
 import { Space } from 'antd';
 import { useResponsive } from 'antd-style';
 import { Link } from 'dumi';

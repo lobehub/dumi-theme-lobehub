@@ -1,4 +1,6 @@
-import type { FeaturesProps, FooterProps, HeroProps, LogoProps } from '@lobehub/ui';
+import type { FooterProps } from '@lobehub/ui';
+import type { FeaturesProps, HeroProps } from '@lobehub/ui/awesome';
+import type { LobeHubProps } from '@lobehub/ui/brand';
 import { IThemeConfig } from 'dumi/dist/client/theme-api/types';
 import { FooterColumn } from 'rc-footer/es/column';
 
@@ -15,7 +17,7 @@ export interface ApiHeaderConfig {
 }
 
 export interface FooterConfig {
-  bottom?: FooterProps['bottom'];
+  bottom?: string;
   columns?: FooterProps['columns'];
   moreProducts?: FooterColumn;
   resources?: FooterColumn;
@@ -50,7 +52,7 @@ export interface SiteThemeConfig extends IThemeConfig {
   hero?: HeroConfig | Record<string, HeroConfig>;
   hideHomeNav?: boolean;
   logo?: string;
-  logoType?: LogoProps['type'];
+  logoType?: LobeHubProps['type'];
   metadata?: {
     description?: string;
     icons?: {
