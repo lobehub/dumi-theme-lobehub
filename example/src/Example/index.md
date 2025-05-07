@@ -24,7 +24,7 @@ description: This is an doc example
 
 ## Markdown Highlighting
 
-:::info {title = 自定义标题}
+:::info{title=自定义标题}
 这是一条普通信息
 :::
 
