@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.0...v2.0.1)
+
+<sup>Released on **2025-05-13**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Unable to override footer configuration.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Unable to override footer configuration, closes [#67](https://github.com/lobehub/dumi-theme-lobehub/issues/67) ([6128758](https://github.com/lobehub/dumi-theme-lobehub/commit/6128758))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version&nbsp;2.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v1.15.2...v2.0.0)
 
 <sup>Released on **2025-04-28**</sup>
