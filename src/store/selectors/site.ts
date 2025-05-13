@@ -6,7 +6,7 @@ import { AnchorItem } from '@/types';
 
 import { SiteStore } from '../useSiteStore';
 
-const themeConfig = (s: SiteStore) => merge(s.siteData.themeConfig, initialThemeConfig);
+const themeConfig = (s: SiteStore) => merge(initialThemeConfig, s.siteData.themeConfig);
 const siteTitle = (s: SiteStore) => themeConfig(s).title;
 const siteDesc = (s: SiteStore) => themeConfig(s).description;
 
