@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.8](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.7...v2.0.8)
+
+<sup>Released on **2025-08-18**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update ssr plugin.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update ssr plugin ([8aaaf88](https://github.com/lobehub/dumi-theme-lobehub/commit/8aaaf88))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.7](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.6...v2.0.7)
 
 <sup>Released on **2025-08-18**</sup>
