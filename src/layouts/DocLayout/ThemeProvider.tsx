@@ -6,6 +6,9 @@ import { PropsWithChildren, memo } from 'react';
 import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
 import customToken from '@/styles/customToken';
 
+import AntdStaticMethods from './AntdStaticMethods';
+import AntdV5MonkeyPatch from './AntdV5MonkeyPatch';
+import ConfigProvider from './ConfigProvider';
 import StyleRegistry from './StyleRegistry';
 
 export default memo<PropsWithChildren>(({ children }) => {
@@ -19,8 +22,10 @@ export default memo<PropsWithChildren>(({ children }) => {
         customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
         themeMode={themeMode}
       >
-        {children}
+        <AntdStaticMethods />
+        <ConfigProvider>{children}</ConfigProvider>
       </ThemeProvider>
+      <AntdV5MonkeyPatch />
     </StyleRegistry>
   );
 });
