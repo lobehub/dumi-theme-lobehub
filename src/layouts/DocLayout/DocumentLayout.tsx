@@ -2,7 +2,7 @@ import { Layout } from '@lobehub/ui';
 import { useResponsive, useTheme } from 'antd-style';
 import { Helmet, useIntl, useLocation } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import { memo, useCallback, useEffect } from 'react';
+import { PropsWithChildren, memo, useCallback, useEffect } from 'react';
 
 import Changelog from '@/pages/Changelog';
 import Docs from '@/pages/Docs';
@@ -13,7 +13,7 @@ import Sidebar from '@/slots/Sidebar';
 import Toc from '@/slots/Toc';
 import { heroSelectors, siteSelectors, useSiteStore } from '@/store';
 
-const DocumentLayout = memo(() => {
+const DocumentLayout = memo<PropsWithChildren>(({ children }) => {
   const intl = useIntl();
   const { hash } = useLocation();
   const theme = useTheme();
@@ -58,9 +58,7 @@ const DocumentLayout = memo(() => {
         {!fm.title || page === 'home' ? (
           <title>{siteTitle}</title>
         ) : (
-          <title>
-            {siteTitle ? `${fm.title}-${siteTitle}` : fm.title}
-          </title>
+          <title>{siteTitle ? `${fm.title}-${siteTitle}` : fm.title}</title>
         )}
       </Helmet>
     ),
@@ -97,9 +95,9 @@ const DocumentLayout = memo(() => {
         toc={hideToc ? undefined : <Toc />}
         tocWidth={hideToc ? 0 : theme.tocWidth}
       >
-        {page === 'home' && <Home />}
-        {page === 'changelog' && <Changelog />}
-        {page === 'docs' && <Docs />}
+        {page === 'home' && <Home>{children}</Home>}
+        {page === 'changelog' && <Changelog>{children}</Changelog>}
+        {page === 'docs' && <Docs>{children}</Docs>}
       </Layout>
     </>
   );

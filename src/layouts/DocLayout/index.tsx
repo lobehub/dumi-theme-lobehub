@@ -1,3 +1,4 @@
+import { useOutlet } from '@@/exports';
 import {
   useLocale,
   useLocation,
@@ -7,7 +8,7 @@ import {
   useSiteData,
   useTabMeta,
 } from 'dumi';
-import { memo, useMemo } from 'react';
+import { PropsWithChildren, memo } from 'react';
 
 import { StoreUpdater } from '@/components/StoreUpdater';
 import { Provider, createStore } from '@/store';
@@ -19,22 +20,7 @@ import Og from './Head/Og';
 import StructuredData from './Head/StructuredData';
 import ThemeProvider from './ThemeProvider';
 
-const App = memo(({ initState }: any) => {
-  return (
-    <Provider createStore={() => createStore(initState)}>
-      <Favicons />
-      <Og />
-      <Analytics />
-      <StructuredData />
-      <StoreUpdater />
-      <ThemeProvider>
-        <DocumentLayout />
-      </ThemeProvider>
-    </Provider>
-  );
-});
-
-export default memo(() => {
+const DocProvider = memo<PropsWithChildren>(({ children }) => {
   const siteData = useSiteData();
   const sidebar = useSidebarData();
   const routeMeta = useRouteMeta();
@@ -42,11 +28,26 @@ export default memo(() => {
   const navData = useNavData();
   const location = useLocation();
   const locale = useLocale();
-
-  const initState = useMemo(
-    () => ({ locale, location, navData, routeMeta, sidebar, siteData, tabMeta }),
-    [],
+  return (
+    <Provider
+      createStore={() =>
+        // @ts-ignore
+        createStore({ locale, location, navData, routeMeta, sidebar, siteData, tabMeta })
+      }
+    >
+      <Favicons />
+      <Og />
+      <Analytics />
+      <StructuredData />
+      <StoreUpdater />
+      <ThemeProvider>
+        <DocumentLayout>{children}</DocumentLayout>
+      </ThemeProvider>
+    </Provider>
   );
+});
 
-  return <App initState={initState} />;
+export default memo(() => {
+  const outlet = useOutlet();
+  return <DocProvider>{outlet}</DocProvider>;
 });

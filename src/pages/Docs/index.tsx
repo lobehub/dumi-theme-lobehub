@@ -1,7 +1,6 @@
 import { Giscus } from '@lobehub/ui/awesome';
 import { useResponsive } from 'antd-style';
-import { useOutlet } from 'dumi';
-import { memo, useCallback, useEffect } from 'react';
+import { PropsWithChildren, memo, useCallback, useEffect } from 'react';
 import { Center } from 'react-layout-kit';
 
 import ApiHeader from '@/slots/ApiHeader';
@@ -10,8 +9,7 @@ import { apiHeaderSelectors, siteSelectors, useSiteStore } from '@/store';
 
 import { useStyles } from './styles';
 
-const Documents = memo(() => {
-  const outlet = useOutlet();
+const Documents = memo<PropsWithChildren>(({ children }) => {
   const { mobile } = useResponsive();
   const { isApiPage, giscus, pathname } = useSiteStore((s) => ({
     giscus: siteSelectors.giscus(s),
@@ -45,7 +43,7 @@ const Documents = memo(() => {
     <Center className={styles.content} style={{ marginBottom: 48, padding: mobile ? 0 : 24 }}>
       {isApiPage && <ApiHeader padding={mobile ? 16 : 0} />}
       <Content>
-        {outlet}
+        {children}
         {giscus && <Comment />}
       </Content>
     </Center>

@@ -1,7 +1,6 @@
 import { useResponsive } from 'antd-style';
-import { useOutlet } from 'dumi';
 import isEqual from 'fast-deep-equal';
-import { memo, useEffect } from 'react';
+import { PropsWithChildren, memo, useEffect } from 'react';
 import { Center } from 'react-layout-kit';
 
 import { ApiHeader } from '@/components/ApiHeader';
@@ -9,8 +8,7 @@ import { useStyles } from '@/pages/Docs/styles';
 import Content from '@/slots/Content';
 import { siteSelectors, useSiteStore } from '@/store';
 
-const Changelog = memo(() => {
-  const outlet = useOutlet();
+const Changelog = memo<PropsWithChildren>(({ children }) => {
   const { mobile } = useResponsive();
   const repoBase = useSiteStore(siteSelectors.github);
 
@@ -37,7 +35,7 @@ const Changelog = memo(() => {
         sourceUrl={`${repoBase}/blob/master/CHANGELOG.md`}
         title={fm.title}
       />
-      <Content className={styles.changelog}>{outlet}</Content>
+      <Content className={styles.changelog}>{children}</Content>
     </Center>
   );
 });
