@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.4](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.3...v2.0.4)
+
+<sup>Released on **2025-08-18**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix StyleRegistry.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix StyleRegistry ([44c5664](https://github.com/lobehub/dumi-theme-lobehub/commit/44c5664))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.3](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.2...v2.0.3)
 
 <sup>Released on **2025-08-18**</sup>
