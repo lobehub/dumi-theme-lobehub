@@ -7,21 +7,25 @@ import GlobalStyle from '@/layouts/DocLayout/GlobalStyle';
 import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
 import customToken from '@/styles/customToken';
 
+import StyleRegistry from './StyleRegistry';
+
 export default memo<PropsWithChildren>(({ children }) => {
   const themeMode = useThemeStore((st) => st.themeMode);
   const userToken = useSiteStore(siteSelectors.token, isEqual);
 
   return (
-    <ThemeProvider
-      appearance={themeMode !== 'auto' ? themeMode : undefined}
-      customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
-      theme={{
-        cssVar: true,
-      }}
-      themeMode={themeMode}
-    >
-      <GlobalStyle />
-      {children}
-    </ThemeProvider>
+    <StyleRegistry>
+      <ThemeProvider
+        appearance={themeMode !== 'auto' ? themeMode : undefined}
+        customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
+        theme={{
+          cssVar: true,
+        }}
+        themeMode={themeMode}
+      >
+        <GlobalStyle />
+        {children}
+      </ThemeProvider>
+    </StyleRegistry>
   );
 });
