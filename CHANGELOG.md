@@ -2,6 +2,40 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.9](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.8...v2.0.9)
+
+<sup>Released on **2025-08-18**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix provider, Fix ssr.
+
+#### 💄 Styles
+
+- **misc**: Update GlobalStyle.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix provider ([1ded595](https://github.com/lobehub/dumi-theme-lobehub/commit/1ded595))
+- **misc**: Fix ssr ([b258fb0](https://github.com/lobehub/dumi-theme-lobehub/commit/b258fb0))
+
+#### Styles
+
+- **misc**: Update GlobalStyle ([c93c04c](https://github.com/lobehub/dumi-theme-lobehub/commit/c93c04c))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.8](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.7...v2.0.8)
 
 <sup>Released on **2025-08-18**</sup>
