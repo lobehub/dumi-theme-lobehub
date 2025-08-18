@@ -37,7 +37,7 @@
     "docs:dev": "cd example && npm run dev",
     "doctor": "father doctor",
     "lint": "eslint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
-    "lint:circular": "dpdm src/**/*.{ts,tsx}  --warning false  --tree false  --exit-code circular:1  -T true",
+    "lint:circular": "dpdm ./src/**/*.{ts,tsx}  --warning false  --tree false  --exit-code circular:1  -T true",
     "lint:md": "remark . --quiet --frail --output",
     "lint:style": "stylelint \"{src,example}/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepack": "clean-package",
