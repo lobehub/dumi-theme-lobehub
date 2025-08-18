@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.1...v2.0.2)
+
+<sup>Released on **2025-08-18**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix thememode.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix thememode ([e46932e](https://github.com/lobehub/dumi-theme-lobehub/commit/e46932e))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.0...v2.0.1)
 
 <sup>Released on **2025-05-13**</sup>
