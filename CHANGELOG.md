@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.6](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.5...v2.0.6)
+
+<sup>Released on **2025-08-18**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix darkmod.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix darkmod ([a8433a9](https://github.com/lobehub/dumi-theme-lobehub/commit/a8433a9))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.5](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.4...v2.0.5)
 
 <sup>Released on **2025-08-18**</sup>
