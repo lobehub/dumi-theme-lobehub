@@ -1,8 +1,8 @@
-import { useOutlet } from '@@/exports';
 import {
   useLocale,
   useLocation,
   useNavData,
+  useOutlet,
   useRouteMeta,
   useSidebarData,
   useSiteData,
