@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;2.0.5](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.4...v2.0.5)
+
+<sup>Released on **2025-08-18**</sup>
+
+#### 💄 Styles
+
+- **misc**: Fix **ANTD_CACHE**.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Fix **ANTD_CACHE** ([a4c4292](https://github.com/lobehub/dumi-theme-lobehub/commit/a4c4292))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.4](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.3...v2.0.4)
 
 <sup>Released on **2025-08-18**</sup>
