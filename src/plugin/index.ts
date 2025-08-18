@@ -43,8 +43,10 @@ const SSRPlugin = (api: IApi) => {
       .filter((f) => !f.path.includes(':'))
 
       .map((file) => {
+        const antdCache = (global as any).__ANTD_CACHE__;
+
         // 提取 antd-style 样式到独立 css 文件
-        const styles = extractStaticStyle().map((item) => item.style);
+        const styles = extractStaticStyle(file.content, { antdCache });
 
         for (const result of styles) {
           api.logger.event(
