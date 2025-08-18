@@ -3,7 +3,6 @@ import 'antd/dist/reset.css';
 import isEqual from 'fast-deep-equal';
 import { PropsWithChildren, memo } from 'react';
 
-import GlobalStyle from '@/layouts/DocLayout/GlobalStyle';
 import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
 import customToken from '@/styles/customToken';
 
@@ -20,7 +19,6 @@ export default memo<PropsWithChildren>(({ children }) => {
         customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
         themeMode={themeMode}
       >
-        <GlobalStyle />
         {children}
       </ThemeProvider>
     </StyleRegistry>

@@ -14,6 +14,7 @@ import { StoreUpdater } from '@/components/StoreUpdater';
 import { Provider, createStore } from '@/store';
 
 import DocumentLayout from './DocumentLayout';
+import GlobalStyle from './GlobalStyle';
 import Analytics from './Head/Analytics';
 import Favicons from './Head/Favicons';
 import Og from './Head/Og';
@@ -41,6 +42,7 @@ const DocProvider = memo<PropsWithChildren>(({ children }) => {
       <StructuredData />
       <StoreUpdater />
       <ThemeProvider>
+        <GlobalStyle />
         <DocumentLayout>{children}</DocumentLayout>
       </ThemeProvider>
     </Provider>
