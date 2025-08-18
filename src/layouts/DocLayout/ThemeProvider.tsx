@@ -18,9 +18,6 @@ export default memo<PropsWithChildren>(({ children }) => {
       <ThemeProvider
         appearance={themeMode !== 'auto' ? themeMode : undefined}
         customToken={(themeToken) => Object.assign({}, customToken(themeToken), userToken)}
-        theme={{
-          cssVar: true,
-        }}
         themeMode={themeMode}
       >
         <GlobalStyle />
