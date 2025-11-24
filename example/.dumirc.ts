@@ -68,10 +68,11 @@ export default defineConfig({
   npmClient: 'pnpm',
   ssr: isProduction ? {} : false,
   styles: [
-    `html, body { background: transparent;  }
+    `html, body { background: transparent; }
 
-  @media (prefers-color-scheme: dark) {
-    html, body { background: #000; }
+  html[data-prefers-color='dark'],
+  html[data-prefers-color='dark'] body {
+    background: #000;
   }`,
   ],
   themeConfig,
