@@ -11,6 +11,7 @@ import { PICKED_PKG_FIELDS } from 'dumi/dist/constants';
 import type { Location } from 'history';
 import { ComponentType } from 'react';
 
+import { globalBackgroundStyles } from '@/styles/globalStyles';
 import { SiteThemeConfig } from '@/types';
 
 export type NavData = (INavItem & { children?: INavItem[] | undefined })[];
@@ -61,13 +62,7 @@ export const initialThemeConfig: Partial<SiteThemeConfig> = {
   },
 };
 
-export const styles = [
-  `html, body { background: transparent;  }
-
-  @media (prefers-color-scheme: dark) {
-    html, body { background: #000; }
-  }`,
-];
+export const styles = [globalBackgroundStyles];
 
 export const initialState: SiteStore = {
   locale: { id: 'en-US', name: 'English', suffix: '' },
