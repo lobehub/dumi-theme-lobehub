@@ -25,7 +25,7 @@ const Toc = memo(() => {
     <>
       {!mobile && <div style={{ height: spacing }} />}
       <T
-        getContainer={() => window}
+        getContainer={typeof window !== 'undefined' ? () => window : undefined}
         headerHeight={theme.headerHeight}
         isMobile={mobile}
         items={items}
