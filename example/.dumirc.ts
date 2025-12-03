@@ -3,6 +3,7 @@ import { SiteThemeConfig } from 'dumi-theme-lobehub';
 import { resolve } from 'node:path';
 
 import { description, homepage, name } from '../package.json';
+import { globalBackgroundStyles } from '../src/styles/globalStyles';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const isWin = process.platform === 'win32';
@@ -67,13 +68,7 @@ export default defineConfig({
   mfsu: isWin ? undefined : {},
   npmClient: 'pnpm',
   ssr: isProduction ? {} : false,
-  styles: [
-    `html, body { background: transparent;  }
-
-  @media (prefers-color-scheme: dark) {
-    html, body { background: #000; }
-  }`,
-  ],
+  styles: [globalBackgroundStyles],
   themeConfig,
   title: 'Dumi Theme LobeHub',
 });
