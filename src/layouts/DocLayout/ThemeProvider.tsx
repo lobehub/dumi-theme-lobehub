@@ -7,7 +7,6 @@ import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
 import customToken from '@/styles/customToken';
 
 import AntdStaticMethods from './AntdStaticMethods';
-import AntdV5MonkeyPatch from './AntdV5MonkeyPatch';
 import ConfigProvider from './ConfigProvider';
 import StyleRegistry from './StyleRegistry';
 
@@ -25,7 +24,6 @@ export default memo<PropsWithChildren>(({ children }) => {
         <AntdStaticMethods />
         <ConfigProvider>{children}</ConfigProvider>
       </ThemeProvider>
-      <AntdV5MonkeyPatch />
     </StyleRegistry>
   );
 });

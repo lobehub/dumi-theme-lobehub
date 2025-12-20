@@ -1,4 +1,4 @@
-import { Tabs } from 'antd';
+import { Tabs } from '@lobehub/ui';
 import { useIntl, useRouteMeta } from 'dumi';
 import { memo } from 'react';
 
