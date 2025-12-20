@@ -2,6 +2,31 @@
 
 # Changelog
 
+## [Version&nbsp;3.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.9...v3.0.0)
+
+<sup>Released on **2025-12-20**</sup>
+
+#### ✨ Features
+
+- **misc**: Bump v3 [force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Bump v3 [force major] ([d9a0fb7](https://github.com/lobehub/dumi-theme-lobehub/commit/d9a0fb7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.9](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.8...v2.0.9)
 
 <sup>Released on **2025-08-18**</sup>
