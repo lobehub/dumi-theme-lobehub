@@ -2,6 +2,23 @@
 
 # Changelog
 
+## [Version&nbsp;4.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.2...v4.0.0)
+
+<sup>Released on **2025-12-24**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;3.0.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.1...v3.0.2)
 
 <sup>Released on **2025-12-24**</sup>
