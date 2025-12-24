@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;3.0.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.1...v3.0.2)
+
+<sup>Released on **2025-12-24**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix lazy motion.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix lazy motion ([0b467a7](https://github.com/lobehub/dumi-theme-lobehub/commit/0b467a7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;3.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.0...v3.0.1)
 
 <sup>Released on **2025-12-20**</sup>
