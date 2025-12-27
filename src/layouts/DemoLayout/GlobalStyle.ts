@@ -1,18 +1,18 @@
-import { createGlobalStyle } from 'antd-style';
+import { createGlobalStyle, cssVar } from 'antd-style';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    background: ${({ theme }) => theme.colorBgContainerSecondary};
+    background: ${cssVar.colorBgLayout};
   }
 
   #root {
     min-height: 100vh;
-    background: ${({ theme }) => theme.colorBgContainerSecondary};
+    background: ${cssVar.colorBgLayout};
   }
 
   #nprogress {
     .bar {
-      background: ${({ theme }) => theme.colorText};
+      background: ${cssVar.colorText};
     }
 
     .peg {

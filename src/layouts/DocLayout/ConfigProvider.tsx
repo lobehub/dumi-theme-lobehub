@@ -2,13 +2,11 @@
 
 import { ConfigProvider as LobehubConfigProvider } from '@lobehub/ui';
 import { ConfigProvider } from 'antd';
-import { useTheme } from 'antd-style';
+import { cssVar } from 'antd-style';
 import * as motion from 'motion/react-m';
 import { PropsWithChildren, memo } from 'react';
 
 const Config = memo<PropsWithChildren>(({ children }) => {
-  const theme = useTheme();
-
   return (
     <LobehubConfigProvider motion={motion}>
       <ConfigProvider
@@ -18,24 +16,24 @@ const Config = memo<PropsWithChildren>(({ children }) => {
               contentFontSizeSM: 12,
             },
             DatePicker: {
-              activeBorderColor: theme.colorBorder,
-              hoverBorderColor: theme.colorBorder,
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
             },
             Input: {
-              activeBorderColor: theme.colorBorder,
-              hoverBorderColor: theme.colorBorder,
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
             },
             InputNumber: {
-              activeBorderColor: theme.colorBorder,
-              hoverBorderColor: theme.colorBorder,
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
             },
             Mentions: {
-              activeBorderColor: theme.colorBorder,
-              hoverBorderColor: theme.colorBorder,
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
             },
             Select: {
-              activeBorderColor: theme.colorBorder,
-              hoverBorderColor: theme.colorBorder,
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
             },
           },
         }}

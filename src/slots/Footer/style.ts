@@ -1,6 +1,6 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles , responsive } from 'antd-style';
 
-export const useStyles = createStyles(({ css, responsive, token }) => {
+export const styles = createStaticStyles(({ css, cssVar }) => {
   const prefix = `rc-footer`;
 
   return {
@@ -8,12 +8,12 @@ export const useStyles = createStyles(({ css, responsive, token }) => {
       grid-area: footer;
       align-self: stretch;
 
-      color: ${token.colorTextDescription};
+      border-top: 1px solid ${cssVar.colorSplit};
+
+      color: ${cssVar.colorTextDescription};
       text-align: center;
 
-      border-top: 1px solid ${token.colorSplit};
-
-      ${responsive.mobile} {
+      ${responsive.sm} {
         flex-direction: column;
         border: none;
       }
@@ -21,17 +21,17 @@ export const useStyles = createStyles(({ css, responsive, token }) => {
     footer: css`
       font-size: 14px;
       line-height: 1.5;
-      color: ${token.colorTextSecondary};
-      background-color: ${token.colorBgLayout};
+      color: ${cssVar.colorTextSecondary};
+      background-color: ${cssVar.colorBgLayout};
 
       &.${prefix} {
         a {
-          color: ${token.colorTextTertiary};
+          color: ${cssVar.colorTextTertiary};
           text-decoration: none;
           transition: all 0.3s;
 
           &:hover {
-            color: ${token.colorLinkHover};
+            color: ${cssVar.colorLinkHover};
           }
         }
       }
@@ -39,7 +39,7 @@ export const useStyles = createStyles(({ css, responsive, token }) => {
       .${prefix} {
         &-container {
           width: 100%;
-          max-width: ${token.contentMaxWidth}px;
+          max-width: var(--lobe-content-max-width, 960px);
           margin: auto;
           padding: 60px 0 20px;
         }
@@ -57,7 +57,7 @@ export const useStyles = createStyles(({ css, responsive, token }) => {
 
             font-size: 16px;
             font-weight: 500;
-            color: ${token.colorText};
+            color: ${cssVar.colorText};
           }
 
           &-icon {
@@ -115,12 +115,11 @@ export const useStyles = createStyles(({ css, responsive, token }) => {
             max-width: 1200px;
             margin: 0 auto;
             padding: 16px 0;
+            border-top: 1px solid ${cssVar.colorBorderSecondary};
 
             font-size: 16px;
             line-height: 32px;
             text-align: center;
-
-            border-top: 1px solid ${token.colorBorderSecondary};
           }
         }
 
@@ -144,7 +143,7 @@ export const useStyles = createStyles(({ css, responsive, token }) => {
         }
       }
 
-      ${responsive.mobile} {
+      ${responsive.sm} {
         .${prefix} {
           text-align: center;
 

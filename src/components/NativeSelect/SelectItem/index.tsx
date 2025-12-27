@@ -1,21 +1,19 @@
+import { cx } from 'antd-style';
 import { ForwardedRef, forwardRef } from 'react';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 interface SelectItemProps {
   disabled?: boolean;
   isActive?: boolean;
   isSelected?: boolean;
   label: any;
-  prefixCls: string;
   ref?: ForwardedRef<HTMLButtonElement>;
   value: any;
 }
 
 const SelectItem = forwardRef<any, SelectItemProps>(
-  ({ value, label, prefixCls, isSelected, isActive, disabled, ...props }, reference) => {
-    const { styles, cx } = useStyles(prefixCls);
-
+  ({ value, label, isSelected, isActive, disabled, ...props }, reference) => {
     return (
       <button
         aria-selected={isSelected}

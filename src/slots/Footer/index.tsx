@@ -1,6 +1,6 @@
 import { Footer as Foot, FooterProps } from '@lobehub/ui';
 import { Divider } from 'antd';
-import { useResponsive } from 'antd-style';
+import { useResponsive, useTheme } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo } from 'react';
 import { Center, Flexbox } from 'react-layout-kit';
@@ -8,13 +8,13 @@ import { Center, Flexbox } from 'react-layout-kit';
 import { siteSelectors, useSiteStore } from '@/store';
 
 import { getColumns } from './columns';
-import { useStyles } from './style';
+import { styles } from './style';
 
 const Footer = memo(() => {
   const { themeConfig, pkg } = useSiteStore((s) => s.siteData, isEqual);
   const { footerConfig, footer } = themeConfig;
   const githubUrl = useSiteStore(siteSelectors.github);
-  const { styles, theme } = useStyles();
+  const theme = useTheme();
   const { mobile } = useResponsive();
 
   if (!footer) return;

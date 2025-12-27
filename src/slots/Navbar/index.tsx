@@ -1,21 +1,16 @@
 import { Tabs } from '@lobehub/ui';
-import { createStyles } from 'antd-style';
 import { Link, history } from 'dumi';
 import NavbarExtra from 'dumi/theme-default/slots/NavbarExtra';
 import { memo } from 'react';
 
 import { siteSelectors, useSiteStore } from '@/store';
+import { lobeStaticStylish } from '@/styles';
 
-const useStyles = createStyles(({ css, stylish }) => {
-  return {
-    link: css`
-      ${stylish.resetLinkColor}
-    `,
-  };
-});
+const styles = {
+  link: lobeStaticStylish.resetLinkColor,
+};
+
 const Navbar = memo(() => {
-  const { styles } = useStyles();
-
   const regLink = /^(\w+:)\/\/|^(mailto|tel):/;
   const nav = useSiteStore((s) => s.navData);
   const activePath = useSiteStore(siteSelectors.activePath);

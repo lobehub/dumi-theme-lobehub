@@ -1,6 +1,6 @@
 import { Block, Typography } from '@lobehub/ui';
 import { Skeleton } from 'antd';
-import { useResponsive } from 'antd-style';
+import { useResponsive , cx } from 'antd-style';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 import { Flexbox } from 'react-layout-kit';
@@ -9,12 +9,12 @@ import ContentFooter from '@/slots/ContentFooter';
 import { siteSelectors, useSiteStore } from '@/store';
 import { DivProps } from '@/types';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 const Content = memo<DivProps>(({ children, ...props }) => {
   const loading = useSiteStore((s) => s.siteData.loading);
   const { docStyle } = useSiteStore(siteSelectors.themeConfig, isEqual);
-  const { styles } = useStyles(docStyle === 'pure');
+  const isPure = docStyle === 'pure';
   const { mobile } = useResponsive();
 
   useEffect(() => {
@@ -23,7 +23,11 @@ const Content = memo<DivProps>(({ children, ...props }) => {
 
   return (
     <Flexbox gap={mobile ? 0 : 24} width={'100%'} {...props}>
-      <Block className={styles.content} shadow variant={'filled'}>
+      <Block
+        className={cx(styles.content, !isPure && styles.content_notPure)}
+        shadow
+        variant={'filled'}
+      >
         <Skeleton active loading={loading} paragraph />
         <Typography
           headerMultiple={0.5}

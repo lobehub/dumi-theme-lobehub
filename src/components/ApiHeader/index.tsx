@@ -7,7 +7,7 @@ import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
 import { ApiHeaderConfig } from '@/types';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 /**
  * @title ApiHeaderProps
@@ -85,7 +85,6 @@ export const ApiHeader = memo<ApiTitleProps & FlexboxProps>(
     serviceList = [],
     ...rest
   }) => {
-    const { styles } = useStyles();
     const { mobile } = useResponsive();
     const isDoc = type === 'doc';
 

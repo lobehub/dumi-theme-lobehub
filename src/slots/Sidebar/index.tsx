@@ -4,11 +4,10 @@ import { memo } from 'react';
 
 import { useSiteStore } from '@/store/useSiteStore';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 const Sidebar = memo(() => {
   const sidebar = useSiteStore((s) => s.sidebar, isEqual);
-  const { styles } = useStyles();
   const isEmptySideBar = !sidebar || sidebar.length === 0;
 
   return isEmptySideBar ? undefined : (

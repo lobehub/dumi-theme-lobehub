@@ -1,40 +1,39 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles, cx , responsive } from 'antd-style';
 
-export const useStyles = createStyles(({ token, responsive, css, cx }) => {
+export const styles = createStaticStyles(({ css, cssVar }) => {
   return {
     container: css`
       position: relative;
 
       // TODO: support search for mobile devices
-      ${responsive.mobile} {
+      ${responsive.sm} {
         display: none;
       }
     `,
     input: css`
       box-sizing: border-box;
       width: 280px;
-      height: ${token.controlHeightLG}px;
+      height: ${cssVar.controlHeightLG};
       padding: 0;
-      padding-inline-start: 40px;
-      padding-inline-end: 12px;
+      padding-inline: 40px 12px;
+      border: 1px solid ${cssVar.colorBorder};
+      border-radius: 20px;
 
       font-size: 14px;
-      color: ${token.colorTextSecondary};
+      color: ${cssVar.colorTextSecondary};
 
       background-color: transparent;
-      border: 1px solid ${token.colorBorder};
-      border-radius: 20px;
       outline: none;
 
       transition: all 0.3s;
 
       &::input-placeholder {
-        color: ${token.colorTextPlaceholder};
+        color: ${cssVar.colorTextPlaceholder};
       }
 
       &:focus {
-        background: ${token.colorBgElevated};
-        border-color: ${token.colorBorderSecondary};
+        border-color: ${cssVar.colorBorderSecondary};
+        background: ${cssVar.colorBgElevated};
 
         ~ .site-header-shortcut {
           opacity: 0;
@@ -54,45 +53,45 @@ export const useStyles = createStyles(({ token, responsive, css, cx }) => {
       min-height: 60px;
       max-height: 400px;
       margin-top: 8px;
+      border: 1px solid ${cssVar.colorBorder};
+      border-radius: ${cssVar.borderRadiusLG};
 
-      background-color: ${token.colorBgElevated};
-      border: 1px solid ${token.colorBorder};
-      border-radius: ${token.borderRadiusLG}px;
-      box-shadow: ${token.boxShadow};
+      background-color: ${cssVar.colorBgElevated};
+      box-shadow: ${cssVar.boxShadow};
 
       -webkit-overflow-scrolling: touch;
 
       .dumi-default-search-result {
         > dl {
           > dt {
-            color: ${token.colorText};
-            background: ${token.colorFillTertiary};
+            color: ${cssVar.colorText};
+            background: ${cssVar.colorFillTertiary};
           }
 
           > dd {
             > a {
               > h4 {
-                color: ${token.colorTextSecondary};
+                color: ${cssVar.colorTextSecondary};
               }
 
               > p {
-                color: ${token.colorTextDescription};
+                color: ${cssVar.colorTextDescription};
               }
 
               &:hover {
-                background: ${token.colorFillSecondary};
+                background: ${cssVar.colorFillSecondary};
               }
             }
 
             + dd {
-              border-color: ${token.colorBorderSecondary};
+              border-color: ${cssVar.colorBorderSecondary};
             }
           }
         }
 
         mark {
           color: #000;
-          background: ${token.yellow9};
+          background: ${cssVar.yellow9};
         }
       }
     `,
@@ -110,19 +109,19 @@ export const useStyles = createStyles(({ token, responsive, css, cx }) => {
         display: inline-block;
 
         padding: 4px 8px;
+        border: 1px solid ${cssVar.colorBorderSecondary};
+        border-radius: 11px;
 
         font-size: 12px;
         line-height: 1;
-        color: ${token.colorTextDescription};
+        color: ${cssVar.colorTextDescription};
         white-space: nowrap;
 
-        background-color: ${token.colorFillSecondary};
-        border: 1px solid ${token.colorBorderSecondary};
-        border-radius: 11px;
+        background-color: ${cssVar.colorFillSecondary};
 
         transition: all 0.3s;
 
-        ${responsive.mobile} {
+        ${responsive.sm} {
           display: none;
         }
       `,
@@ -136,7 +135,7 @@ export const useStyles = createStyles(({ token, responsive, css, cx }) => {
       width: 16px;
       margin-top: 1px;
 
-      color: ${token.colorTextPlaceholder};
+      color: ${cssVar.colorTextPlaceholder};
     `),
   };
 });

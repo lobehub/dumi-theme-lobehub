@@ -2,12 +2,12 @@ import { createGlobalStyle } from 'antd-style';
 
 const GlobalStyle = createGlobalStyle`
   html, body {
-    background: ${({ theme }) => theme.colorBgContainerSecondary};
+    background: ${({ theme }) => theme.colorBgLayout};
   }
 
   #root {
     min-height: 100vh;
-    background: ${({ theme }) => theme.colorBgContainerSecondary};
+    background: ${({ theme }) => theme.colorBgLayout};
   }
 
   #nprogress {

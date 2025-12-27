@@ -1,10 +1,11 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ token, prefixCls, css }) => {
-  const prefix = `.${prefixCls}-tabs`;
+const prefixCls = 'ant';
+const prefix = `.${prefixCls}-tabs`;
 
-  const marginBlock = 8;
+const marginBlock = 8;
 
+export const styles = createStaticStyles(({ css, cssVar }) => {
   return {
     cls: css`
       ${prefix}-tab + ${prefix}-tab {
@@ -14,7 +15,7 @@ export const useStyles = createStyles(({ token, prefixCls, css }) => {
       }
 
       ${prefix}-tab {
-        color: ${token.colorTextSecondary};
+        color: ${cssVar.colorTextSecondary};
         transition: background-color 150ms ease-out;
 
         &:first-child {
@@ -24,9 +25,9 @@ export const useStyles = createStyles(({ token, prefixCls, css }) => {
         }
 
         &:hover {
-          color: ${token.colorText} !important;
-          background: ${token.colorFillTertiary};
           border-radius: 6px;
+          color: ${cssVar.colorText} !important;
+          background: ${cssVar.colorFillTertiary};
         }
       }
     `,

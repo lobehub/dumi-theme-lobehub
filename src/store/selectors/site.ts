@@ -1,5 +1,5 @@
 import { ISidebarItem } from 'dumi/dist/client/theme-api/types';
-import { merge } from 'lodash-es';
+import { merge } from 'es-toolkit/compat';
 
 import { initialThemeConfig } from '@/store/initialState';
 import { AnchorItem } from '@/types';
