@@ -1,6 +1,6 @@
 {
   "name": "dumi-theme-lobehub",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "dumi-theme-lobehub is a documentation site theme package designed for dumi2. It provides a more beautiful and user-friendly development and reading experience based on @lobehub/ui",
   "keywords": [
     "lobehub",

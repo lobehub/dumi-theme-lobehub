@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;4.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v4.0.0...v4.0.1)
+
+<sup>Released on **2025-12-27**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor static style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor static style ([8ea8395](https://github.com/lobehub/dumi-theme-lobehub/commit/8ea8395))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ## [Version&nbsp;4.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.2...v4.0.0)
 
 <sup>Released on **2025-12-24**</sup>
