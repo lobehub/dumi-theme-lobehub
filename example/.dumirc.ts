@@ -5,7 +5,6 @@ import { resolve } from 'node:path';
 import { description, homepage, name } from '../package.json';
 import { globalBackgroundStyles } from '../src/styles/globalStyles';
 
-const isProduction = process.env.NODE_ENV === 'production';
 const isWin = process.platform === 'win32';
 
 const themeConfig: SiteThemeConfig = {

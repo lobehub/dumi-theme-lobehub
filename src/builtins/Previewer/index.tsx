@@ -1,7 +1,8 @@
+import { cx } from 'antd-style';
 import { IPreviewerProps } from 'dumi/dist/client/theme-api/types';
 import Previewer from 'dumi/theme-default/builtins/Previewer';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 export interface PreviewerProps extends IPreviewerProps {
   center?: boolean;
@@ -10,8 +11,6 @@ export interface PreviewerProps extends IPreviewerProps {
 }
 
 export default ({ center, codePlacement, nopadding, pure, ...props }: PreviewerProps) => {
-  const { styles, cx } = useStyles(pure);
-
   return (
     <div
       className={cx(

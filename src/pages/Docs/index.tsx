@@ -7,7 +7,7 @@ import ApiHeader from '@/slots/ApiHeader';
 import Content from '@/slots/Content';
 import { apiHeaderSelectors, siteSelectors, useSiteStore } from '@/store';
 
-import { useStyles } from './styles';
+import { styles } from './styles';
 
 const Documents = memo<PropsWithChildren>(({ children }) => {
   const { mobile } = useResponsive();
@@ -16,7 +16,6 @@ const Documents = memo<PropsWithChildren>(({ children }) => {
     isApiPage: apiHeaderSelectors.isApiPage(s),
     pathname: s.location.pathname,
   }));
-  const { styles } = useStyles();
 
   useEffect(() => {
     window?.scrollTo(0, 0);

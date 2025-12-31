@@ -10,7 +10,7 @@
     "setup": "dumi setup"
   },
   "devDependencies": {
-    "antd": "^5.23.0",
+    "antd": "^6.1.1",
     "babel-plugin-antd-style": "^1.0.4",
     "dumi": "^2.4.17",
     "react": "^19.0.0",

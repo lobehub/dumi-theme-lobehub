@@ -1,8 +1,8 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ css, token }) => ({
+export const styles = createStaticStyles(({ css, cssVar }) => ({
   sidebar: css`
-    margin-top: ${token.headerHeight}px;
+    margin-top: var(--lobe-header-height, 64px);
   `,
   sidebarInner: css`
     overflow: auto;
@@ -21,7 +21,7 @@ export const useStyles = createStyles(({ css, token }) => ({
         margin: 8px 0;
 
         font-weight: 500;
-        color: ${token.colorText};
+        color: ${cssVar.colorText};
         text-overflow: ellipsis;
         text-transform: uppercase;
         white-space: nowrap;
@@ -36,42 +36,41 @@ export const useStyles = createStyles(({ css, token }) => ({
           display: block;
 
           padding: 6px 12px;
+          border-radius: 6px;
 
-          font-size: ${token.fontSize}px;
-          line-height: ${token.lineHeight};
-          color: ${token.colorTextSecondary};
+          font-size: ${cssVar.fontSize};
+          line-height: ${cssVar.lineHeight};
+          color: ${cssVar.colorTextSecondary};
           text-decoration: none;
           text-overflow: ellipsis;
           white-space: nowrap;
 
-          border-radius: 6px;
-
           transition:
-            color 600ms ${token.motionEaseOut},
-            background-color 100ms ${token.motionEaseOut};
+            color 600ms ${cssVar.motionEaseOut},
+            background-color 100ms ${cssVar.motionEaseOut};
 
           &:hover {
-            color: ${token.colorText};
-            background: ${token.colorFillTertiary};
+            color: ${cssVar.colorText};
+            background: ${cssVar.colorFillTertiary};
           }
 
           &:active {
-            color: ${token.colorText};
-            background-color: ${token.colorFill};
+            color: ${cssVar.colorText};
+            background-color: ${cssVar.colorFill};
           }
 
           &.active {
-            color: ${token.colorText};
-            background-color: ${token.colorFillSecondary};
+            color: ${cssVar.colorText};
+            background-color: ${cssVar.colorFillSecondary};
 
             &:hover {
-              color: ${token.colorText};
-              background: ${token.colorFillSecondary};
+              color: ${cssVar.colorText};
+              background: ${cssVar.colorFillSecondary};
             }
 
             &:active {
-              color: ${token.colorText};
-              background-color: ${token.colorFill};
+              color: ${cssVar.colorText};
+              background-color: ${cssVar.colorFill};
             }
           }
         }
@@ -80,7 +79,7 @@ export const useStyles = createStyles(({ css, token }) => ({
       + dl {
         margin-top: 16px;
         padding-top: 16px;
-        border-top: 1px dashed ${token.colorBorder};
+        border-top: 1px dashed ${cssVar.colorBorder};
       }
     }
   `,

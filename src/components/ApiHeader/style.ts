@@ -1,19 +1,21 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles , responsive } from 'antd-style';
 
-export const useStyles = createStyles(({ css, token, responsive: r, stylish }) => ({
+import { lobeStaticStylish } from '@/styles';
+
+export const styles = createStaticStyles(({ css, cssVar }) => ({
   desc: css`
-    font-size: ${token.fontSizeLG}px;
-    line-height: ${token.lineHeightLG}px;
+    font-size: ${cssVar.fontSizeLG};
+    line-height: ${cssVar.lineHeightLG};
   `,
   label: css`
     width: 80px;
   `,
   meta: css``,
   text: css`
-    ${stylish.resetLinkColor}
+    ${lobeStaticStylish.resetLinkColor}
   `,
   title: css`
-    ${r.mobile} {
+    ${responsive.sm} {
       margin-block: 0;
       font-size: 32px !important;
     }

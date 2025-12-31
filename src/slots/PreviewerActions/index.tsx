@@ -5,7 +5,7 @@ import { type FC, type ReactNode, useState } from 'react';
 
 import SourceCode from '@/builtins/SourceCode';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 export interface PreviewerActionsProps extends IPreviewerProps {
   demoContainer: HTMLDivElement | HTMLIFrameElement;
@@ -24,7 +24,6 @@ const PreviewerActions: FC<PreviewerActionsProps> = (props) => {
   const [showCode, setShowCode] = useState(props.forceShowCode || props.defaultShowCode);
   const isSingleFile = files.length === 1;
   const lang = (files[activeKey][0].match(/\.([^.]+)$/)?.[1] || 'text') as any;
-  const { styles } = useStyles();
 
   return (
     <>

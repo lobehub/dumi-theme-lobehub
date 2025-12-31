@@ -1,6 +1,6 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ token, css }) => {
+export const styles = createStaticStyles(({ css, cssVar }) => {
   return {
     actionBar: css`
       display: flex;
@@ -12,9 +12,9 @@ export const useStyles = createStyles(({ token, css }) => {
     `,
     tabs: css`
       padding: 0 12px;
-      background: ${token.colorBgLayout};
-      border-top: 1px dashed ${token.colorBorderSecondary};
-      border-bottom: 1px dashed ${token.colorBorderSecondary};
+      border-top: 1px dashed ${cssVar.colorBorderSecondary};
+      border-bottom: 1px dashed ${cssVar.colorBorderSecondary};
+      background: ${cssVar.colorBgLayout};
     `,
   };
 });

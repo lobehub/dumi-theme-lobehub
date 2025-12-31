@@ -1,8 +1,8 @@
-import { Tabs } from 'antd';
+import { Tabs } from '@lobehub/ui';
 import { useIntl, useRouteMeta } from 'dumi';
 import { memo } from 'react';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 type IContentTabs = ReturnType<typeof useRouteMeta>['tabs'];
 
@@ -14,7 +14,6 @@ export interface ContentTabsProps {
 
 const ContentTabs = memo<ContentTabsProps>(({ tabs, tabKey: key, onChange }) => {
   const intl = useIntl();
-  const { styles } = useStyles();
   // TODO: tab.Extra & tab.Action render
 
   return tabs && tabs?.length > 0 ? (

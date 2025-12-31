@@ -1,7 +1,7 @@
 import { BurgerProps, Burger as Menu } from '@lobehub/ui';
 import { Link } from 'dumi';
+import { uniq } from 'es-toolkit';
 import isEqual from 'fast-deep-equal';
-import { uniq } from 'lodash-es';
 import { memo, useMemo, useState } from 'react';
 
 import { siteSelectors, useSiteStore } from '@/store';

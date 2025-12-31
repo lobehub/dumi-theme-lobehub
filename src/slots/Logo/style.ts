@@ -1,18 +1,18 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles , responsive } from 'antd-style';
 
-export const useStyles = createStyles(
-  ({ css, responsive, token }) => css`
+export const styles = createStaticStyles(({ css, cssVar }) => ({
+  root: css`
     display: inline-flex;
     align-items: center;
 
     font-size: 22px;
     font-weight: 500;
     line-height: 1;
-    color: ${token.colorText};
+    color: ${cssVar.colorText};
     text-decoration: none;
 
-    ${responsive.mobile} {
+    ${responsive.sm} {
       font-size: 18px;
     }
   `,
-);
+}));

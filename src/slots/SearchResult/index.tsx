@@ -1,7 +1,7 @@
 import { Icon } from '@lobehub/ui';
 import animateScrollTo from 'animated-scroll-to';
 import { Empty, Typography } from 'antd';
-import { useTheme } from 'antd-style';
+import { cssVar } from 'antd-style';
 import { Link, history, useIntl, type useSiteSearch } from 'dumi';
 import { FileBox, FileIcon, HeadingIcon, LetterText, LucideIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
@@ -84,7 +84,6 @@ export interface SearchResultProps {
 }
 
 const SearchResult = memo<SearchResultProps>((props) => {
-  const theme = useTheme();
   const intl = useIntl();
   const [data, histsCount] = useFlatSearchData(props.data);
   const [activeIndex, setActiveIndex] = useState(-1);
@@ -151,8 +150,8 @@ const SearchResult = memo<SearchResultProps>((props) => {
               paddingBlock={8}
               paddingInline={12}
               style={{
-                background: theme.colorFillTertiary,
-                borderRadius: theme.borderRadius,
+                background: cssVar.colorFillTertiary,
+                borderRadius: cssVar.borderRadius,
               }}
             >
               <Typography.Title
@@ -188,13 +187,13 @@ const SearchResult = memo<SearchResultProps>((props) => {
                     flex={'none'}
                     height={48}
                     style={{
-                      background: theme.colorFillTertiary,
-                      borderRadius: theme.borderRadius,
+                      background: cssVar.colorFillTertiary,
+                      borderRadius: cssVar.borderRadius,
                     }}
                     width={48}
                   >
                     <Icon
-                      color={theme.colorTextDescription}
+                      color={cssVar.colorTextDescription}
                       icon={ICONS_MAPPING?.[item.value.type] as any}
                       size={32}
                     />
@@ -214,7 +213,7 @@ const SearchResult = memo<SearchResultProps>((props) => {
                     <Typography.Paragraph
                       ellipsis={{ rows: 2 }}
                       style={{
-                        color: theme.colorTextSecondary,
+                        color: cssVar.colorTextSecondary,
                         fontSize: 12,
                         lineHeight: 1.4,
                         margin: 0,

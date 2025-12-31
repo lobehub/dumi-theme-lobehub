@@ -1,44 +1,46 @@
 'use client';
 
+import { ConfigProvider as LobehubConfigProvider } from '@lobehub/ui';
 import { ConfigProvider } from 'antd';
-import { useTheme } from 'antd-style';
+import { cssVar } from 'antd-style';
+import * as motion from 'motion/react-m';
 import { PropsWithChildren, memo } from 'react';
 
 const Config = memo<PropsWithChildren>(({ children }) => {
-  const theme = useTheme();
-
   return (
-    <ConfigProvider
-      theme={{
-        components: {
-          Button: {
-            contentFontSizeSM: 12,
+    <LobehubConfigProvider motion={motion}>
+      <ConfigProvider
+        theme={{
+          components: {
+            Button: {
+              contentFontSizeSM: 12,
+            },
+            DatePicker: {
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
+            },
+            Input: {
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
+            },
+            InputNumber: {
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
+            },
+            Mentions: {
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
+            },
+            Select: {
+              activeBorderColor: cssVar.colorBorder,
+              hoverBorderColor: cssVar.colorBorder,
+            },
           },
-          DatePicker: {
-            activeBorderColor: theme.colorBorder,
-            hoverBorderColor: theme.colorBorder,
-          },
-          Input: {
-            activeBorderColor: theme.colorBorder,
-            hoverBorderColor: theme.colorBorder,
-          },
-          InputNumber: {
-            activeBorderColor: theme.colorBorder,
-            hoverBorderColor: theme.colorBorder,
-          },
-          Mentions: {
-            activeBorderColor: theme.colorBorder,
-            hoverBorderColor: theme.colorBorder,
-          },
-          Select: {
-            activeBorderColor: theme.colorBorder,
-            hoverBorderColor: theme.colorBorder,
-          },
-        },
-      }}
-    >
-      {children}
-    </ConfigProvider>
+        }}
+      >
+        {children}
+      </ConfigProvider>
+    </LobehubConfigProvider>
   );
 });
 

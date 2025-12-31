@@ -1,13 +1,13 @@
 import { ThemeProvider } from '@lobehub/ui';
 import 'antd/dist/reset.css';
 import isEqual from 'fast-deep-equal';
+import { LazyMotion, domMax } from 'motion/react';
 import { PropsWithChildren, memo } from 'react';
 
 import { siteSelectors, useSiteStore, useThemeStore } from '@/store';
 import customToken from '@/styles/customToken';
 
 import AntdStaticMethods from './AntdStaticMethods';
-import AntdV5MonkeyPatch from './AntdV5MonkeyPatch';
 import ConfigProvider from './ConfigProvider';
 import StyleRegistry from './StyleRegistry';
 
@@ -23,9 +23,10 @@ export default memo<PropsWithChildren>(({ children }) => {
         themeMode={themeMode}
       >
         <AntdStaticMethods />
-        <ConfigProvider>{children}</ConfigProvider>
+        <ConfigProvider>
+          <LazyMotion features={domMax}>{children}</LazyMotion>
+        </ConfigProvider>
       </ThemeProvider>
-      <AntdV5MonkeyPatch />
     </StyleRegistry>
   );
 });

@@ -4,7 +4,7 @@ import { PropsWithChildren, memo, useEffect } from 'react';
 import { Center } from 'react-layout-kit';
 
 import { ApiHeader } from '@/components/ApiHeader';
-import { useStyles } from '@/pages/Docs/styles';
+import { styles } from '@/pages/Docs/styles';
 import Content from '@/slots/Content';
 import { siteSelectors, useSiteStore } from '@/store';
 
@@ -18,8 +18,6 @@ const Changelog = memo<PropsWithChildren>(({ children }) => {
     }),
     isEqual,
   );
-
-  const { styles } = useStyles();
 
   useEffect(() => {
     window?.scrollTo(0, 0);

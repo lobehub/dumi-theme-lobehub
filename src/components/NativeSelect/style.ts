@@ -1,10 +1,14 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles, cx } from 'antd-style';
 
-export const useStyles = createStyles(({ css, stylish, cx, token }, prefixCls: string) => ({
+import { lobeStaticStylish } from '@/styles';
+
+const prefixCls = 'ant';
+
+export const styles = createStaticStyles(({ css, cssVar }) => ({
   button: cx(
     `${prefixCls}-button`,
     css`
-      ${stylish.buttonDefaultHover}
+      ${lobeStaticStylish.buttonDefaultHover}
       all: unset;
 
       cursor: default;
@@ -12,19 +16,20 @@ export const useStyles = createStyles(({ css, stylish, cx, token }, prefixCls: s
 
       padding: 8px;
 
-      font-size: ${token.fontSize}px;
+      font-size: ${cssVar.fontSize};
       line-height: 0;
-      color: ${token.colorTextSecondary};
+      color: ${cssVar.colorTextSecondary};
 
-      background: ${token.colorBgContainer};
-      border: 1px solid ${token.colorBorder};
-      border-radius: ${token.borderRadius}px;
+      background: ${cssVar.colorBgContainer};
+
+      border: 1px solid ${cssVar.colorBorder};
+      border-radius: ${cssVar.borderRadius};
 
       -webkit-tap-highlight-color: transparent;
 
       &:focus-visible {
-        border-color: ${token.colorPrimary};
-        box-shadow: 0 0 0 2px ${token.colorPrimaryBg};
+        border-color: ${cssVar.colorPrimary};
+        box-shadow: 0 0 0 2px ${cssVar.colorPrimaryBg};
       }
     `,
   ),
@@ -40,14 +45,14 @@ export const useStyles = createStyles(({ css, stylish, cx, token }, prefixCls: s
       box-sizing: border-box;
       width: 160px;
       padding: 5px;
-
-      font-size: ${token.fontSize};
-
-      background: ${token.colorBgElevated};
-      border: 1px solid ${token.colorBorder};
+      border: 1px solid ${cssVar.colorBorder};
       border-radius: 8px;
+
+      font-size: ${cssVar.fontSize};
+
+      background: ${cssVar.colorBgElevated};
       outline: 0;
-      box-shadow: ${token.boxShadowSecondary};
+      box-shadow: ${cssVar.boxShadowSecondary};
 
       &::-webkit-scrollbar {
         display: none;

@@ -1,10 +1,12 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles, cx } from 'antd-style';
 
-export const useStyles = createStyles(({ css, cx, token }, prefixCls) => ({
+const prefixCls = 'ant';
+
+export const styles = createStaticStyles(({ css, cssVar }) => ({
   active: cx(
     `${prefixCls}-item-active`,
     css`
-      background: ${token.colorFillTertiary};
+      background: ${cssVar.colorFillTertiary};
     `,
   ),
   item: cx(
@@ -21,17 +23,17 @@ export const useStyles = createStyles(({ css, cx, token }, prefixCls) => ({
       box-sizing: inherit;
       width: 100%;
       padding: 12px 10px;
-
-      font-family: ${token.fontFamily};
-      font-weight: normal;
-      line-height: 1;
-      color: ${token.colorText};
-
-      background: transparent;
       border-radius: 5px;
 
+      font-family: ${cssVar.fontFamily};
+      font-weight: normal;
+      line-height: 1;
+      color: ${cssVar.colorText};
+
+      background: transparent;
+
       &:hover {
-        background: ${token.colorFillTertiary};
+        background: ${cssVar.colorFillTertiary};
       }
     `,
   ),
@@ -39,12 +41,12 @@ export const useStyles = createStyles(({ css, cx, token }, prefixCls) => ({
     `${prefixCls}-item-selected`,
     css`
       font-weight: bold;
-      color: ${token.colorPrimaryText};
-      background: ${token.colorPrimaryBg};
+      color: ${cssVar.colorPrimaryText};
+      background: ${cssVar.colorPrimaryBg};
 
       &:hover {
-        color: ${token.colorPrimaryTextHover};
-        background: ${token.colorPrimaryBgHover};
+        color: ${cssVar.colorPrimaryTextHover};
+        background: ${cssVar.colorPrimaryBgHover};
       }
     `,
   ),

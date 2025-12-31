@@ -2,6 +2,149 @@
 
 # Changelog
 
+### [Version&nbsp;4.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v4.0.0...v4.0.1)
+
+<sup>Released on **2025-12-27**</sup>
+
+#### ♻ Code Refactoring
+
+- **misc**: Refactor static style.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Code refactoring
+
+- **misc**: Refactor static style ([8ea8395](https://github.com/lobehub/dumi-theme-lobehub/commit/8ea8395))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version&nbsp;4.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.2...v4.0.0)
+
+<sup>Released on **2025-12-24**</sup>
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version&nbsp;3.0.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.1...v3.0.2)
+
+<sup>Released on **2025-12-24**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix lazy motion.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix lazy motion ([0b467a7](https://github.com/lobehub/dumi-theme-lobehub/commit/0b467a7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version&nbsp;3.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v3.0.0...v3.0.1)
+
+<sup>Released on **2025-12-20**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix background.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix background ([3f7d15b](https://github.com/lobehub/dumi-theme-lobehub/commit/3f7d15b))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version&nbsp;3.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.9...v3.0.0)
+
+<sup>Released on **2025-12-20**</sup>
+
+#### ✨ Features
+
+- **misc**: Bump v3 [force major], Feat: Bump v3 [force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Bump v3 [force major] ([d9a0fb7](https://github.com/lobehub/dumi-theme-lobehub/commit/d9a0fb7))
+- **misc**: Feat: Bump v3 [force major] ([3872731](https://github.com/lobehub/dumi-theme-lobehub/commit/3872731))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+## [Version&nbsp;3.0.0](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.9...v3.0.0)
+
+<sup>Released on **2025-12-20**</sup>
+
+#### ✨ Features
+
+- **misc**: Bump v3 [force major].
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's improved
+
+- **misc**: Bump v3 [force major] ([d9a0fb7](https://github.com/lobehub/dumi-theme-lobehub/commit/d9a0fb7))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;2.0.9](https://github.com/lobehub/dumi-theme-lobehub/compare/v2.0.8...v2.0.9)
 
 <sup>Released on **2025-08-18**</sup>

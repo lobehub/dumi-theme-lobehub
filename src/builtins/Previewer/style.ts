@@ -1,7 +1,8 @@
-import { createStyles } from 'antd-style';
-import { rgba } from 'polished';
+import { createStaticStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ css, token, prefixCls }) => {
+const prefixCls = 'ant';
+
+export const styles = createStaticStyles(({ css, cssVar }) => {
   return {
     center: css`
       .dumi-default-previewer-demo {
@@ -18,27 +19,27 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
         display: flex;
         flex-direction: column;
 
-        border-color: ${token.colorBorderSecondary};
+        border-color: ${cssVar.colorBorderSecondary};
 
-        background: ${token.colorBgContainerSecondary};
+        background: ${cssVar.colorBgLayout};
 
         &-demo {
           flex: 1;
-          border-top-color: ${token.colorBgContainerSecondary} !important;
+          border-top-color: ${cssVar.colorBgLayout} !important;
 
           > iframe {
             min-height: 600px;
-            border-top: 1px solid ${token.colorBorderSecondary};
+            border-top: 1px solid ${cssVar.colorBorderSecondary};
           }
 
           &[data-iframe]::before {
-            background: ${token.colorFillContent};
+            background: ${cssVar.colorFillContent};
           }
         }
 
         &-meta {
           flex: 1;
-          border-color: ${token.colorBorderSecondary};
+          border-color: ${cssVar.colorBorderSecondary};
 
           .${prefixCls}-highlighter {
             pre {
@@ -48,41 +49,41 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
         }
 
         &-actions:not(:last-child) {
-          border-color: ${token.colorBorderSecondary};
+          border-color: ${cssVar.colorBorderSecondary};
         }
 
         &-desc {
           .markdown {
-            border-color: ${token.colorBorderSecondary};
+            border-color: ${cssVar.colorBorderSecondary};
           }
 
           h5 {
             background: linear-gradient(
               to top,
-              ${token.colorBgContainer},
-              ${rgba(token.colorBgContainer, 0.95)} 50%,
-              ${rgba(token.colorBgContainer, 0)} 100%
+              ${cssVar.colorBgContainer},
+              color-mix(in srgb, ${cssVar.colorBgContainer} 95%, transparent) 50%,
+              color-mix(in srgb, ${cssVar.colorBgContainer} 0%, transparent) 100%
             );
 
             a {
-              color: ${token.colorText};
+              color: ${cssVar.colorText};
             }
           }
         }
 
         &-tabs::after {
-          border-color: ${token.colorBorderSecondary};
+          border-color: ${cssVar.colorBorderSecondary};
         }
       }
 
       .dumi-default-tabs-tab {
         &-btn {
-          color: ${token.colorTextTertiary};
+          color: ${cssVar.colorTextTertiary};
         }
 
         &-active {
           .dumi-default-tabs-tab-btn {
-            color: ${token.colorText};
+            color: ${cssVar.colorText};
           }
         }
       }
@@ -93,7 +94,7 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
 
         &-demo {
           width: 50%;
-          border-left: 1px solid ${token.colorBorderSecondary};
+          border-left: 1px solid ${cssVar.colorBorderSecondary};
         }
 
         &-meta {
@@ -128,7 +129,7 @@ export const useStyles = createStyles(({ css, token, prefixCls }) => {
 
         &-demo {
           width: 50%;
-          border-right: 1px solid ${token.colorBorderSecondary};
+          border-right: 1px solid ${cssVar.colorBorderSecondary};
         }
 
         &-meta {

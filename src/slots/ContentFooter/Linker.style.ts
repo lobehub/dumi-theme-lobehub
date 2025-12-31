@@ -1,6 +1,6 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ token, css }) => ({
+export const styles = createStaticStyles(({ css, cssVar }) => ({
   alignmentEnd: css`
     justify-content: flex-end;
   `,
@@ -9,17 +9,17 @@ export const useStyles = createStyles(({ token, css }) => ({
 
     min-width: 250px;
     padding: 16px 24px;
-
-    background: ${token.colorBgContainer};
     border-radius: 8px;
 
+    background: ${cssVar.colorBgContainer};
+
     &:hover {
-      background: ${token.colorFillTertiary};
+      background: ${cssVar.colorFillTertiary};
     }
   `,
   nav: css`
     font-size: 12px;
-    color: ${token.colorTextTertiary};
+    color: ${cssVar.colorTextTertiary};
   `,
 
   title: css`

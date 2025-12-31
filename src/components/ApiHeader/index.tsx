@@ -7,7 +7,7 @@ import { Flexbox, FlexboxProps } from 'react-layout-kit';
 
 import { ApiHeaderConfig } from '@/types';
 
-import { useStyles } from './style';
+import { styles } from './style';
 
 /**
  * @title ApiHeaderProps
@@ -85,7 +85,6 @@ export const ApiHeader = memo<ApiTitleProps & FlexboxProps>(
     serviceList = [],
     ...rest
   }) => {
-    const { styles } = useStyles();
     const { mobile } = useResponsive();
     const isDoc = type === 'doc';
 
@@ -119,7 +118,7 @@ export const ApiHeader = memo<ApiTitleProps & FlexboxProps>(
             )}
             <Divider dashed style={{ margin: '2px 0' }} />
             <Flexbox distribution={'space-between'} gap={mobile ? 24 : 0} horizontal={!mobile}>
-              <Space split={<Divider type={'vertical'} />} wrap>
+              <Space separator={<Divider orientation={'vertical'} />} wrap>
                 {serviceList.map((item) => (
                   <a
                     href={item.url}
@@ -135,7 +134,7 @@ export const ApiHeader = memo<ApiTitleProps & FlexboxProps>(
                   </a>
                 ))}
               </Space>
-              <Space className={styles.meta} split={<Divider type={'vertical'} />}>
+              <Space className={styles.meta} split={<Divider orientation={'vertical'} />}>
                 {items.map((item, index) => (
                   <a href={item.url} key={index} rel="noreferrer" target={'_blank'}>
                     <Flexbox align={'center'} className={styles.text} gap={8} horizontal>

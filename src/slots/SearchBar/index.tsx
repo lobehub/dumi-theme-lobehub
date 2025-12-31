@@ -3,10 +3,9 @@ import { useSiteSearch } from 'dumi';
 import { memo, useState } from 'react';
 
 import SearchResult from '../SearchResult';
-import { useStyles } from './style';
+import { styles } from './style';
 
 const SearchBar = memo(() => {
-  const { styles } = useStyles();
   const [focusing, setFocusing] = useState(false);
   const { keywords, setKeywords, result, loading } = useSiteSearch();
 

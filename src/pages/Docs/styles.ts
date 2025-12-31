@@ -1,6 +1,6 @@
-import { createStyles } from 'antd-style';
+import { createStaticStyles } from 'antd-style';
 
-export const useStyles = createStyles(({ css, token }) => ({
+export const styles = createStaticStyles(({ css, cssVar }) => ({
   changelog: css`
     .markdown {
       font-size: 16px;
@@ -16,7 +16,7 @@ export const useStyles = createStyles(({ css, token }) => ({
       }
 
       sup {
-        color: ${token.colorTextDescription};
+        color: ${cssVar.colorTextDescription};
       }
 
       details {
@@ -26,19 +26,19 @@ export const useStyles = createStyles(({ css, token }) => ({
       summary > kbd {
         margin-left: 6px;
         padding: unset;
+        border: unset;
 
         font-size: inherit;
         line-height: inherit;
 
         background: unset;
-        border: unset;
       }
 
       a[href='/changelog#readme-top'] {
         display: block;
         margin-bottom: 32px;
         padding-bottom: 32px;
-        border-bottom: 1px solid ${token.colorBorderSecondary};
+        border-bottom: 1px solid ${cssVar.colorBorderSecondary};
 
         > img {
           display: none;
@@ -48,7 +48,7 @@ export const useStyles = createStyles(({ css, token }) => ({
   `,
   content: css`
     width: 100%;
-    max-width: ${token.contentMaxWidth}px;
+    max-width: var(--lobe-content-max-width, 960px);
     margin: 0 auto;
   `,
 }));

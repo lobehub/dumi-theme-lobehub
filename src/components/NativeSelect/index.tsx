@@ -22,7 +22,7 @@ import { CSSProperties, ReactNode, memo, useEffect, useRef, useState } from 'rea
 import useControlledState from 'use-merge-value';
 
 import SelectItem from './SelectItem';
-import { useStyles } from './style';
+import { styles } from './style';
 
 interface OptionType {
   icon?: ReactNode;
@@ -32,7 +32,6 @@ interface OptionType {
 export interface NativeSelectProps {
   onChange?: (index: number) => void;
   options?: OptionType[];
-  prefixCls?: string;
   renderItem?: (item: OptionType, index: number) => ReactNode;
   renderValue?: (index: number) => ReactNode;
   style?: CSSProperties;
@@ -40,11 +39,8 @@ export interface NativeSelectProps {
 }
 
 const NativeSelect = memo<NativeSelectProps>(
-  ({ options = [], value, prefixCls, onChange, renderValue, renderItem, style }) => {
-    const cls = prefixCls ?? 'native-select';
+  ({ options = [], value, onChange, renderValue, renderItem, style }) => {
     const [selectedIndex, setSelectedIndex] = useControlledState<number>(0, { onChange, value });
-
-    const { styles } = useStyles(cls);
     const listReference = useRef<Array<HTMLElement | null>>([]);
     const listContentReference = useRef<Array<string | null>>([]);
     const overflowReference = useRef<SideObject>(null);
@@ -194,7 +190,6 @@ const NativeSelect = memo<NativeSelectProps>(
                           isSelected={index === selectedIndex}
                           key={item.value}
                           label={renderItem ? renderItem(item, index) : item.label}
-                          prefixCls={cls}
                           ref={(node) => {
                             listReference.current[index] = node;
                             listContentReference.current[index] = item.label as string;
