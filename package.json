@@ -91,7 +91,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@lobehub/lint": "^1.26.3",
-    "@lobehub/ui": "^4.3.3",
+    "@lobehub/ui": "^4.11.0",
     "@types/node": "^22.19.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
