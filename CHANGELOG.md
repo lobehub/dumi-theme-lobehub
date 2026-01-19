@@ -2,6 +2,31 @@
 
 # Changelog
 
+### [Version&nbsp;4.0.2](https://github.com/lobehub/dumi-theme-lobehub/compare/v4.0.1...v4.0.2)
+
+<sup>Released on **2026-01-19**</sup>
+
+#### 🐛 Bug Fixes
+
+- **ui**: Bump ui version.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **ui**: Bump ui version ([d101989](https://github.com/lobehub/dumi-theme-lobehub/commit/d101989))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version&nbsp;4.0.1](https://github.com/lobehub/dumi-theme-lobehub/compare/v4.0.0...v4.0.1)
 
 <sup>Released on **2025-12-27**</sup>
